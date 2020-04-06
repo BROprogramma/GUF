@@ -1,4 +1,4 @@
-BESCHRIJVING BHR-AG
-===================
+Beschrijving Grondwatergebruik (GUF)
+====================================
 
-Hier de beschrijvingende tekst horende bij BHR-AG…
+Hier de beschrijvende tekst horende bij Grondwater (GUF)...
