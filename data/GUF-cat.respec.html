@@ -442,7 +442,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e1666"></a><section id="detail_d52283e1666">
+            </section><a class="anchor" id="detail_d52127e1666"></a><section id="detail_d52127e1666">
             <h4>  registratiegeschiedenis</h4>
             
             
@@ -497,7 +497,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e1875"></a><section id="detail_d52283e1875">
+            </section><a class="anchor" id="detail_d52127e1875"></a><section id="detail_d52127e1875">
             <h4>  geldigheidsduur</h4>
             
             
@@ -544,7 +544,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e2042"></a><section id="detail_d52283e2042">
+            </section><a class="anchor" id="detail_d52127e2042"></a><section id="detail_d52127e2042">
             <h4>  levensduur</h4>
             
             
@@ -772,7 +772,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e2829"></a><section id="detail_d52283e2829">
+            </section><a class="anchor" id="detail_d52127e2829"></a><section id="detail_d52127e2829">
             <h4>  maximale waterverplaatsing</h4>
             
             
@@ -848,7 +848,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e3114"></a><section id="detail_d52283e3114">
+            </section><a class="anchor" id="detail_d52127e3114"></a><section id="detail_d52127e3114">
             <h4>  gebruiksdoel systeem</h4>
             
             
@@ -895,7 +895,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e3281"></a><section id="detail_d52283e3281">
+            </section><a class="anchor" id="detail_d52127e3281"></a><section id="detail_d52127e3281">
             <h4>  geldigheidsduur</h4>
             
             
@@ -1166,6 +1166,15 @@
                         Ontwerpoppervlakteinfiltratie
                         </td>
                   </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p>De entiteit mag aanwezig zijn wanneer de waarde van het attribuut installatiefunctie
+                           van de entiteit Ontwerpinstallatie gelijk is aan infiltratie of aan infiltratieEnOnttrekking.
+                           De entiteit mag niet aanwezig in alle andere gevallen.</p>
+                        </td>
+                  </tr>
                </tbody>
             </table>
             </section><a class="anchor" id="detail_association_Model_Ontwerpinstallatie_gerelateerdeontwerpbodemlus"></a><section id="detail_association_Model_Ontwerpinstallatie_gerelateerdeontwerpbodemlus">
@@ -1211,6 +1220,15 @@
                      <th>Doel</th>
                      <td>
                         Ontwerpbodemlus
+                        </td>
+                  </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p>De entiteit moet aanwezig wanneer de waarde van het attribuut installatiefunctie van
+                           de entiteit Ontwerpinstallatie gelijk is aan geslotenBodemenergiesysteem.<br clear="none">
+                           In alle andere gevallen ontbreekt de entiteit.</p>
                         </td>
                   </tr>
                </tbody>
@@ -1260,9 +1278,20 @@
                         Ontwerpput
                         </td>
                   </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p>De entiteit mag niet aanwezig zijn wanneer de waarde van het attribuut installatiefunctie
+                           van de entiteit Ontwerpinstallatie gelijk is aan geslotenBodemenergiesysteem.<br clear="none">
+                           De entiteit mag ontbreken wanneer het attribuut installatiefunctie van de entiteit
+                           Ontwerpinstallatie gelijk is aan infiltratie.<br clear="none">
+                           De entiteit moet aanwezig zijn in alle andere gevallen.</p>
+                        </td>
+                  </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e4423"></a><section id="detail_d52283e4423">
+            </section><a class="anchor" id="detail_d52127e4520"></a><section id="detail_d52127e4520">
             <h4>  maximale waterverplaatsing</h4>
             
             
@@ -1326,7 +1355,7 @@
                      <th>Reden geen waarde</th>
                      <td>
                         
-                        <p>Voor IMBRO/A-gegevens mag de waarde ontbreken..</p>
+                        <p>Voor IMBRO/A-gegevens mag de waarde ontbreken.</p>
                         </td>
                   </tr>
                   <tr>
@@ -1350,7 +1379,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e4779"></a><section id="detail_d52283e4779">
+            </section><a class="anchor" id="detail_d52127e4876"></a><section id="detail_d52127e4876">
             <h4>  energiekenmerken</h4>
             
             
@@ -1428,7 +1457,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e5107"></a><section id="detail_d52283e5107">
+            </section><a class="anchor" id="detail_d52127e5204"></a><section id="detail_d52127e5204">
             <h4>  geldigheidsduur</h4>
             
             
@@ -1475,7 +1504,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e5274"></a><section id="detail_d52283e5274">
+            </section><a class="anchor" id="detail_d52127e5371"></a><section id="detail_d52127e5371">
             <h4>  levensduur</h4>
             
             
@@ -1544,14 +1573,6 @@
                         bodemlus is een constructie die geboord of gegraven is onder het maaiveld bestaande
                         uit een gesloten buizenstelsel of slang waardoor een vloeistof stroomt met als doel
                         het uitwisselen van warmte en koude met de ondergrond.</p>
-                     </td>
-               </tr>
-               <tr>
-                  <th>Regels</th>
-                  <td>
-                     
-                     <p>De entiteit moet aanwezig wanneer de waarde van het attribuut <em>ontwerpinstallatiefunctie</em> van de entiteit <em>Ontwerpinstallatie</em> gelijk is aan <em>geslotenBodemenergiesysteem</em>.<br clear="none">
-                        In alle andere gevallen ontbreekt de entiteit.</p>
                      </td>
                </tr>
             </tbody>
@@ -1721,7 +1742,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e6088"></a><section id="detail_d52283e6088">
+            </section><a class="anchor" id="detail_d52127e6170"></a><section id="detail_d52127e6170">
             <h4>  geldigheidsduur</h4>
             
             
@@ -1768,7 +1789,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e6255"></a><section id="detail_d52283e6255">
+            </section><a class="anchor" id="detail_d52127e6337"></a><section id="detail_d52127e6337">
             <h4>  levensduur</h4>
             
             
@@ -1836,14 +1857,6 @@
                      <p>De kenmerken van het in de beschikking of melding opgenomen oppervlaktelichaam voor
                         de infiltratie van water.<br clear="none">
                         </p>
-                     </td>
-               </tr>
-               <tr>
-                  <th>Regels</th>
-                  <td>
-                     
-                     <p>De entiteit mag aanwezig zijn wanneer de waarde van het attribuut <em>ontwerpinstallatiefunctie</em> van de entiteit <em>Ontwerpinstallatie</em> gelijk is aan <em>infiltratie</em> of aan <em>infiltratieEnOnttrekking.</em>
-                        De entiteit mag niet aanwezig in alle andere gevallen.</p>
                      </td>
                </tr>
                <tr>
@@ -2016,7 +2029,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e7152"></a><section id="detail_d52283e7152">
+            </section><a class="anchor" id="detail_d52127e7196"></a><section id="detail_d52127e7196">
             <h4>  geldigheidsduur</h4>
             
             
@@ -2064,7 +2077,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e7319"></a><section id="detail_d52283e7319">
+            </section><a class="anchor" id="detail_d52127e7363"></a><section id="detail_d52127e7363">
             <h4>  levensduur</h4>
             
             
@@ -2130,15 +2143,6 @@
                   <td>
                      
                      <p>De kenmerken van de in de beschikking of melding opgenomen, ontworpen put.</p>
-                     </td>
-               </tr>
-               <tr>
-                  <th>Regels</th>
-                  <td>
-                     
-                     <p>De entiteit mag niet aanwezig zijn wanneer de waarde van het attribuut <em>ontwerpinstallatiefunctie</em> van de entiteit <em>Ontwerpinstallatie</em> gelijk is aan <em>geslotenBodemenergiesysteem.</em> 
-                        De entiteit mag ontbreken wanneer het attribuut <em>ontwerpinstallatiefunctie</em> van de entiteit <em>Ontwerpinstallatie</em> gelijk is aan <em>infiltratie</em>.<br clear="none">
-                        De entiteit moet aanwezig zijn in alle andere gevallen.</p>
                      </td>
                </tr>
                <tr>
@@ -2566,7 +2570,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e9007"></a><section id="detail_d52283e9007">
+            </section><a class="anchor" id="detail_d52127e9010"></a><section id="detail_d52127e9010">
             <h4>  filtertraject</h4>
             
             
@@ -2634,7 +2638,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e9278"></a><section id="detail_d52283e9278">
+            </section><a class="anchor" id="detail_d52127e9281"></a><section id="detail_d52127e9281">
             <h4>  geldigheidsduur</h4>
             
             
@@ -2681,7 +2685,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e9445"></a><section id="detail_d52283e9445">
+            </section><a class="anchor" id="detail_d52127e9448"></a><section id="detail_d52127e9448">
             <h4>  levensduur</h4>
             
             
@@ -2999,6 +3003,15 @@
                         Gerealiseerd oppervlakteinfiltratie
                         </td>
                   </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p>De entiteit mag aanwezig zijn wanneer de waarde van het attribuut installatiefunctie
+                           van de entiteit Gerealiseerd installatie gelijk is aan infiltratie of aan infiltratieEnOnttrekking.
+                           De entiteit mag niet aanwezig in alle andere gevallen.</p>
+                        </td>
+                  </tr>
                </tbody>
             </table>
             </section><a class="anchor" id="detail_association_Model_Gerealiseerdinstallatie_gerelateerdegerealiseerdeput"></a><section id="detail_association_Model_Gerealiseerdinstallatie_gerelateerdegerealiseerdeput">
@@ -3045,6 +3058,17 @@
                      <th>Doel</th>
                      <td>
                         Gerealiseerd put
+                        </td>
+                  </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p>De entiteit mag niet aanwezig zijn wanneer het attribuut installatiefunctie van de
+                           entiteit Gerealiseerd installatie gelijk is aan geslotenBodemenergiesysteem.<br clear="none">
+                           De entiteit mag ontbreken wanneer het attribuut installatiefunctie van de entiteit
+                           Gerealiseerd installatie gelijk is aan infiltratie.<br clear="none">
+                           De entiteit moet aanwezig zijn in alle andere gevallen.</p>
                         </td>
                   </tr>
                </tbody>
@@ -3095,9 +3119,19 @@
                         Gerealiseerd bodemlus
                         </td>
                   </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p> (eigenlijk op de realtie)
+                           De entiteit moet aanwezig zijn wanneer het attribuut installatiefunctie van de entiteit
+                           Gerealiseerd installatie gelijk is aan geslotenBodemenergiesysteem.
+                           In alle andere gevallen ontbreekt de entiteit.</p>
+                        </td>
+                  </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e10768"></a><section id="detail_d52283e10768">
+            </section><a class="anchor" id="detail_d52127e10836"></a><section id="detail_d52127e10836">
             <h4>  geldigheidsduur</h4>
             
             
@@ -3145,7 +3179,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e10935"></a><section id="detail_d52283e10935">
+            </section><a class="anchor" id="detail_d52127e11003"></a><section id="detail_d52127e11003">
             <h4>  levensduur</h4>
             
             
@@ -3221,15 +3255,6 @@
                         die geboord of gegraven is onder het maaiveld bestaande uit een gesloten buizenstelsel
                         of slang waardoor een vloeistof stroomt met als doel het uitwisselen van warmte en
                         koude met de ondergrond.</p>
-                     </td>
-               </tr>
-               <tr>
-                  <th>Regels</th>
-                  <td>
-                     
-                     <p> (eigenlijk op de realtie)
-                        De entiteit moet aanwezig zijn wanneer het attribuut <em>gerealiseerd installatiefunctie</em> van de entiteit <em>Gerealiseerd installatie</em> gelijk is aan <em>geslotenBodemenergiesysteem</em>.
-                        In alle andere gevallen ontbreekt de entiteit.</p>
                      </td>
                </tr>
             </tbody>
@@ -3462,7 +3487,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e11965"></a><section id="detail_d52283e11965">
+            </section><a class="anchor" id="detail_d52127e12016"></a><section id="detail_d52127e12016">
             <h4>  geldigheidsduur</h4>
             
             
@@ -3510,7 +3535,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e12132"></a><section id="detail_d52283e12132">
+            </section><a class="anchor" id="detail_d52127e12183"></a><section id="detail_d52127e12183">
             <h4>  levensduur</h4>
             
             
@@ -3583,14 +3608,6 @@
                      <p>De kenmerken van het in werkelijkheid gerealiseerde oppervlaktelichaam voor de infiltratie
                         van water.<br clear="none">
                         </p>
-                     </td>
-               </tr>
-               <tr>
-                  <th>Regels</th>
-                  <td>
-                     
-                     <p>De entiteit mag aanwezig zijn wanneer de waarde van het attribuut <em>gerealiseerd installatiefunctie</em> van de entiteit <em>Gerealiseerd installatie</em> gelijk is aan <em>infiltratie</em> of aan <em>infiltratieEnOnttrekking.</em>
-                        De entiteit mag niet aanwezig in alle andere gevallen.</p>
                      </td>
                </tr>
                <tr>
@@ -3702,7 +3719,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e12848"></a><section id="detail_d52283e12848">
+            </section><a class="anchor" id="detail_d52127e12863"></a><section id="detail_d52127e12863">
             <h4>  geldigheidsduur</h4>
             
             
@@ -3750,7 +3767,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e13015"></a><section id="detail_d52283e13015">
+            </section><a class="anchor" id="detail_d52127e13030"></a><section id="detail_d52127e13030">
             <h4>  levensduur</h4>
             
             
@@ -3816,15 +3833,6 @@
                   <td>
                      
                      <p>De kenmerken van de put zoals in werkelijkheid aanwezig.</p>
-                     </td>
-               </tr>
-               <tr>
-                  <th>Regels</th>
-                  <td>
-                     
-                     <p>De entiteit mag niet aanwezig zijn wanneer het attribuut <em>gerealiseerd installatiefunctie</em> van de entiteit <em>Gerealiseerd installatie</em> gelijk is aan <em>geslotenBodemenergiesysteem</em>.<br clear="none">
-                        De entiteit mag ontbreken wanneer het attribuut <em>gerealiseerd installatiefunctie</em> van de entiteit <em>Gerealiseerd installatie</em> gelijk is aan <em>infiltratie</em>.<br clear="none">
-                        De entiteit moet aanwezig zijn in alle andere gevallen.</p>
                      </td>
                </tr>
                <tr>
@@ -4232,9 +4240,18 @@
                         Gerealiseerd filter
                         </td>
                   </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p>De entiteit moet aanwezig zijn wanneer het attribuut rechtstype van de entiteit Recht
+                           grondwatergebruik gelijk is aan beschikking.
+                           Het attribuut mag ontbreken in alle andere gevallen.</p>
+                        </td>
+                  </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e14625"></a><section id="detail_d52283e14625">
+            </section><a class="anchor" id="detail_d52127e14628"></a><section id="detail_d52127e14628">
             <h4>  geldigheidsduur</h4>
             
             
@@ -4281,7 +4298,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e14792"></a><section id="detail_d52283e14792">
+            </section><a class="anchor" id="detail_d52127e14795"></a><section id="detail_d52127e14795">
             <h4>  levensduur</h4>
             
             
@@ -4355,14 +4372,6 @@
                      <p>De kenmerken van het filter van de put zoals in werkelijkheid aanwezig. Het filter
                         is het deel van de put dat voorzien is van openingen waardoor het grondwater kan binnenstromen
                         of uitstromen.</p>
-                     </td>
-               </tr>
-               <tr>
-                  <th>Regels</th>
-                  <td>
-                     
-                     <p>De entiteit moet aanwezig zijn wanneer het attribuut <em>rechtstype</em> van de entiteit <em>Recht grondwatergebruik</em> gelijk is aan <em>beschikking</em>.
-                        Het attribuut mag ontbreken in alle andere gevallen</p>
                      </td>
                </tr>
                <tr>
@@ -4635,7 +4644,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e16028"></a><section id="detail_d52283e16028">
+            </section><a class="anchor" id="detail_d52127e15983"></a><section id="detail_d52127e15983">
             <h4>  geldigheidsduur</h4>
             
             
@@ -4682,7 +4691,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d52283e16195"></a><section id="detail_d52283e16195">
+            </section><a class="anchor" id="detail_d52127e16150"></a><section id="detail_d52127e16150">
             <h4>  levensduur</h4>
             
             
