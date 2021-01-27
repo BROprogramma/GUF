@@ -11,7 +11,7 @@ levensduur en historie.
 Materiële historie beschrijft de veranderingen van een object in de
 werkelijkheid. Formele historie beschrijft de historie van veranderingen van een
 object in de registratie. Analoog hieraan beschrijft de materiële levensduur het
-initïele ontstaan en vervallen van een object in de werkelijkheid, de formele
+initïele ontstaan en vervallen van een object in de werkelijkheid en de formele
 levensduur van een object in de registratie.
 
 De formele levensduur en historie worden generiek voor alle registratieobjecten
