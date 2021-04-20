@@ -15,7 +15,7 @@
    <body>
       <p>Conceptual model/Grondwatergebruik (GUF) conceptueel/20210201</p>
       <p>Imvertor: 1.64.0</p>
-      <p>Model release: Conceptualmodel-GrondwatergebruikGUFconceptueel-0.9-1-20210201-20210416-153459</p>
+      <p>Model release: Conceptualmodel-GrondwatergebruikGUFconceptueel-0.9-1-20210201-20210420-170753</p>
       <hr>
       <section>
          <h1>Artikel 1 Definitie van registratieobject, entiteiten en attributen</h1>
@@ -1133,8 +1133,7 @@
                               <th>Definitie</th>
                               <td>
                                  
-                                 <p>De tweedimensionale (2D) puntgeometrie voor de globale horizontale positie van de
-                                    <em>Ontwerpinstallatie</em>.</p>
+                                 <p>De puntgeometrie van de globale horizontale positie van de <em>Ontwerpinstallatie</em> in het tweedimensionale (2D) vlak.</p>
                                  </td>
                            </tr>
                            <tr>
@@ -1662,7 +1661,7 @@
                               <th>Definitie</th>
                               <td>
                                  
-                                 <p>De tweedimensionale (2D) punt-, lijn- of vlakgeometrie van een ontwerpbodemlus.</p>
+                                 <p>De punt-, lijn- of vlakgeometrie, in het tweedimensionale (2D) vlak, van de ontwerpbodemlus.</p>
                                  </td>
                            </tr>
                            <tr>
@@ -1881,8 +1880,8 @@
                               <th>Definitie</th>
                               <td>
                                  
-                                 <p>De tweedimensionale punt-, of lijn, of vlakgeometrie van de infiltratieplas of het
-                                    infiltratiekanaal.</p>
+                                 <p>De punt-, lijn- of vlakgeometrie, in het tweedimensionale (2D) vlak, van de infiltratieplas
+                                    of het infiltratiekanaal.</p>
                                  </td>
                            </tr>
                            <tr>
@@ -2154,7 +2153,7 @@
                               <th>Definitie</th>
                               <td>
                                  
-                                 <p>De tweedimensionale puntgeometrie van de ontwerpput.</p>
+                                 <p>De puntgeometrie, in het tweedimensionale (2D) vlak, van de ontwerpput.</p>
                                  </td>
                            </tr>
                            <tr>
@@ -3131,7 +3130,8 @@
                               <th>Definitie</th>
                               <td>
                                  
-                                 <p>De tweedimensionale (2D) punt-, lijn- of vlakgeometrie van een gerealiseerde bodemlus.</p>
+                                 <p>De punt-, lijn- of vlakgeometrie, in het tweedimensionale (2D) vlak, van de in de
+                                    werkelijkheid gerealiseerde bodemlus.</p>
                                  </td>
                            </tr>
                            <tr>
@@ -3530,8 +3530,8 @@
                               <th>Definitie</th>
                               <td>
                                  
-                                 <p>De tweedimensionale punt-, lijn- of vlakgeometrie van de infiltratieplas of het infiltratiekanaal
-                                    zoals het in de werkelijkheid is gerealiseerd.</p>
+                                 <p>De punt-, lijn- of vlakgeometrie, in het tweedimensionale (2D) vlak, van de infiltratieplas
+                                    of het infiltratiekanaal zoals het in de werkelijkheid is gerealiseerd.</p>
                                  </td>
                            </tr>
                            <tr>
@@ -3864,7 +3864,7 @@
                               <th>Definitie</th>
                               <td>
                                  
-                                 <p>De tweedimensionale puntgeometrie van de gerealiseerde put.</p>
+                                 <p>De puntgeometrie, in het tweedimensionale (2D) vlak, van de gerealiseerde put.</p>
                                  </td>
                            </tr>
                            <tr>
@@ -4551,7 +4551,7 @@
                               <th>Definitie</th>
                               <td>
                                  
-                                 <p>Geometrie van het filter in het tweedimensionale vlak.</p>
+                                 <p>De geometrie van het filter in het tweedimensionale vlak.</p>
                                  </td>
                            </tr>
                            <tr>
@@ -5485,8 +5485,9 @@
                               <th>Definitie</th>
                               <td>
                                  
-                                 <p>De locatie van een grondwatergebruiksysteem zoals getransformeerd door de basisregistratie
-                                    ondergrond, bestaand uit coördinaten in het standaard referentiestelsel.</p>
+                                 <p>De locatie van een grondwatergebruiksysteem, bestaande uit de locatie of locaties
+                                    van ontwerpinstallaties en gerealiseerde installaties, zoals getransformeerd door
+                                    de basisregistratie ondergrond. De coördinaten zijn in het standaard referentiestelsel.</p>
                                  </td>
                            </tr>
                            <tr>
@@ -6479,7 +6480,7 @@
                            <tr>
                               <th>&nbsp;&nbsp;Naam</th>
                               <td>Meetwaarde 
-                                 4.0</td>
+                                 5.0</td>
                            </tr>
                            <tr>
                               <th>&nbsp;&nbsp;Eenheid</th>
@@ -6868,7 +6869,7 @@
                            <tr>
                               <th>&nbsp;&nbsp;Naam</th>
                               <td>Meetwaarde 
-                                 4.0</td>
+                                 5.0</td>
                            </tr>
                            <tr>
                               <th>&nbsp;&nbsp;Eenheid</th>
@@ -7410,7 +7411,8 @@
                               <th>Regels</th>
                               <td>
                                  
-                                 <p>Het gegeven mag ontbreken wanneer de waarde van het attribuut <em>filtertype</em> gelijk is aan <em>horizontaal</em>
+                                 <p>Het gegeven moet aanwezig wanneer de waarde van het attribuut <em>filtertype</em> gelijk is aan <em>Verticaal.</em> 
+                                    Het gegeven mag ontbreken wanneer de waarde van het attribuut <em>filtertype</em> gelijk is aan <em>nietVerticaal.</em>
                                     </p>
                                  </td>
                            </tr>
@@ -7422,7 +7424,9 @@
                               <th>Toelichting</th>
                               <td>
                                  
-                                 <p>Het al dan niet opdelen van het filtertraject in afzonderlijke stukken wordt niet
+                                 <p>Bij een significant verschil tussen de bovenkant en de onderkant van het filtertraject,
+                                    bij een schuin filtertrajert, moet dit attribuut gevuld zijn.<br clear="none">
+                                    Het al dan niet opdelen van het filtertraject in afzonderlijke stukken wordt niet
                                     als onderdeel van de ontwerpput geregistreerd. Dit wordt normaal gesproken tijdens
                                     de realisatie bepaald omdat ten tijde van het ontwerp de exacte bodemopbouw ter plaatse
                                     nog niet bekend is.</p>
