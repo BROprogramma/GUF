@@ -1,5 +1,5 @@
-1.1. Inleiding grondwatergebruik
---------------------------------
+Inleiding grondwatergebruik
+---------------------------
 
 Grondwater is een belangrijke bestaansbron. Voor uiteenlopende doelen wordt
 actief gebruik gemaakt van grondwater. Deels richt het gebruik zich op het
@@ -73,8 +73,8 @@ De volledige scopeafbakening is beschreven in het Scopedocument Domein
 Grondwatergebruik (GU). Deze is te raadplegen op:
 <https://bro-productomgeving.nl/bpo/latest/grondwatergebruik/grondwatergebruiksysteem-guf>
 
-1.2. Domein grondwatergebruik in de BRO
----------------------------------------
+Domein grondwatergebruik in de BRO
+----------------------------------
 
 Het domein grondwatergebruik in de basisregistratie ondergrond (BRO) omvat de
 volgende twee registratieobjecten:
@@ -133,10 +133,10 @@ Een grondwaterproductiedossier en het grondwatergebruiksysteem waar dat
 grondwaterproductiedossier betrekking op heeft, vallen onder de
 verantwoordelijkheid van dezelfde bronhouder.
 
-1.3. Inleiding grondwatergebruiksysteem
----------------------------------------
+Inleiding grondwatergebruiksysteem
+----------------------------------
 
-### 1.3.1. Inleiding
+### Inleiding
 
 Een *Grondwatergebruiksysteem (GUF)* is een technisch of organisatorisch
 samenhangend systeem van tenminste één of meerdere buizen of slangen in de
@@ -152,7 +152,7 @@ stappen van het proces waarin de gegevens ontstaan. Paragraaf 1.3.3 beschrijft
 een aantal belangrijke kenmerken van de gegevens over het
 grondwatergebruiksysteem. 
 
-### 1.3.2. Het proces van gegevensverwerking
+### Het proces van gegevensverwerking
 
 Het proces waarin gegevens van grondwatergebruiksystemen in de praktijk ontstaan
 is schematisch weergegeven in de onderstaande figuur en wordt daaronder
@@ -189,7 +189,7 @@ periodiek aan het bevoegd gezag geleverd. Het bevoegd gezag levert een deel van
 deze gegevens aan de BRO aan binnen het registratieobject
 Grondwaterproductiedossier.
 
-### 1.3.3. Eigenschappen van grondwatergebruiksystemen die de gegevensinhoud van het registratieobject bepalen
+### Eigenschappen van grondwatergebruiksystemen die de gegevensinhoud van het registratieobject bepalen
 
 In het standaardisatietraject is gebleken dat grondwatergebruiksystemen een
 aantal eigenschappen hebben die sturing geven aan de gegevensinhoud van het
@@ -341,8 +341,8 @@ en dat het daarom nuttig is om ook de inwinningsmethoden op te nemen in de
 protocollen. In het registratieobject grondwatergebruiksysteem is daarom
 vooralsnog bij geen van de variabelen een kwaliteitskenmerk opgenomen.
 
-1.4. Belangrijkste entiteiten
------------------------------
+Belangrijkste entiteiten
+------------------------
 
 Een registratieobject is de belangrijkste eenheid van informatie in de
 basisregistratie ondergrond. Een registratieobject bestaat uit delen
@@ -352,7 +352,7 @@ belangrijkste entiteiten en hun eigenschappen. De expliciete definities zijn te
 vinden in de tabellen van de gegevensdefinitie in artikel 1. Als eerste wordt de
 hoofdentiteit beschreven, daarna de overige entiteiten.
 
-### 1.4.1. Grondwatergebruiksysteem
+### Grondwatergebruiksysteem
 
 Het registratieobject Grondwatergebruiksysteem bevat het geheel van gegevens van
 de constructie die is ingericht om de hulpbron grondwater direct te gebruiken
@@ -397,7 +397,7 @@ gestandaardiseerde locatie kan identiek zijn aan de aangeleverde locaties van de
 (ontwerp)installatie bij elkaar, of er een transformatie van zijn. Er is geen
 gestandaardiseerde locatie voor onderdelen van een grondwatergebruiksysteem.
 
-### 1.4.2. Recht grondwatergebruik
+### Recht grondwatergebruik
 
 Een grondwatergebruiksysteem is gebaseerd op een *Recht grondwatergebruik*. Dit
 gebruiksrecht kan een melding zijn of een beschikking. Welk van de twee het
@@ -471,7 +471,7 @@ de melding of de beschikking (wijzigingsbesluit) worden ook de veranderingen die
 betrekking hebben op de gegevensinhoud in de basisregistratie ondergrond daar
 bijgewerkt (zie paragraaf 1.5 (levensduur)).
 
-### 1.4.3. Ontwerpinstallatie
+### Ontwerpinstallatie
 
 Een installatie kenmerkt zich doordat de onderdelen van de installatie onderling
 een technische samenhang hebben. Een installatie kan een in de werkelijkheid
@@ -535,7 +535,7 @@ ondergrond geregistreerd. Er zit een verschil tussen de *Energiekenmerken* die
 voor open bodemenergiesystemen worden geregistreerd en die voor gesloten
 bodemenergiesystemen worden geregistreerd.
 
-### 1.4.4. Ontwerpbodemlus
+### Ontwerpbodemlus
 
 Een installatie van een gesloten bodemenergiesystemen bestaat uit één of
 meerdere bodemlussen. De ontwerpgegevens over de bodemlus(sen) maken onderdeel
@@ -566,7 +566,7 @@ oppervlak uitspreid die verder reikt dan 10 meter vanaf het middelpunt van de
 lus. In dat laatste geval wordt het vlak geregistreerd waarbinnen de lus zich
 bevindt.
 
-### 1.4.5. Ontwerpoppervlakte-infiltratie
+### Ontwerpoppervlakte-infiltratie
 
 Infiltratie gebeurt in sommige gevallen met behulp van putten en in sommige
 gevallen met behulp van bovengrondse oppervlaktewaterlichamen zoals
@@ -580,7 +580,7 @@ installaties met primair gebruiksdoel: openbare drinkwatervoorziening, wordt
 aangegeven of de geometrie voor alle gebruikers openbaar te raadplegen is (zie
 ook paragraaf 'De horizontale en verticale positie van systeemonderdelen').
 
-### 1.4.6. Ontwerpput
+### Ontwerpput
 
 Bij een beschikking of melding worden, in het geval het een installatie met
 putten betreft, ook ontwerpgegevens van de putten vastgelegd. Een deel van deze
@@ -671,7 +671,7 @@ opzichte van het maaiveld. Ook bij horizontale filters van een ontwerpput worden
 de individuele filterdelen bij het ontwerp niet afzonderlijk opgenomen. Bij
 meldingen is niet in alle gevallen informatie bekend van het filtertraject. 
 
-### 1.4.7. Gerealiseerde installatie
+### Gerealiseerde installatie
 
 Na vergunningverlening of verwerken van de melding wordt de installatie gebouwd.
 In de basisregistratie ondergrond worden gegevens over de gerealiseerde
@@ -687,7 +687,7 @@ gemiddelde van de coördinaten van de installatie-onderdelen of de geometrie van
 één van de installatie-onderdelen. In andere gevallen is het een specifiek
 bepaalde locatie.
 
-### 1.4.8. Gerealiseerde bodemlus
+### Gerealiseerde bodemlus
 
 Wanneer de installatiefunctie een gesloten bodemenergiesysteem is, zijn er één
 of meer *Gerealiseerde bodemlus*sen aanwezig. Ten opzichte van de
@@ -729,14 +729,14 @@ van deze gerelateerde verkenning kan een gebruiker makkelijker achterhalen wat
 bijvoorbeeld de samenstelling van de ondergrond is op de plaats van de bodemlus,
 hoe diep er geboord is of welk aanvulmateriaal er gebruikt is.
 
-### 1.4.9. Gerealiseerde oppervlakte-infiltratie
+### Gerealiseerde oppervlakte-infiltratie
 
 Veelal wijkt de locatie van de gerealiseerde infiltratieplas of het -kanaal niet
 af van de locatie zoals hij in de beschikking of de melding is opgenomen. Bij
 specifieke vergunningsvormen kan dit wel voorkomen en daarom wordt de geometrie
 ook apart bij de *Gerealiseerde oppervlakteinfiltratie* geregistreerd.
 
-### 1.4.10. Gerealiseerde put
+### Gerealiseerde put
 
 Bij open bodemenergiesystemen, grondwateronttrekking- en/of
 infiltratie-installaties en grondwateronttrekkings- en retourneringsinstallaties
@@ -763,7 +763,7 @@ eigen filter(s). Deze twee putten zijn in één boorgat aangebracht waarbij ook
 één verkenning (van hetzelfde type) heeft plaatsgevonden. Beide putten zullen
 daarom verwijzen naar dezelfde verkenning(en).
 
-### 1.4.11. Gerealiseerde filter
+### Gerealiseerde filter
 
 De geperforeerde delen waardoor het water kan instromen, bij onttrekken, en kan
 uitstromen, bij infiltreren en retourneren, zijn de filters. Een put heeft in
@@ -795,8 +795,8 @@ het filter niet op dezelfde locatie in het platte vlak ligt als de put. Bij
 voorkeur wordt ook een schuin geboord filter als lijngeometrie geregistreerd
 waarbij de lijn de projectie van het filter in het platte vlak representeert.
 
-1.5. Levensduur en historie
----------------------------
+Levensduur en historie
+----------------------
 
 In het stelsel van basisregistraties geldt bij het modelleren van levensduur en
 historie een onderscheid in materiële levensduur en historie en formele
@@ -905,8 +905,8 @@ met het ontwerp. Op een later moment ontstaan de gerealiseerde objecten. De
 gerealiseerde objecten kunnen nieuwe voorkomens krijgen gedurende de
 levensduur.*
 
-1.6. Impact kwaliteitsregime IMBRO/A
-------------------------------------
+Impact kwaliteitsregime IMBRO/A
+-------------------------------
 
 De wijze waarop grondwatergebruiksgegevens nu worden geregistreerd en beheerd
 wijkt op een aantal aspecten af van de IMBRO gegevensinhoud. Bij de aanlevering
@@ -953,8 +953,8 @@ worden naar een grondwatergebruiksysteem dat in de basisregistratie ondergrond
 is geregistreerd. Het maakt daarbij niet uit of het grondwatergebruiksysteem
 waarnaar verwezen wordt kwaliteitsregime IMBRO of IMBRO/A heeft.
 
-1.7. INSPIRE
-------------
+INSPIRE
+-------
 
 Het doel van de Europese kaderrichtlijn INSPIRE is het harmoniseren en openbaar
 maken van ruimtelijke gegevens van overheidsorganisaties ten behoeve van het
@@ -975,8 +975,8 @@ codelijst en kan dus niet worden aangevuld met bodemenergie. Dit betekent dat de
 gegevens over bodemenergiesystemen niet geharmoniseerd naar het INSPIRE
 datamodel kunnen worden ontsloten.
 
-1.8. Bijlage: Voorbeelden materiële historie
---------------------------------------------
+Bijlage: Voorbeelden materiële historie
+---------------------------------------
 
 Op 01-01-2021 wordt een vergunning voor grondwaterontrekking verleend met
 ingangsdatum 01-02-2021 is. In de vergunning is geen einddatum opgenomen. De
