@@ -71,7 +71,7 @@ het gebied op de Noordzee waar Nederland economische rechten heeft.
 
 De volledige scopeafbakening is beschreven in het Scopedocument Domein
 Grondwatergebruik (GU). Deze is te raadplegen op:
-<https://bro-productomgeving.nl/bpo/latest/grondwatergebruik/grondwatergebruiksysteem-guf>
+https://bro-productomgeving.nl/bpo/latest/grondwatergebruik/grondwatergebruiksysteem-guf
 
 Domein grondwatergebruik in de BRO
 ----------------------------------
