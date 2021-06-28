@@ -1,8 +1,8 @@
 var respecConfig = {
-  specStatus: "GN-WV",
+  specStatus: "GN-VV",
   specType: "IM",
   //canonicalURI: "WV",
- // publishDate: "2021-06-04",
+  publishDate: "2021-06-28",
   maxTocLevel: 3,
   editors: [
     {
