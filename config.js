@@ -1,8 +1,8 @@
 var respecConfig = {
-  specStatus: "GN-VV",
+  specStatus: "GN-WV",
   specType: "IM",
   //canonicalURI: "WV",
-  publishDate: "2021-06-28",
+//  publishDate: "2021-06-28",
   maxTocLevel: 3,
   editors: [
     {
@@ -17,7 +17,7 @@ var respecConfig = {
   shortName: "guf",
   pubDomain: "bro",
   github: "https://github.com/BROprogramma/GUF",
-  previousPublishDate: "2021-06-04",
+  previousPublishDate: "2021-06-28",
  previousStatus: "GN-VV",
   //localBiblio: {
   //  "ISO19136": {
