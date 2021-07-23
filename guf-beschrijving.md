@@ -101,19 +101,10 @@ afkortingen en verder de Nederlandstalige termen gebruiken.
 -   Grondwaterproductiedossier wordt afgekort tot GPD (Groundwater Production
     Dossier).
 
-![](media/39964ae4bf6d301a85a027ff152809ae.png)
-
-Figuur 1 De mogelijke samenhang tussen de twee registratieobjecten
-grondwatergebruiksysteem en grondwaterproductiedossier binnen het domein
-grondwatergebruik. Onder het IMBRO-regime heeft de inhoud van het
-Grondwaterproductiedossier voornamelijk betrekking op het installatie-niveau
-onder GUF. Onder het IMBRO/A-regime hebben deze gegevens voornamelijk betrekking
-op het Grondwatergebruiksysteem onder GUF. In het figuur is met dunne lijnen
-aangegeven dat onder het IMBRO-regime een klein deel van de inhoud van het
-Grondwaterproductiedossier betrekking zal hebben op het
-grondwatergebruiksysteem-niveau van GUF. Een klein deel van inhoud van de
-Grondwaterproductiedossiers onder het IMBRO/A-regime zal betrekking hebben op
-het installatie-niveau van GUF.
+<figure id='image002'>
+  <img src="./media/39964ae4bf6d301a85a027ff152809ae.png" alt="samenhangDomein" width="600"/>
+  <figcaption>De mogelijke samenhang tussen de twee registratieobjecten grondwatergebruiksysteem en grondwaterproductiedossier binnen het domein grondwatergebruik. Onder het IMBRO-regime heeft de inhoud van het Grondwaterproductiedossier voornamelijk betrekking op het installatie-niveau onder GUF. Onder het IMBRO/A-regime hebben deze gegevens voornamelijk betrekking op het Grondwatergebruiksysteem onder GUF. In het figuur is met dunne lijnen aangegeven dat onder het IMBRO-regime een klein deel van de inhoud van het Grondwaterproductiedossier betrekking zal hebben op het grondwatergebruiksysteem-niveau van GUF. Een klein deel van inhoud van de Grondwaterproductiedossiers onder het IMBRO/A-regime zal betrekking hebben op het installatie-niveau van GUF.</figcaption>
+</figure>
 
 Een grondwatergebruiksysteem betreft de constructie die gebruikt wordt om
 grondwater te onttrekken aan, en te brengen in de ondergrond. Ook zijn systemen
@@ -150,8 +141,8 @@ ondergrond en het grondwater daarbinnen in het geval van bodemenergiesystemen.
 De registratie van deze systemen moet de vraag beantwoorden hoe, waar, waartoe
 en met welke capaciteit gebruik wordt gemaakt van grondwater. De in de BRO te
 registreren informatie van de grondwatergebruiksystemen ontstaat in het
-werkproces van de bevoegde gezagen. Paragraaf 1.3.2 beschrijft de opeenvolgende
-stappen van het proces waarin de gegevens ontstaan. Paragraaf 1.3.3 beschrijft
+werkproces van de bevoegde gezagen. Paragraaf 3.3.2 beschrijft de opeenvolgende
+stappen van het proces waarin de gegevens ontstaan. Paragraaf 3.3.3 beschrijft
 een aantal belangrijke kenmerken van de gegevens over het
 grondwatergebruiksysteem. 
 
@@ -161,11 +152,12 @@ Het proces waarin gegevens van grondwatergebruiksystemen in de praktijk ontstaan
 is schematisch weergegeven in de onderstaande figuur en wordt daaronder
 beschreven. 
 
-![](media/7eabe4932ceecaa8fdba234d0662535d.png)
-
-Figuur 2: Het totstandkomingsproces van gegevens voor de registratieobjecten
+<figure id='image003'>
+  <img src="./media/7eabe4932ceecaa8fdba234d0662535d.png" alt="proces" width="600"/>
+  <figcaption>Het totstandkomingsproces van gegevens voor de registratieobjecten
 Grondwatergebruiksysteem (beige pijlen) en Grondwaterproductiedossier (rode
-pijlen) en de daarbij betrokken actoren.
+pijlen) en de daarbij betrokken actoren.</figcaption>
+</figure>
 
 Ontwerpen van nieuw aan te leggen grondwatergebruiksystemen worden door
 initiatiefnemers middels een vergunningaanvraag of melding aan het bevoegd gezag
