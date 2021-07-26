@@ -103,7 +103,15 @@ afkortingen en verder de Nederlandstalige termen gebruiken.
 
 <figure id='image002'>
   <img src="./media/39964ae4bf6d301a85a027ff152809ae.png" alt="samenhangDomein" width="600"/>
-  <figcaption>De mogelijke samenhang tussen de twee registratieobjecten grondwatergebruiksysteem en grondwaterproductiedossier binnen het domein grondwatergebruik. Onder het IMBRO-regime heeft de inhoud van het Grondwaterproductiedossier voornamelijk betrekking op het installatie-niveau onder GUF. Onder het IMBRO/A-regime hebben deze gegevens voornamelijk betrekking op het Grondwatergebruiksysteem onder GUF. In het figuur is met dunne lijnen aangegeven dat onder het IMBRO-regime een klein deel van de inhoud van het Grondwaterproductiedossier betrekking zal hebben op het grondwatergebruiksysteem-niveau van GUF. Een klein deel van inhoud van de Grondwaterproductiedossiers onder het IMBRO/A-regime zal betrekking hebben op het installatie-niveau van GUF.</figcaption>
+  <figcaption>De mogelijke samenhang tussen de twee registratieobjecten grondwatergebruiksysteem en 
+      grondwaterproductiedossier binnen het domein grondwatergebruik. Onder het IMBRO-regime heeft de 
+      inhoud van het Grondwaterproductiedossier voornamelijk betrekking op het installatie-niveau onder GUF. 
+      Onder het IMBRO/A-regime hebben deze gegevens voornamelijk betrekking op het 
+      Grondwatergebruiksysteem onder GUF. In het figuur is met dunne lijnen aangegeven 
+      dat onder het IMBRO-regime een klein deel van de inhoud van het Grondwaterproductiedossier 
+      betrekking zal hebben op het grondwatergebruiksysteem-niveau van GUF. Een klein deel van inhoud 
+      van de Grondwaterproductiedossiers onder het IMBRO/A-regime zal betrekking hebben op het 
+      installatie-niveau van GUF.</figcaption>
 </figure>
 
 Een grondwatergebruiksysteem betreft de constructie die gebruikt wordt om
@@ -217,7 +225,9 @@ verder op in gegaan.
 
 <figure id='image004'>
   <img src="./media/b96f50061a6ce02dd914dff7bc0068f9.png" alt="systeemonderdelen" width="600"/>
-  <figcaption>Schematisch overzicht van mogelijke variaties van systeemonderdelen binnen drie verschillende grondwatergebruiksystemen. In dit schema is de put met filters uitgewerkt. Dit zou ook een bodemlus kunnen zijn en ook oppervlakte-infiltraties maken onderdeel uit van eenvoudige of complexere systemen.</figcaption>
+  <figcaption>Schematisch overzicht van mogelijke variaties van systeemonderdelen binnen drie verschillende grondwatergebruiksystemen. 
+  In dit schema is de put met filters uitgewerkt. Dit zou ook een bodemlus kunnen zijn en ook oppervlakte-infiltraties maken onderdeel 
+  uit van eenvoudige of complexere systemen.</figcaption>
 </figure>
 
 #### De geometrie en verticale kenmerken van systeemonderdelen
@@ -276,8 +286,7 @@ beperkte groep (door bronhouders aan te wijzen) gebruikers uitgeleverd worden.
 Voor de overige gebruikers is alleen de geometrie van de installatie te
 raadplegen.
 
-#### De technische specificaties van te onttrekken en te infiltreren hoeveelheden
-water en energie
+#### De technische specificaties van te onttrekken en te infiltreren hoeveelheden water en energie
 
 Per locatie dient helder te zijn hoeveel water en energie maximaal verpompt mag
 en kan worden. Aandacht voor de registratie van deze hoeveelheden op het juiste
@@ -465,7 +474,21 @@ bijgewerkt (zie paragraaf 3.5 (levensduur)).
 
 ### Ontwerpinstallatie
 
-Een installatie kenmerkt zich doordat de onderdelen van de installatie onderling een technische samenhang hebben en doordat gezamenlijk over de onderdelen wordt gerapporteerd. Een installatie kan een in de werkelijkheid bestaand fysiek object zijn, maar het kan ook een abstracte eenheid zijn. Een oppervlakte-infiltratielichaam met daaromheen bijbehorende onttrekkingsputten kan gelden als een installatie. In andere gevallen vormt een groep geschakelde oppervlakte-infiltraties een installatie. Bij een gesloten bodemenergiesysteem bijvoorbeeld, bestaat de installatie soms uit één, en in andere gevallen uit een groep van bij elkaar horende bodemlussen. In al deze voorbeelden is er sprake van een onderlinge technische samenhang tussen de verschillende objecten die onderdeel uitmaken van de installatie. In de beschikking is veelal opgenomen over welke (groep van) systeemonderdelen de onttrekkings- en infiltratiecijfers gerapporteerd moeten worden. Omdat deze productiecijfers in de basisregistratieondergrond gekoppeld worden op het niveau van de installatie, of eventueel op het niveau van het grondwatergebruiksysteem, is de eenheid waarover gerapporteerd moet worden, mede bepalend bij de indeling van de systeemonderdelen in installaties.
+Een installatie kenmerkt zich doordat de onderdelen van de installatie onderling een 
+technische samenhang hebben en doordat gezamenlijk over de onderdelen wordt gerapporteerd. 
+Een installatie kan een in de werkelijkheid bestaand fysiek object zijn, maar het kan ook 
+een abstracte eenheid zijn. Een oppervlakte-infiltratielichaam met daaromheen bijbehorende 
+onttrekkingsputten kan gelden als een installatie. In andere gevallen vormt een groep 
+geschakelde oppervlakte-infiltraties een installatie. Bij een gesloten bodemenergiesysteem 
+bijvoorbeeld, bestaat de installatie soms uit één, en in andere gevallen uit een groep 
+van bij elkaar horende bodemlussen. In al deze voorbeelden is er sprake van een 
+onderlinge technische samenhang tussen de verschillende objecten die onderdeel 
+uitmaken van de installatie. In de beschikking is veelal opgenomen over welke 
+(groep van) systeemonderdelen de onttrekkings- en infiltratiecijfers gerapporteerd 
+moeten worden. Omdat deze productiecijfers in de basisregistratieondergrond gekoppeld 
+worden op het niveau van de installatie, of eventueel op het niveau van het 
+grondwatergebruiksysteem, is de eenheid waarover gerapporteerd moet worden, 
+mede bepalend bij de indeling van de systeemonderdelen in installaties.
 
 Onderdeel van de beschikking of de melding zijn gegevens over de ontworpen
 installatie(s). Een deel van deze gegevens over de ontwerpinstallatie(s) wordt
@@ -639,11 +662,12 @@ twee putten, op dezelfde locatie, waarbij elke put haar eigen filter(s) en
 filterdiepte heeft. De twee putten van een monobron maken onderdeel uit van één
 installatie.
 
-![](media/8d86e0fba46bcca4f7360431219e6c8e.png)
-
-Figuur 5: Schematische weergave van de uitvoeringsvorm (monobron en doublet) en
-het werkingsprincipe (warmte- en koudeopslagsysteem en recirculatiesysteem) van
-open bodemenergiesystemen. 
+<figure id='image006'>
+  <img src="./media/8d86e0fba46bcca4f7360431219e6c8e.png" alt="openBodemenergiesystemen" width="600"/>
+  <figcaption>Schematische weergave van de uitvoeringsvorm (monobron en doublet) en
+  het werkingsprincipe (warmte- en koudeopslagsysteem en recirculatiesysteem) van
+  open bodemenergiesystemen.</figcaption>
+</figure>
 
 Bij het ontwerp worden niet alle afzonderlijke filterdelen geregistreerd. In de
 beschikking of melding wordt dit vaak niet gespecificeerd omdat ten tijde van
@@ -689,7 +713,7 @@ historische gegevens is in sommige gevallen de geometrie van de individuele
 bodemlussen niet bekend en vertegenwoordigt een geometrie een groep van
 bodemlussen. Voor de historische gegevens wordt daarom geregistreerd of 'het
 object bodemlus' wel of niet een *groep van lussen* betreft (zie ook hoofdstuk
-1.6 over IMBRO/A).
+3.6 over IMBRO/A).
 
 Van de gerealiseerde bodemlus wordt de *einddiepte* geregistreerd. Dit is het
 diepste punt dat de bodemlus in de ondergrond bereikt ten opzichte van het
@@ -792,7 +816,7 @@ van een object in de registratie van de BRO plaats vindt. De formele historie
 beschrijft de momenten die altijd tussen het begin en het einde van de formele
 levensduur liggen, of daarmee overlappen. De formele levensduur en historie
 worden in de BRO generiek voor alle registratieobjecten middels de gegevensgroep
-Registratiegeschiedenis vastgelegd. Zie Artikel 1, paragraaf 3.13.
+Registratiegeschiedenis vastgelegd. Zie paragraaf 5.3.13.
 
 De **materiële levensduur** beschrijft het initiële ontstaan en het vervallen
 van een object in de werkelijkheid. Een object is bijvoorbeeld een
@@ -820,7 +844,7 @@ bodemlus) is de datum waarop het object is gerealiseerd ofwel ingericht; de
 eindtijd de datum waarop het gerealiseerde object definitief buiten gebruik is
 gesteld, of is gesloopt. De eindtijd is leeg wanneer het object nog niet is
 vervallen (bij ontwerpobjecten) of nog niet buiten gebruik is gesteld of is
-gesloopt (bij gerealiseerde objecten). Zie ook de voorbeelden in de bijlage.
+gesloopt (bij gerealiseerde objecten). Zie ook de voorbeelden in hoofdstuk 7, bijlage.
 
 De **materiële historie** beschrijft veranderingen van een object gedurende de
 levensduur van het object in de werkelijkheid. De datums van deze veranderingen
@@ -880,13 +904,14 @@ middel van een datum eindGeldigheid.
 
 In de bijlage is een aantal voorbeelden opgenomen van de levenscyclus.
 
-![](media/6e86f385b83cb076071aa315476da261.tmp)
-
-Figuur 6: Schematisch voorbeeld van de *levenscyclus van objecten binnen het
-grondwatergebruiksysteem: Als eerste ontstaat het recht grondwatergebruik, samen
-met het ontwerp. Op een later moment ontstaan de gerealiseerde objecten. De
-gerealiseerde objecten kunnen nieuwe voorkomens krijgen gedurende de
-levensduur.*
+<figure id='image007'>
+  <img src="./media/6e86f385b83cb076071aa315476da261.tmp" alt="levenscyclus" width="600"/>
+  <figcaption>Schematisch voorbeeld van de levenscyclus van objecten binnen het
+  grondwatergebruiksysteem: Als eerste ontstaat het recht grondwatergebruik, samen
+  met het ontwerp. Op een later moment ontstaan de gerealiseerde objecten. De
+  gerealiseerde objecten kunnen nieuwe voorkomens krijgen gedurende de
+  levensduur.</figcaption>
+</figure>
 
 Impact kwaliteitsregime IMBRO/A
 -------------------------------
