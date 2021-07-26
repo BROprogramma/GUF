@@ -190,10 +190,9 @@ In het standaardisatietraject is gebleken dat grondwatergebruiksystemen een
 aantal eigenschappen hebben die sturing geven aan de gegevensinhoud van het
 registratieobject grondwatergebruiksysteem. Hieronder zijn de belangrijkste
 sturende kenmerken kort toegelicht. In de beschrijving van de gegevensinhoud
-(paragraaf 1.4) wordt per entiteit een nadere, specifieke toelichting gegeven.
+(paragraaf 3.4) wordt per entiteit een nadere, specifieke toelichting gegeven.
 
-**Onderscheid en samenhang tussen ontwerpgegevens enerzijds en
-realisatie-gegevens anderzijds**
+#### Onderscheid en samenhang tussen ontwerpgegevens enerzijds en realisatie-gegevens anderzijds
 
 Het is belangrijk te weten waar grondwater precies wordt onttrokken. Deze vraag
 kan bij benadering met behulp van de ontwerpgegevens worden beantwoord. Van
@@ -202,7 +201,7 @@ nuttig om ook realisatie-gegevens vast te leggen, omdat de uitvoering af kan
 wijken van het ontwerp én omdat bijvoorbeeld de exacte filterdiepte pas tijdens
 de realisatie wordt bepaald. 
 
-**De hiërarchie en kardinaliteit van registratieonderdelen**
+#### De hiërarchie en kardinaliteit van registratieonderdelen
 
 De praktijk laat een veelheid aan uitvoeringsmogelijkheden van
 grondwatergebruiksystemen zien. Sommige beschikkingen of meldingen zijn heel
@@ -213,7 +212,7 @@ installaties horen en die op hun beurt, als gevolg van technische of
 organisatorische samenhang, tot één beschikking of melding behoren. Deze
 complexiteit is met diverse bevoegd gezagen en andere relevante stakeholders
 uitgebreid besproken en in het gegevensmodel eenduidig vastgelegd. Figuur 3 laat
-schematisch een aantal verschillende situaties zien. In paragraaf 1.4 wordt hier
+schematisch een aantal verschillende situaties zien. In paragraaf 3.4 wordt hier
 verder op in gegaan.
 
 ![](media/b96f50061a6ce02dd914dff7bc0068f9.png)
@@ -224,7 +223,7 @@ filters uitgewerkt. Dit zou ook een bodemlus kunnen zijn en ook
 oppervlakte-infiltraties maken onderdeel uit van eenvoudige of complexere
 systemen.
 
-**De geometrie en verticale kenmerken van systeemonderdelen**
+#### De geometrie en verticale kenmerken van systeemonderdelen
 
 Om het effect van het grondwatergebruiksysteem op het grondwater te kunnen
 bepalen is een goede registratie van de plaats waar (de essentiële onderdelen
@@ -261,7 +260,7 @@ bij de realisatiegegevens *wel* geregistreerd. Figuur 4 laat zien hoe de
 geometrie en verticale kenmerken (hoogte/diepte) van verschillende
 systeemonderdelen van de grondwatergebruiksystemen worden geregistreerd. Dit
 wordt per entiteit nader toegelicht bij de toelichting op de gegevensinhoud
-(paragraaf 1.4)
+(paragraaf 3.4)
 
 ![](media/ed7ceed437987f4876c78fba6b35b7ce.png)
 
@@ -279,8 +278,8 @@ beperkte groep (door bronhouders aan te wijzen) gebruikers uitgeleverd worden.
 Voor de overige gebruikers is alleen de geometrie van de installatie te
 raadplegen.
 
-**De technische specificaties van te onttrekken en te infiltreren hoeveelheden
-water en energie**
+#### De technische specificaties van te onttrekken en te infiltreren hoeveelheden
+water en energie
 
 Per locatie dient helder te zijn hoeveel water en energie maximaal verpompt mag
 en kan worden. Aandacht voor de registratie van deze hoeveelheden op het juiste
@@ -290,7 +289,7 @@ eenheid wordt gebruikt. Het gegevensmodel houdt zoveel mogelijk rekening met
 deze specifieke eigenschappen van systeemonderdelen en met de praktijk van
 vergunningverlening. 
 
-**De termen infiltreren, retourneren en lozen**
+#### De termen infiltreren, retourneren en lozen
 
 Voor het in de bodem brengen van water wordt in de basisregistratie ondergrond
 onderscheid gemaakt tussen de termen infiltreren, retourneren en lozen waarbij
@@ -314,7 +313,7 @@ teruggebracht in de bodem: geretourneerd. Bij bronbemalingen is in sommige
 gevallen sprake van retourbemaling. Ook in dat voorbeeld wordt eerst grondwater
 onttrokken en vervolgens geretourneerd.
 
-**De kwaliteit en nauwkeurigheid van de geregistreerde gegevens**
+#### De kwaliteit en nauwkeurigheid van de geregistreerde gegevens
 
 Bij het gebruik van de BRO-gegevens moet de gebruiker kunnen vertrouwen op de
 geregistreerde gegevens. Dat roept de vraag op wat de kwaliteit en de
@@ -344,7 +343,7 @@ basisregistratie ondergrond. Een registratieobject bestaat uit delen
 (entiteiten), en de delen hebben eigenschappen (attributen). In deze paragraaf
 wordt een beschrijvende toelichting geven op de gegevensinhoud van de
 belangrijkste entiteiten en hun eigenschappen. De expliciete definities zijn te
-vinden in de tabellen van de gegevensdefinitie in artikel 1. Als eerste wordt de
+vinden in de tabellen van de gegevensdefinitie in  hoofdstuk 5. Als eerste wordt de
 hoofdentiteit beschreven, daarna de overige entiteiten.
 
 ### Grondwatergebruiksysteem
@@ -461,7 +460,7 @@ registratieobject grondwaterproductiedossier (GPD).
 
 De gegevens over het gebruiksrecht worden na afhandeling en goedkeuring van de
 melding, respectievelijk de vergunningaanvraag, geregistreerd in de
-basisregistratie ondergrond (zie figuur 2 (processchema)). Bij een wijziging van
+basisregistratie ondergrond (zie figuur 3 (processchema)). Bij een wijziging van
 de melding of de beschikking (wijzigingsbesluit) worden ook de veranderingen die
 betrekking hebben op de gegevensinhoud in de basisregistratie ondergrond daar
 bijgewerkt (zie paragraaf 1.5 (levensduur)).
