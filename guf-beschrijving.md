@@ -249,8 +249,7 @@ als de diepte ten opzichte van het maaiveld. Omdat de maaiveldhoogte niet altijd
 nauwkeurig vast te stellen is, zou het de voorkeur hebben om de diepte aan het
 referentieniveau NAP te refereren. Ten tijde van het opstellen van deze versie
 van de catalogus is dat (nog) niet gebruikelijk in het werkveld, het wordt niet
-vermeld in de gebruikte protocollen (zie ook de paragraaf 'De kwaliteit en
-nauwkeurigheid van de geregistreerde gegevens").
+vermeld in de gebruikte protocollen (zie ook paragraaf 3.3.3.6).
 
 De geometrie en de verticale kenmerken van de put met bijbehorende filters,
 oppervlakte-infiltratie en bodemlus zijn van belang om de grondwatereffecten te
@@ -584,7 +583,7 @@ vlak- of lijngeometrie op te nemen waarbij een vlakgeometrie gebruikt wordt voor
 een infiltratieplas een lijngeometrie voor een infiltratiekanaal. Bij
 installaties met primair gebruiksdoel: openbare drinkwatervoorziening, wordt
 aangegeven of de geometrie voor alle gebruikers openbaar te raadplegen is (zie
-ook paragraaf 3.3.3.3.).
+ook paragraaf 3.3.3.3).
 
 ### Ontwerpput
 
