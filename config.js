@@ -2,7 +2,7 @@ var respecConfig = {
   specStatus: "GN-VV",
   specType: "IM",
   //canonicalURI: "WV",
-//  publishDate: "2021-06-23",
+  publishDate: "2021-06-23",
  maxTocLevel: 4,
 logos: [
   {
