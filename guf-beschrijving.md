@@ -262,7 +262,7 @@ ontwerp) en de begin- en einddiepte per filter (bij realisatie) van belang. Bij
 ontwerpputten met één of meer horizontale filters is gekozen om, net als bij
 putten met verticale filters, *geen* geometrie van de filters te
 registreren*.* De geometrie van deze niet-verticale, individuele filters wordt
-bij de realisatiegegevens *wel* geregistreerd. Figuur 4 laat zien hoe de
+bij de realisatiegegevens *wel* geregistreerd. Figuur 5 laat zien hoe de
 geometrie en verticale kenmerken (hoogte/diepte) van verschillende
 systeemonderdelen van de grondwatergebruiksystemen worden geregistreerd. Dit
 wordt per entiteit nader toegelicht bij de toelichting op de gegevensinhoud
