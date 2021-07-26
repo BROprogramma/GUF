@@ -1,5 +1,8 @@
+Grondwatergebruiksysteem
+===================
+
 Inleiding grondwatergebruik
----------------------------
+----------------------------------
 
 Grondwater is een belangrijke bestaansbron. Voor uiteenlopende doelen wordt
 actief gebruik gemaakt van grondwater. Deels richt het gebruik zich op het
@@ -98,19 +101,10 @@ afkortingen en verder de Nederlandstalige termen gebruiken.
 -   Grondwaterproductiedossier wordt afgekort tot GPD (Groundwater Production
     Dossier).
 
-![](media/39964ae4bf6d301a85a027ff152809ae.png)
-
-Figuur 1 De mogelijke samenhang tussen de twee registratieobjecten
-grondwatergebruiksysteem en grondwaterproductiedossier binnen het domein
-grondwatergebruik. Onder het IMBRO-regime heeft de inhoud van het
-Grondwaterproductiedossier voornamelijk betrekking op het installatie-niveau
-onder GUF. Onder het IMBRO/A-regime hebben deze gegevens voornamelijk betrekking
-op het Grondwatergebruiksysteem onder GUF. In het figuur is met dunne lijnen
-aangegeven dat onder het IMBRO-regime een klein deel van de inhoud van het
-Grondwaterproductiedossier betrekking zal hebben op het
-grondwatergebruiksysteem-niveau van GUF. Een klein deel van inhoud van de
-Grondwaterproductiedossiers onder het IMBRO/A-regime zal betrekking hebben op
-het installatie-niveau van GUF.
+<figure id='image002'>
+  <img src="./media/39964ae4bf6d301a85a027ff152809ae.png" alt="samenhangDomein" width="600"/>
+  <figcaption>De mogelijke samenhang tussen de twee registratieobjecten grondwatergebruiksysteem en grondwaterproductiedossier binnen het domein grondwatergebruik. Onder het IMBRO-regime heeft de inhoud van het Grondwaterproductiedossier voornamelijk betrekking op het installatie-niveau onder GUF. Onder het IMBRO/A-regime hebben deze gegevens voornamelijk betrekking op het Grondwatergebruiksysteem onder GUF. In het figuur is met dunne lijnen aangegeven dat onder het IMBRO-regime een klein deel van de inhoud van het Grondwaterproductiedossier betrekking zal hebben op het grondwatergebruiksysteem-niveau van GUF. Een klein deel van inhoud van de Grondwaterproductiedossiers onder het IMBRO/A-regime zal betrekking hebben op het installatie-niveau van GUF.</figcaption>
+</figure>
 
 Een grondwatergebruiksysteem betreft de constructie die gebruikt wordt om
 grondwater te onttrekken aan, en te brengen in de ondergrond. Ook zijn systemen
@@ -147,8 +141,8 @@ ondergrond en het grondwater daarbinnen in het geval van bodemenergiesystemen.
 De registratie van deze systemen moet de vraag beantwoorden hoe, waar, waartoe
 en met welke capaciteit gebruik wordt gemaakt van grondwater. De in de BRO te
 registreren informatie van de grondwatergebruiksystemen ontstaat in het
-werkproces van de bevoegde gezagen. Paragraaf 1.3.2 beschrijft de opeenvolgende
-stappen van het proces waarin de gegevens ontstaan. Paragraaf 1.3.3 beschrijft
+werkproces van de bevoegde gezagen. Paragraaf 3.3.2 beschrijft de opeenvolgende
+stappen van het proces waarin de gegevens ontstaan. Paragraaf 3.3.3 beschrijft
 een aantal belangrijke kenmerken van de gegevens over het
 grondwatergebruiksysteem. 
 
@@ -158,11 +152,12 @@ Het proces waarin gegevens van grondwatergebruiksystemen in de praktijk ontstaan
 is schematisch weergegeven in de onderstaande figuur en wordt daaronder
 beschreven. 
 
-![](media/7eabe4932ceecaa8fdba234d0662535d.png)
-
-Figuur 2: Het totstandkomingsproces van gegevens voor de registratieobjecten
+<figure id='image003'>
+  <img src="./media/7eabe4932ceecaa8fdba234d0662535d.png" alt="proces" width="600"/>
+  <figcaption>Het totstandkomingsproces van gegevens voor de registratieobjecten
 Grondwatergebruiksysteem (beige pijlen) en Grondwaterproductiedossier (rode
-pijlen) en de daarbij betrokken actoren.
+pijlen) en de daarbij betrokken actoren.</figcaption>
+</figure>
 
 Ontwerpen van nieuw aan te leggen grondwatergebruiksystemen worden door
 initiatiefnemers middels een vergunningaanvraag of melding aan het bevoegd gezag
@@ -974,129 +969,3 @@ als specifieke duurzame energiebron opgenomen. Dit is een niet-uitbreidbare
 codelijst en kan dus niet worden aangevuld met bodemenergie. Dit betekent dat de
 gegevens over bodemenergiesystemen niet geharmoniseerd naar het INSPIRE
 datamodel kunnen worden ontsloten.
-
-Bijlage: Voorbeelden materiële historie
----------------------------------------
-
-Op 01-01-2021 wordt een vergunning voor grondwaterontrekking verleend met
-ingangsdatum 01-02-2021 is. In de vergunning is geen einddatum opgenomen. De
-grondwaterontrekking bestaat uit een installatie met 1 grondwaterontrekkingsput.
-In de LV BRO worden de volgende objecten opgevoerd.
-
-| **Object**               | **ID** | **Voorkomen** | **beginTijd** | **eindTijd** | **Begin Geldigheid** | **Eind Geldigheid** |
-|--------------------------|--------|---------------|---------------|--------------|----------------------|---------------------|
-| Grondwatergebruiksysteem | 001    | 1             | 01-02-2021    | «leeg»       | 01-02-2021           | «leeg»              |
-| Recht grondwatergebruik  | 101    | 1             | 01-02-2021    | «leeg»       | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie       | 201    | 1             | 01-02-2021    | «leeg»       | n.v.t.               | n.v.t.              |
-| Ontwerpput               | 301    | 1             | 01-02-2021    | «leeg»       | n.v.t.               | n.v.t.              |
-
-Per 01-03-2021 wordt een wijzigingsvergunning verleend waarbij de maximale
-putcapaciteit van de ontwerpinstallatie is verhoogd. In de BRO wordt bij het
-Grondwatergebruiksysteem een nieuw Recht grondwatergebruik geregistreerd, en een
-nieuwe ontwerpinstallatie en ontwerpput. De vorige installatie en put krijgen
-een eindtijd. Het vorige Recht grondwatergebruik krijgt geen eindtijd omdat een
-deel van de gegevens van de vorige vergunning nog geldig zijn.
-
-| **Object**                   | **ID**  | **Voorkomen** | **beginTijd**  | **eindTijd** | **Begin Geldigheid** | **Eind Geldigheid** |
-|------------------------------|---------|---------------|----------------|--------------|----------------------|---------------------|
-| Grondwatergebruiksysteem     | 001     | 1             | 01-02-2021     | «leeg»       | 01-02-2021           | 01-03-2021          |
-| **Grondwatergebruiksysteem** | **001** | **2**         | **01-02-2021** | **«leeg»**   | **01-03-2021**       | **«leeg»**          |
-| Recht grondwatergebruik      | 101     | 1             | 01-02-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| **Recht grondwatergebruik**  | **102** | **1**         | **01-03-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
-| Ontwerpinstallatie           | 201     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| **Ontwerpinstallatie**       | **202** | **1**         | **01-03-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
-| Ontwerpput                   | 301     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| **Ontwerpput**               | **302** | **1**         | **01-03-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
-
-Per 01-06-2021 is de put gerealiseerd. In de BRO wordt een gerealiseerde
-installatie en gerealiseerde put opgenomen. De gerealiseerde installatie en put
-worden toegevoegd aan het Grondwatergebruiksysteem dat een nieuw voorkomen
-krijgt.
-
-| **Object**                    | **ID**  | **Voorkomen** | **beginTijd**  | **eindTijd** | **Begin Geldigheid** | **Eind Geldigheid** |
-|-------------------------------|---------|---------------|----------------|--------------|----------------------|---------------------|
-| Grondwatergebruiksysteem      | 001     | 1             | 01-02-2021     | «leeg»       | 01-02-2021           | 01-03-2021          |
-| Grondwatergebruiksysteem      | 001     | 2             | 01-02-2021     | «leeg»       | 01-03-2021           | 01-06-2021          |
-| **Grondwatergebruiksysteem**  | **001** | **3**         | **01-02-2021** | **«leeg»**   | **01-06-2021**       | **«leeg»**          |
-| Recht grondwatergebruik       | 101     | 1             | 01-02-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Recht grondwatergebruik       | 102     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 201     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 202     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 301     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 302     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| **Gerealiseerde installatie** | **401** | **1**         | **01-06-2021** | **«leeg»**   | **01-06-2021**       | **«leeg»**          |
-| **Gerealiseerde put**         | **501** | **1**         | **01-06-2021** | **«leeg»**   | **01-06-2021**       | **«leeg»**          |
-
-Per 01-09-2021 wordt een wijzigingsvergunning verleend voor het toevoegen van
-een extra put aan de installatie. De wijzigingsvergunning wordt toegevoegd aan
-het grondwatergebruikssysteem. Samen met dit nieuwe Recht Grondwatergebruik
-wordt een nieuwe ontwerpinstallatie en beide ontwerpputten geregistreerd in de
-BRO.
-
-| **Object**                   | **ID**  | **Voorkomen** | **beginTijd**  | **eindTijd** | **Begin Geldigheid** | **Eind Geldigheid** |
-|------------------------------|---------|---------------|----------------|--------------|----------------------|---------------------|
-| Grondwatergebruiksysteem     | 001     | 1             | 01-02-2021     | «leeg»       | 01-02-2021           | 01-03-2021          |
-| Grondwatergebruiksysteem     | 001     | 2             | 01-02-2021     | «leeg»       | 01-03-2021           | 01-06-2021          |
-| Grondwatergebruiksysteem     | 001     | 3             | 01-02-2021     | «leeg»       | 01-06-2021           | 01-09-2021          |
-| **Grondwatergebruiksysteem** | **001** | **4**         | **01-02-2021** | **«leeg»**   | **01-09-2021**       | **«leeg»**          |
-| Recht grondwatergebruik      | 101     | 1             | 01-02-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Recht grondwatergebruik      | 102     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| **Rechtgrondwatergebruik**   | **103** | **1**         | **01-09-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
-| Ontwerpinstallatie           | 201     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie           | 202     | 1             | 01-03-2021     | 01-09-2021   | n.v.t.               | n.v.t.              |
-| **Ontwerpinstallatie**       | **203** | **1**         | **01-09-2021** | **«leeg»**   | n.v.t.               | n.v.t.              |
-| Ontwerpput                   | 301     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpput                   | 302     | 1             | 01-03-2021     | 01-09-2021   | n.v.t.               | n.v.t.              |
-| **Ontwerpput**               | **303** | **1**         | **01-09-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
-| **Ontwerpput**               | **304** | **1**         | **01-09-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
-| Gerealiseerde installatie    | 401     | 1             | 01-06-2021     | «leeg»       | 01-06-2021           | «leeg»              |
-| Gerealiseerde put            | 501     | 1             | 01-06-2021     | «leeg»       | 01-06-2021           | «leeg»              |
-
-Per 01-10-2021 is de extra ontwerpput gerealiseerd en wordt de gerealiseerde put
-toegevoegd aan de gerealiseerde installatie in de BRO.
-
-| **Object**                    | **ID**  | **Voorkomen** | **beginTijd**  | **eindTijd** | **Begin Geldigheid** | **Eind Geldigheid** |
-|-------------------------------|---------|---------------|----------------|--------------|----------------------|---------------------|
-| Grondwatergebruiksysteem      | 001     | 1             | 01-02-2021     | «leeg»       | 01-02-2021           | 01-03-2021          |
-| Grondwatergebruiksysteem      | 001     | 2             | 01-02-2021     | «leeg»       | 01-03-2021           | 01-06-2021          |
-| Grondwatergebruiksysteem      | 001     | 3             | 01-02-2021     | «leeg»       | 01-06-2021           | 01-09-2021          |
-| Grondwatergebruiksysteem      | 001     | 4             | 01-02-2021     | «leeg»       | 01-09-2021           | «leeg»              |
-| Recht grondwatergebruik       | 101     | 1             | 01-02-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Recht grondwatergebruik       | 102     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Rechtgrondwatergebruik        | 103     | 1             | 01-09-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 201     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 202     | 1             | 01-03-2021     | 01-09-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 203     | 1             | 01-09-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 301     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 302     | 1             | 01-03-2021     | 01-09-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 303     | 1             | 01-09-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 304     | 1             | 01-09-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Gerealiseerde installatie     | 401     | 1             | 01-06-2021     | «leeg»       | 01-06-2021           | 1-10-2021           |
-| **Gerealiseerde installatie** | **401** | **2**         | **01-06-2021** | **«leeg»**   | **1-10-2021**        | **«leeg»**          |
-| Gerealiseerde put             | 501     | 1             | 01-06-2021     | «leeg»       | 01-06-2021           | «leeg»              |
-| **Gerealiseerde put**         | **502** | **1**         | **01-10-2021** | **«leeg»**   | **01-10-2021**       | **«leeg»**          |
-
-Per 01-01-2022 worden de gerealiseerde installatie en putten buiten werking
-gesteld. De vergunning blijft wel geldig. In de BRO worden de gerealiseerde
-installatie en putten beëindigd.
-
-| **Object**                    | **ID** | **Voorkomen** | **beginTijd** | **eindTijd**   | **Begin Geldigheid** | **Eind Geldigheid** |
-|-------------------------------|--------|---------------|---------------|----------------|----------------------|---------------------|
-| Grondwatergebruiksysteem      | 001    | 1             | 01-02-2021    | «leeg»         | 01-02-2021           | 01-03-2021          |
-| Grondwatergebruiksysteem      | 001    | 2             | 01-02-2021    | «leeg»         | 01-03-2021           | 01-06-2021          |
-| Grondwatergebruiksysteem      | 001    | 3             | 01-02-2021    | «leeg»         | 01-06-2021           | 01-09-2021          |
-| Grondwatergebruiksysteem      | 001    | 4             | 01-02-2021    | «leeg»         | 01-09-2021           | «leeg»              |
-| Recht grondwatergebruik       | 101    | 1             | 01-02-2021    | «leeg»         | n.v.t.               | n.v.t.              |
-| Recht grondwatergebruik       | 102    | 1             | 01-03-2021    | «leeg»         | n.v.t.               | n.v.t.              |
-| Rechtgrondwatergebruik        | 103    | 1             | 01-09-2021    | «leeg»         | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 201    | 1             | 01-02-2021    | 01-03-2021     | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 202    | 1             | 01-03-2021    | 01-09-2021     | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 203    | 1             | 01-09-2021    | «leeg»         | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 301    | 1             | 01-02-2021    | 01-03-2021     | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 302    | 1             | 01-03-2021    | 01-09-2021     | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 303    | 1             | 01-09-2021    | «leeg»         | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 304    | 1             | 01-09-2021    | «leeg»         | n.v.t.               | n.v.t.              |
-| Gerealiseerde installatie     | 401    | 1             | 01-06-2021    | «leeg»         | 01-06-2021           | 1-10-2021           |
-| **Gerealiseerde installatie** | 401    | 2             | 01-06-2021    | **01-01-2022** | 1-10-2021            | **01-01-2022**      |
-| **Gerealiseerde put**         | 501    | 1             | 01-06-2021    | **01-01-2022** | 01-06-2021           | **01-01-2022**      |
-| **Gerealiseerde put**         | 502    | 1             | 01-10-2021    | **01-01-2022** | 01-10-2021           | **01-01-2022**      |
