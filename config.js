@@ -3,12 +3,17 @@ var respecConfig = {
   specType: "IM",
   //canonicalURI: "WV",
 //  publishDate: "2021-06-23",
-  maxTocLevel: 4,
-  editors: [
-    {
-      name: "TNO Geologische Dienst Nederland",
-      url: "https://www.tno.nl/nl/",
-    },
+ maxTocLevel: 4,
+logos: [
+  {
+    src: 'https://docs.geostandaarden.nl/bro/gen/logo_minbzk.png',
+    href: "https://www.geobasisregistraties.nl/basisregistraties/ondergrond",
+    alt: "Ministerie BZK",
+    width: 776,
+    height: 163,
+    id: 'logo_minbzk',
+  }]  ,	
+  editors: [    
     {
       name: "Geonovum",
       url: "https://www.geonovum.nl", 
