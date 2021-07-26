@@ -211,17 +211,14 @@ in meerdere putten, of meerdere bodemlussen, die bij één of verschillende
 installaties horen en die op hun beurt, als gevolg van technische of
 organisatorische samenhang, tot één beschikking of melding behoren. Deze
 complexiteit is met diverse bevoegd gezagen en andere relevante stakeholders
-uitgebreid besproken en in het gegevensmodel eenduidig vastgelegd. Figuur 3 laat
+uitgebreid besproken en in het gegevensmodel eenduidig vastgelegd. Figuur 4 laat
 schematisch een aantal verschillende situaties zien. In paragraaf 3.4 wordt hier
 verder op in gegaan.
 
-![](media/b96f50061a6ce02dd914dff7bc0068f9.png)
-
-Figuur 3: Schematisch overzicht van mogelijke variaties van systeemonderdelen
-binnen drie verschillende grondwatergebruiksystemen. In dit schema is de put met
-filters uitgewerkt. Dit zou ook een bodemlus kunnen zijn en ook
-oppervlakte-infiltraties maken onderdeel uit van eenvoudige of complexere
-systemen.
+<figure id='image004'>
+  <img src="./media/b96f50061a6ce02dd914dff7bc0068f9.png" alt="systeemonderdelen" width="600"/>
+  <figcaption>Schematisch overzicht van mogelijke variaties van systeemonderdelen binnen drie verschillende grondwatergebruiksystemen. In dit schema is de put met filters uitgewerkt. Dit zou ook een bodemlus kunnen zijn en ook oppervlakte-infiltraties maken onderdeel uit van eenvoudige of complexere systemen.</figcaption>
+</figure>
 
 #### De geometrie en verticale kenmerken van systeemonderdelen
 
@@ -262,12 +259,13 @@ systeemonderdelen van de grondwatergebruiksystemen worden geregistreerd. Dit
 wordt per entiteit nader toegelicht bij de toelichting op de gegevensinhoud
 (paragraaf 3.4)
 
-![](media/ed7ceed437987f4876c78fba6b35b7ce.png)
-
-Figuur 4: Schematisch overzicht van verschillende onderdelen van
+<figure id='image005'>
+  <img src="./media/ed7ceed437987f4876c78fba6b35b7ce.png" alt="geometrieSysteemonderdelen" width="600"/>
+  <figcaption>Schematisch overzicht van verschillende onderdelen van
 grondwatergebruiksystemen zoals deze in de praktijk voor komen, waarbij de te
 registreren geometrie en verticale kenmerken van de onderdelen van de systemen
-is aangegeven.
+is aangegeven.</figcaption>
+</figure>
 
 In het kader van de Wet beveiliging netwerk- en informatiesystemen vallen
 drinkwaterbedrijven onder de vitale sectoren. Bronhouders kunnen daarom aangeven
@@ -343,7 +341,7 @@ basisregistratie ondergrond. Een registratieobject bestaat uit delen
 (entiteiten), en de delen hebben eigenschappen (attributen). In deze paragraaf
 wordt een beschrijvende toelichting geven op de gegevensinhoud van de
 belangrijkste entiteiten en hun eigenschappen. De expliciete definities zijn te
-vinden in de tabellen van de gegevensdefinitie in  hoofdstuk 5. Als eerste wordt de
+vinden in de tabellen van de gegevensdefinitie in hoofdstuk 5. Als eerste wordt de
 hoofdentiteit beschreven, daarna de overige entiteiten.
 
 ### Grondwatergebruiksysteem
@@ -463,20 +461,11 @@ melding, respectievelijk de vergunningaanvraag, geregistreerd in de
 basisregistratie ondergrond (zie figuur 3 (processchema)). Bij een wijziging van
 de melding of de beschikking (wijzigingsbesluit) worden ook de veranderingen die
 betrekking hebben op de gegevensinhoud in de basisregistratie ondergrond daar
-bijgewerkt (zie paragraaf 1.5 (levensduur)).
+bijgewerkt (zie paragraaf 3.5 (levensduur)).
 
 ### Ontwerpinstallatie
 
-Een installatie kenmerkt zich doordat de onderdelen van de installatie onderling
-een technische samenhang hebben. Een installatie kan een in de werkelijkheid
-bestaand fysiek object zijn, maar het kan ook een abstracte eenheid zijn. Een
-oppervlakte-infiltratielichaam met daaromheen bijbehorende onttrekkingsputten
-kan gelden als een installatie. In andere gevallen vormt een groep geschakelde
-oppervlakte-infiltraties een installatie. Bij een gesloten bodemenergiesysteem
-bijvoorbeeld, bestaat de installatie soms uit één, en in andere gevallen uit een
-groep van bij elkaar horende bodemlussen. In al deze voorbeelden is er sprake
-van een onderlinge technische samenhang tussen de verschillende objecten die
-onderdeel uitmaken van de installatie.
+Een installatie kenmerkt zich doordat de onderdelen van de installatie onderling een technische samenhang hebben en doordat gezamenlijk over de onderdelen wordt gerapporteerd. Een installatie kan een in de werkelijkheid bestaand fysiek object zijn, maar het kan ook een abstracte eenheid zijn. Een oppervlakte-infiltratielichaam met daaromheen bijbehorende onttrekkingsputten kan gelden als een installatie. In andere gevallen vormt een groep geschakelde oppervlakte-infiltraties een installatie. Bij een gesloten bodemenergiesysteem bijvoorbeeld, bestaat de installatie soms uit één, en in andere gevallen uit een groep van bij elkaar horende bodemlussen. In al deze voorbeelden is er sprake van een onderlinge technische samenhang tussen de verschillende objecten die onderdeel uitmaken van de installatie. In de beschikking is veelal opgenomen over welke (groep van) systeemonderdelen de onttrekkings- en infiltratiecijfers gerapporteerd moeten worden. Omdat deze productiecijfers in de basisregistratieondergrond gekoppeld worden op het niveau van de installatie, of eventueel op het niveau van het grondwatergebruiksysteem, is de eenheid waarover gerapporteerd moet worden, mede bepalend bij de indeling van de systeemonderdelen in installaties.
 
 Onderdeel van de beschikking of de melding zijn gegevens over de ontworpen
 installatie(s). Een deel van deze gegevens over de ontwerpinstallatie(s) wordt
@@ -493,7 +482,7 @@ installatie-onderdelen. In andere gevallen is het de locatie van één van de
 installatie-onderdelen of een specifiek bepaalde locatie. Dit is aan de
 bronhouder om te bepalen en kan situatie-afhankelijk zijn.
 
-Zoals in paragraaf 1.4.2 is beschreven, wordt in de beschikking of de melding,
+Zoals in paragraaf 3.4.2 is beschreven, wordt in de beschikking of de melding,
 met uitzondering van gesloten bodemenergiesystemen, voor het gehele
 grondwatergebruiksysteem aangegeven hoeveel grondwater er maximaal mag worden
 onttrokken en in de bodem mag worden gebracht. De gegevens over toegestane
@@ -548,7 +537,7 @@ integraal inzicht te krijgen in het gebruik van de ondergrond. Ook wordt
 potentiële negatieve interferentie duidelijk.
 
 Bij een verticale bodemlus en bij een korf is de geometrie van een
-ontwerpbodemlus een puntlocatie, zie ook figuur 4. Bij een horizontale bodemlus
+ontwerpbodemlus een puntlocatie, zie ook figuur 5. Bij een horizontale bodemlus
 kan bij de geometrie gekozen worden voor een punt, een lijn of een vlak. Welke
 van de mogelijke geometrieën wordt gekozen, hangt af van de wijze waarop de
 bodemlus in het horizontale vlak ligt. Er wordt een puntgeometrie gebruikt als
@@ -572,7 +561,7 @@ vlak- of lijngeometrie op te nemen waarbij een vlakgeometrie gebruikt wordt voor
 een infiltratieplas een lijngeometrie voor een infiltratiekanaal. Bij
 installaties met primair gebruiksdoel: openbare drinkwatervoorziening, wordt
 aangegeven of de geometrie voor alle gebruikers openbaar te raadplegen is (zie
-ook paragraaf 'De horizontale en verticale positie van systeemonderdelen').
+ook paragraaf 3.3.3.3.).
 
 ### Ontwerpput
 
@@ -593,7 +582,7 @@ niet als putfunctie geregistreerd in de basisregistratie ondergrond.
 De puntgeometrie van de ontwerpput in het tweedimensionale vlak wordt
 geregistreerd bij *geometrie*. Daarnaast wordt de *maaiveldhoogte* vastgelegd
 ten opzichte van NAP. Dit is de hoogte van het maaiveld op de locatie waar de
-put gepland is. Zoals in paragraaf 1.3.3 is aangegeven, is in de protocollen
+put gepland is. Zoals in paragraaf 3.3.3.6 is aangegeven, is in de protocollen
 (ten tijde van het publiceren van de 1.0 versie van deze catalogus) niet
 vastgelegd met welke methode de geometrie en de maaiveldhoogte bepaald moet
 worden. In de praktijk kan dit met behulp van een analoge kaart gebeuren, maar
