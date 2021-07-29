@@ -1,5 +1,8 @@
+Grondwatergebruiksysteem
+===================
+
 Inleiding grondwatergebruik
----------------------------
+----------------------------------
 
 Grondwater is een belangrijke bestaansbron. Voor uiteenlopende doelen wordt
 actief gebruik gemaakt van grondwater. Deels richt het gebruik zich op het
@@ -98,19 +101,18 @@ afkortingen en verder de Nederlandstalige termen gebruiken.
 -   Grondwaterproductiedossier wordt afgekort tot GPD (Groundwater Production
     Dossier).
 
-![](media/39964ae4bf6d301a85a027ff152809ae.png)
-
-Figuur 1 De mogelijke samenhang tussen de twee registratieobjecten
-grondwatergebruiksysteem en grondwaterproductiedossier binnen het domein
-grondwatergebruik. Onder het IMBRO-regime heeft de inhoud van het
-Grondwaterproductiedossier voornamelijk betrekking op het installatie-niveau
-onder GUF. Onder het IMBRO/A-regime hebben deze gegevens voornamelijk betrekking
-op het Grondwatergebruiksysteem onder GUF. In het figuur is met dunne lijnen
-aangegeven dat onder het IMBRO-regime een klein deel van de inhoud van het
-Grondwaterproductiedossier betrekking zal hebben op het
-grondwatergebruiksysteem-niveau van GUF. Een klein deel van inhoud van de
-Grondwaterproductiedossiers onder het IMBRO/A-regime zal betrekking hebben op
-het installatie-niveau van GUF.
+<figure id='image002'>
+  <img src="./media/39964ae4bf6d301a85a027ff152809ae.png" alt="samenhangDomein" width="600"/>
+  <figcaption>De mogelijke samenhang tussen de twee registratieobjecten grondwatergebruiksysteem en 
+      grondwaterproductiedossier binnen het domein grondwatergebruik. Onder het IMBRO-regime heeft de 
+      inhoud van het Grondwaterproductiedossier voornamelijk betrekking op het installatie-niveau onder GUF. 
+      Onder het IMBRO/A-regime hebben deze gegevens voornamelijk betrekking op het 
+      Grondwatergebruiksysteem onder GUF. In het figuur is met dunne lijnen aangegeven 
+      dat onder het IMBRO-regime een klein deel van de inhoud van het Grondwaterproductiedossier 
+      betrekking zal hebben op het grondwatergebruiksysteem-niveau van GUF. Een klein deel van inhoud 
+      van de Grondwaterproductiedossiers onder het IMBRO/A-regime zal betrekking hebben op het 
+      installatie-niveau van GUF.</figcaption>
+</figure>
 
 Een grondwatergebruiksysteem betreft de constructie die gebruikt wordt om
 grondwater te onttrekken aan, en te brengen in de ondergrond. Ook zijn systemen
@@ -147,8 +149,8 @@ ondergrond en het grondwater daarbinnen in het geval van bodemenergiesystemen.
 De registratie van deze systemen moet de vraag beantwoorden hoe, waar, waartoe
 en met welke capaciteit gebruik wordt gemaakt van grondwater. De in de BRO te
 registreren informatie van de grondwatergebruiksystemen ontstaat in het
-werkproces van de bevoegde gezagen. Paragraaf 1.3.2 beschrijft de opeenvolgende
-stappen van het proces waarin de gegevens ontstaan. Paragraaf 1.3.3 beschrijft
+werkproces van de bevoegde gezagen. Paragraaf 3.3.2 beschrijft de opeenvolgende
+stappen van het proces waarin de gegevens ontstaan. Paragraaf 3.3.3 beschrijft
 een aantal belangrijke kenmerken van de gegevens over het
 grondwatergebruiksysteem. 
 
@@ -158,11 +160,12 @@ Het proces waarin gegevens van grondwatergebruiksystemen in de praktijk ontstaan
 is schematisch weergegeven in de onderstaande figuur en wordt daaronder
 beschreven. 
 
-![](media/7eabe4932ceecaa8fdba234d0662535d.png)
-
-Figuur 2: Het totstandkomingsproces van gegevens voor de registratieobjecten
+<figure id='image003'>
+  <img src="./media/7eabe4932ceecaa8fdba234d0662535d.png" alt="proces" width="600"/>
+  <figcaption>Het totstandkomingsproces van gegevens voor de registratieobjecten
 Grondwatergebruiksysteem (beige pijlen) en Grondwaterproductiedossier (rode
-pijlen) en de daarbij betrokken actoren.
+pijlen) en de daarbij betrokken actoren.</figcaption>
+</figure>
 
 Ontwerpen van nieuw aan te leggen grondwatergebruiksystemen worden door
 initiatiefnemers middels een vergunningaanvraag of melding aan het bevoegd gezag
@@ -195,10 +198,9 @@ In het standaardisatietraject is gebleken dat grondwatergebruiksystemen een
 aantal eigenschappen hebben die sturing geven aan de gegevensinhoud van het
 registratieobject grondwatergebruiksysteem. Hieronder zijn de belangrijkste
 sturende kenmerken kort toegelicht. In de beschrijving van de gegevensinhoud
-(paragraaf 1.4) wordt per entiteit een nadere, specifieke toelichting gegeven.
+(paragraaf 3.4) wordt per entiteit een nadere, specifieke toelichting gegeven.
 
-**Onderscheid en samenhang tussen ontwerpgegevens enerzijds en
-realisatie-gegevens anderzijds**
+#### Onderscheid en samenhang tussen ontwerpgegevens enerzijds en realisatie-gegevens anderzijds
 
 Het is belangrijk te weten waar grondwater precies wordt onttrokken. Deze vraag
 kan bij benadering met behulp van de ontwerpgegevens worden beantwoord. Van
@@ -207,7 +209,7 @@ nuttig om ook realisatie-gegevens vast te leggen, omdat de uitvoering af kan
 wijken van het ontwerp én omdat bijvoorbeeld de exacte filterdiepte pas tijdens
 de realisatie wordt bepaald. 
 
-**De hiërarchie en kardinaliteit van registratieonderdelen**
+#### De hiërarchie en kardinaliteit van registratieonderdelen
 
 De praktijk laat een veelheid aan uitvoeringsmogelijkheden van
 grondwatergebruiksystemen zien. Sommige beschikkingen of meldingen zijn heel
@@ -217,19 +219,18 @@ in meerdere putten, of meerdere bodemlussen, die bij één of verschillende
 installaties horen en die op hun beurt, als gevolg van technische of
 organisatorische samenhang, tot één beschikking of melding behoren. Deze
 complexiteit is met diverse bevoegd gezagen en andere relevante stakeholders
-uitgebreid besproken en in het gegevensmodel eenduidig vastgelegd. Figuur 3 laat
-schematisch een aantal verschillende situaties zien. In paragraaf 1.4 wordt hier
+uitgebreid besproken en in het gegevensmodel eenduidig vastgelegd. Figuur 4 laat
+schematisch een aantal verschillende situaties zien. In paragraaf 3.4 wordt hier
 verder op in gegaan.
 
-![](media/b96f50061a6ce02dd914dff7bc0068f9.png)
+<figure id='image004'>
+  <img src="./media/b96f50061a6ce02dd914dff7bc0068f9.png" alt="systeemonderdelen" width="600"/>
+  <figcaption>Schematisch overzicht van mogelijke variaties van systeemonderdelen binnen drie verschillende grondwatergebruiksystemen. 
+  In dit schema is de put met filters uitgewerkt. Dit zou ook een bodemlus kunnen zijn en ook oppervlakte-infiltraties maken onderdeel 
+  uit van eenvoudige of complexere systemen.</figcaption>
+</figure>
 
-Figuur 3: Schematisch overzicht van mogelijke variaties van systeemonderdelen
-binnen drie verschillende grondwatergebruiksystemen. In dit schema is de put met
-filters uitgewerkt. Dit zou ook een bodemlus kunnen zijn en ook
-oppervlakte-infiltraties maken onderdeel uit van eenvoudige of complexere
-systemen.
-
-**De geometrie en verticale kenmerken van systeemonderdelen**
+#### De geometrie en verticale kenmerken van systeemonderdelen
 
 Om het effect van het grondwatergebruiksysteem op het grondwater te kunnen
 bepalen is een goede registratie van de plaats waar (de essentiële onderdelen
@@ -248,8 +249,7 @@ als de diepte ten opzichte van het maaiveld. Omdat de maaiveldhoogte niet altijd
 nauwkeurig vast te stellen is, zou het de voorkeur hebben om de diepte aan het
 referentieniveau NAP te refereren. Ten tijde van het opstellen van deze versie
 van de catalogus is dat (nog) niet gebruikelijk in het werkveld, het wordt niet
-vermeld in de gebruikte protocollen (zie ook de paragraaf 'De kwaliteit en
-nauwkeurigheid van de geregistreerde gegevens").
+vermeld in de gebruikte protocollen (zie ook paragraaf 3.3.3.6).
 
 De geometrie en de verticale kenmerken van de put met bijbehorende filters,
 oppervlakte-infiltratie en bodemlus zijn van belang om de grondwatereffecten te
@@ -262,18 +262,19 @@ ontwerp) en de begin- en einddiepte per filter (bij realisatie) van belang. Bij
 ontwerpputten met één of meer horizontale filters is gekozen om, net als bij
 putten met verticale filters, *geen* geometrie van de filters te
 registreren*.* De geometrie van deze niet-verticale, individuele filters wordt
-bij de realisatiegegevens *wel* geregistreerd. Figuur 4 laat zien hoe de
+bij de realisatiegegevens *wel* geregistreerd. Figuur 5 laat zien hoe de
 geometrie en verticale kenmerken (hoogte/diepte) van verschillende
 systeemonderdelen van de grondwatergebruiksystemen worden geregistreerd. Dit
 wordt per entiteit nader toegelicht bij de toelichting op de gegevensinhoud
-(paragraaf 1.4)
+(paragraaf 3.4)
 
-![](media/ed7ceed437987f4876c78fba6b35b7ce.png)
-
-Figuur 4: Schematisch overzicht van verschillende onderdelen van
+<figure id='image005'>
+  <img src="./media/ed7ceed437987f4876c78fba6b35b7ce.png" alt="geometrieSysteemonderdelen" width="600"/>
+  <figcaption>Schematisch overzicht van verschillende onderdelen van
 grondwatergebruiksystemen zoals deze in de praktijk voor komen, waarbij de te
 registreren geometrie en verticale kenmerken van de onderdelen van de systemen
-is aangegeven.
+is aangegeven.</figcaption>
+</figure>
 
 In het kader van de Wet beveiliging netwerk- en informatiesystemen vallen
 drinkwaterbedrijven onder de vitale sectoren. Bronhouders kunnen daarom aangeven
@@ -284,8 +285,7 @@ beperkte groep (door bronhouders aan te wijzen) gebruikers uitgeleverd worden.
 Voor de overige gebruikers is alleen de geometrie van de installatie te
 raadplegen.
 
-**De technische specificaties van te onttrekken en te infiltreren hoeveelheden
-water en energie**
+#### De technische specificaties van te onttrekken en te infiltreren hoeveelheden water en energie
 
 Per locatie dient helder te zijn hoeveel water en energie maximaal verpompt mag
 en kan worden. Aandacht voor de registratie van deze hoeveelheden op het juiste
@@ -295,7 +295,7 @@ eenheid wordt gebruikt. Het gegevensmodel houdt zoveel mogelijk rekening met
 deze specifieke eigenschappen van systeemonderdelen en met de praktijk van
 vergunningverlening. 
 
-**De termen infiltreren, retourneren en lozen**
+#### De termen infiltreren, retourneren en lozen
 
 Voor het in de bodem brengen van water wordt in de basisregistratie ondergrond
 onderscheid gemaakt tussen de termen infiltreren, retourneren en lozen waarbij
@@ -319,7 +319,7 @@ teruggebracht in de bodem: geretourneerd. Bij bronbemalingen is in sommige
 gevallen sprake van retourbemaling. Ook in dat voorbeeld wordt eerst grondwater
 onttrokken en vervolgens geretourneerd.
 
-**De kwaliteit en nauwkeurigheid van de geregistreerde gegevens**
+#### De kwaliteit en nauwkeurigheid van de geregistreerde gegevens
 
 Bij het gebruik van de BRO-gegevens moet de gebruiker kunnen vertrouwen op de
 geregistreerde gegevens. Dat roept de vraag op wat de kwaliteit en de
@@ -349,7 +349,7 @@ basisregistratie ondergrond. Een registratieobject bestaat uit delen
 (entiteiten), en de delen hebben eigenschappen (attributen). In deze paragraaf
 wordt een beschrijvende toelichting geven op de gegevensinhoud van de
 belangrijkste entiteiten en hun eigenschappen. De expliciete definities zijn te
-vinden in de tabellen van de gegevensdefinitie in artikel 1. Als eerste wordt de
+vinden in de tabellen van de gegevensdefinitie in hoofdstuk 5. Als eerste wordt de
 hoofdentiteit beschreven, daarna de overige entiteiten.
 
 ### Grondwatergebruiksysteem
@@ -466,23 +466,28 @@ registratieobject grondwaterproductiedossier (GPD).
 
 De gegevens over het gebruiksrecht worden na afhandeling en goedkeuring van de
 melding, respectievelijk de vergunningaanvraag, geregistreerd in de
-basisregistratie ondergrond (zie figuur 2 (processchema)). Bij een wijziging van
+basisregistratie ondergrond (zie figuur 3 (processchema)). Bij een wijziging van
 de melding of de beschikking (wijzigingsbesluit) worden ook de veranderingen die
 betrekking hebben op de gegevensinhoud in de basisregistratie ondergrond daar
-bijgewerkt (zie paragraaf 1.5 (levensduur)).
+bijgewerkt (zie paragraaf 3.5 (levensduur)).
 
 ### Ontwerpinstallatie
 
-Een installatie kenmerkt zich doordat de onderdelen van de installatie onderling
-een technische samenhang hebben. Een installatie kan een in de werkelijkheid
-bestaand fysiek object zijn, maar het kan ook een abstracte eenheid zijn. Een
-oppervlakte-infiltratielichaam met daaromheen bijbehorende onttrekkingsputten
-kan gelden als een installatie. In andere gevallen vormt een groep geschakelde
-oppervlakte-infiltraties een installatie. Bij een gesloten bodemenergiesysteem
-bijvoorbeeld, bestaat de installatie soms uit één, en in andere gevallen uit een
-groep van bij elkaar horende bodemlussen. In al deze voorbeelden is er sprake
-van een onderlinge technische samenhang tussen de verschillende objecten die
-onderdeel uitmaken van de installatie.
+Een installatie kenmerkt zich doordat de onderdelen van de installatie onderling een 
+technische samenhang hebben en doordat gezamenlijk over de onderdelen wordt gerapporteerd. 
+Een installatie kan een in de werkelijkheid bestaand fysiek object zijn, maar het kan ook 
+een abstracte eenheid zijn. Een oppervlakte-infiltratielichaam met daaromheen bijbehorende 
+onttrekkingsputten kan gelden als een installatie. In andere gevallen vormt een groep 
+geschakelde oppervlakte-infiltraties een installatie. Bij een gesloten bodemenergiesysteem 
+bijvoorbeeld, bestaat de installatie soms uit één, en in andere gevallen uit een groep 
+van bij elkaar horende bodemlussen. In al deze voorbeelden is er sprake van een 
+onderlinge technische samenhang tussen de verschillende objecten die onderdeel 
+uitmaken van de installatie. In de beschikking is veelal opgenomen over welke 
+(groep van) systeemonderdelen de onttrekkings- en infiltratiecijfers gerapporteerd 
+moeten worden. Omdat deze productiecijfers in de basisregistratieondergrond gekoppeld 
+worden op het niveau van de installatie, of eventueel op het niveau van het 
+grondwatergebruiksysteem, is de eenheid waarover gerapporteerd moet worden, 
+mede bepalend bij de indeling van de systeemonderdelen in installaties.
 
 Onderdeel van de beschikking of de melding zijn gegevens over de ontworpen
 installatie(s). Een deel van deze gegevens over de ontwerpinstallatie(s) wordt
@@ -499,7 +504,7 @@ installatie-onderdelen. In andere gevallen is het de locatie van één van de
 installatie-onderdelen of een specifiek bepaalde locatie. Dit is aan de
 bronhouder om te bepalen en kan situatie-afhankelijk zijn.
 
-Zoals in paragraaf 1.4.2 is beschreven, wordt in de beschikking of de melding,
+Zoals in paragraaf 3.4.2 is beschreven, wordt in de beschikking of de melding,
 met uitzondering van gesloten bodemenergiesystemen, voor het gehele
 grondwatergebruiksysteem aangegeven hoeveel grondwater er maximaal mag worden
 onttrokken en in de bodem mag worden gebracht. De gegevens over toegestane
@@ -554,7 +559,7 @@ integraal inzicht te krijgen in het gebruik van de ondergrond. Ook wordt
 potentiële negatieve interferentie duidelijk.
 
 Bij een verticale bodemlus en bij een korf is de geometrie van een
-ontwerpbodemlus een puntlocatie, zie ook figuur 4. Bij een horizontale bodemlus
+ontwerpbodemlus een puntlocatie, zie ook figuur 5. Bij een horizontale bodemlus
 kan bij de geometrie gekozen worden voor een punt, een lijn of een vlak. Welke
 van de mogelijke geometrieën wordt gekozen, hangt af van de wijze waarop de
 bodemlus in het horizontale vlak ligt. Er wordt een puntgeometrie gebruikt als
@@ -578,7 +583,7 @@ vlak- of lijngeometrie op te nemen waarbij een vlakgeometrie gebruikt wordt voor
 een infiltratieplas een lijngeometrie voor een infiltratiekanaal. Bij
 installaties met primair gebruiksdoel: openbare drinkwatervoorziening, wordt
 aangegeven of de geometrie voor alle gebruikers openbaar te raadplegen is (zie
-ook paragraaf 'De horizontale en verticale positie van systeemonderdelen').
+ook paragraaf 3.3.3.3).
 
 ### Ontwerpput
 
@@ -599,7 +604,7 @@ niet als putfunctie geregistreerd in de basisregistratie ondergrond.
 De puntgeometrie van de ontwerpput in het tweedimensionale vlak wordt
 geregistreerd bij *geometrie*. Daarnaast wordt de *maaiveldhoogte* vastgelegd
 ten opzichte van NAP. Dit is de hoogte van het maaiveld op de locatie waar de
-put gepland is. Zoals in paragraaf 1.3.3 is aangegeven, is in de protocollen
+put gepland is. Zoals in paragraaf 3.3.3.6 is aangegeven, is in de protocollen
 (ten tijde van het publiceren van de 1.0 versie van deze catalogus) niet
 vastgelegd met welke methode de geometrie en de maaiveldhoogte bepaald moet
 worden. In de praktijk kan dit met behulp van een analoge kaart gebeuren, maar
@@ -656,11 +661,12 @@ twee putten, op dezelfde locatie, waarbij elke put haar eigen filter(s) en
 filterdiepte heeft. De twee putten van een monobron maken onderdeel uit van één
 installatie.
 
-![](media/8d86e0fba46bcca4f7360431219e6c8e.png)
-
-Figuur 5: Schematische weergave van de uitvoeringsvorm (monobron en doublet) en
-het werkingsprincipe (warmte- en koudeopslagsysteem en recirculatiesysteem) van
-open bodemenergiesystemen. 
+<figure id='image006'>
+  <img src="./media/8d86e0fba46bcca4f7360431219e6c8e.png" alt="openBodemenergiesystemen" width="600"/>
+  <figcaption>Schematische weergave van de uitvoeringsvorm (monobron en doublet) en
+  het werkingsprincipe (warmte- en koudeopslagsysteem en recirculatiesysteem) van
+  open bodemenergiesystemen.</figcaption>
+</figure>
 
 Bij het ontwerp worden niet alle afzonderlijke filterdelen geregistreerd. In de
 beschikking of melding wordt dit vaak niet gespecificeerd omdat ten tijde van
@@ -706,7 +712,7 @@ historische gegevens is in sommige gevallen de geometrie van de individuele
 bodemlussen niet bekend en vertegenwoordigt een geometrie een groep van
 bodemlussen. Voor de historische gegevens wordt daarom geregistreerd of 'het
 object bodemlus' wel of niet een *groep van lussen* betreft (zie ook hoofdstuk
-1.6 over IMBRO/A).
+3.6 over IMBRO/A).
 
 Van de gerealiseerde bodemlus wordt de *einddiepte* geregistreerd. Dit is het
 diepste punt dat de bodemlus in de ondergrond bereikt ten opzichte van het
@@ -809,7 +815,7 @@ van een object in de registratie van de BRO plaats vindt. De formele historie
 beschrijft de momenten die altijd tussen het begin en het einde van de formele
 levensduur liggen, of daarmee overlappen. De formele levensduur en historie
 worden in de BRO generiek voor alle registratieobjecten middels de gegevensgroep
-Registratiegeschiedenis vastgelegd. Zie Artikel 1, paragraaf 3.13.
+Registratiegeschiedenis vastgelegd. Zie paragraaf 5.3.13.
 
 De **materiële levensduur** beschrijft het initiële ontstaan en het vervallen
 van een object in de werkelijkheid. Een object is bijvoorbeeld een
@@ -837,7 +843,7 @@ bodemlus) is de datum waarop het object is gerealiseerd ofwel ingericht; de
 eindtijd de datum waarop het gerealiseerde object definitief buiten gebruik is
 gesteld, of is gesloopt. De eindtijd is leeg wanneer het object nog niet is
 vervallen (bij ontwerpobjecten) of nog niet buiten gebruik is gesteld of is
-gesloopt (bij gerealiseerde objecten). Zie ook de voorbeelden in de bijlage.
+gesloopt (bij gerealiseerde objecten). Zie ook de voorbeelden in hoofdstuk 7, bijlage.
 
 De **materiële historie** beschrijft veranderingen van een object gedurende de
 levensduur van het object in de werkelijkheid. De datums van deze veranderingen
@@ -897,13 +903,14 @@ middel van een datum eindGeldigheid.
 
 In de bijlage is een aantal voorbeelden opgenomen van de levenscyclus.
 
-![](media/6e86f385b83cb076071aa315476da261.tmp)
-
-Figuur 6: Schematisch voorbeeld van de *levenscyclus van objecten binnen het
-grondwatergebruiksysteem: Als eerste ontstaat het recht grondwatergebruik, samen
-met het ontwerp. Op een later moment ontstaan de gerealiseerde objecten. De
-gerealiseerde objecten kunnen nieuwe voorkomens krijgen gedurende de
-levensduur.*
+<figure id='image007'>
+  <img src="./media/6e86f385b83cb076071aa315476da261.tmp" alt="levenscyclus" width="600"/>
+  <figcaption>Schematisch voorbeeld van de levenscyclus van objecten binnen het
+  grondwatergebruiksysteem: Als eerste ontstaat het recht grondwatergebruik, samen
+  met het ontwerp. Op een later moment ontstaan de gerealiseerde objecten. De
+  gerealiseerde objecten kunnen nieuwe voorkomens krijgen gedurende de
+  levensduur.</figcaption>
+</figure>
 
 Impact kwaliteitsregime IMBRO/A
 -------------------------------
@@ -974,129 +981,3 @@ als specifieke duurzame energiebron opgenomen. Dit is een niet-uitbreidbare
 codelijst en kan dus niet worden aangevuld met bodemenergie. Dit betekent dat de
 gegevens over bodemenergiesystemen niet geharmoniseerd naar het INSPIRE
 datamodel kunnen worden ontsloten.
-
-Bijlage: Voorbeelden materiële historie
----------------------------------------
-
-Op 01-01-2021 wordt een vergunning voor grondwaterontrekking verleend met
-ingangsdatum 01-02-2021 is. In de vergunning is geen einddatum opgenomen. De
-grondwaterontrekking bestaat uit een installatie met 1 grondwaterontrekkingsput.
-In de LV BRO worden de volgende objecten opgevoerd.
-
-| **Object**               | **ID** | **Voorkomen** | **beginTijd** | **eindTijd** | **Begin Geldigheid** | **Eind Geldigheid** |
-|--------------------------|--------|---------------|---------------|--------------|----------------------|---------------------|
-| Grondwatergebruiksysteem | 001    | 1             | 01-02-2021    | «leeg»       | 01-02-2021           | «leeg»              |
-| Recht grondwatergebruik  | 101    | 1             | 01-02-2021    | «leeg»       | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie       | 201    | 1             | 01-02-2021    | «leeg»       | n.v.t.               | n.v.t.              |
-| Ontwerpput               | 301    | 1             | 01-02-2021    | «leeg»       | n.v.t.               | n.v.t.              |
-
-Per 01-03-2021 wordt een wijzigingsvergunning verleend waarbij de maximale
-putcapaciteit van de ontwerpinstallatie is verhoogd. In de BRO wordt bij het
-Grondwatergebruiksysteem een nieuw Recht grondwatergebruik geregistreerd, en een
-nieuwe ontwerpinstallatie en ontwerpput. De vorige installatie en put krijgen
-een eindtijd. Het vorige Recht grondwatergebruik krijgt geen eindtijd omdat een
-deel van de gegevens van de vorige vergunning nog geldig zijn.
-
-| **Object**                   | **ID**  | **Voorkomen** | **beginTijd**  | **eindTijd** | **Begin Geldigheid** | **Eind Geldigheid** |
-|------------------------------|---------|---------------|----------------|--------------|----------------------|---------------------|
-| Grondwatergebruiksysteem     | 001     | 1             | 01-02-2021     | «leeg»       | 01-02-2021           | 01-03-2021          |
-| **Grondwatergebruiksysteem** | **001** | **2**         | **01-02-2021** | **«leeg»**   | **01-03-2021**       | **«leeg»**          |
-| Recht grondwatergebruik      | 101     | 1             | 01-02-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| **Recht grondwatergebruik**  | **102** | **1**         | **01-03-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
-| Ontwerpinstallatie           | 201     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| **Ontwerpinstallatie**       | **202** | **1**         | **01-03-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
-| Ontwerpput                   | 301     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| **Ontwerpput**               | **302** | **1**         | **01-03-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
-
-Per 01-06-2021 is de put gerealiseerd. In de BRO wordt een gerealiseerde
-installatie en gerealiseerde put opgenomen. De gerealiseerde installatie en put
-worden toegevoegd aan het Grondwatergebruiksysteem dat een nieuw voorkomen
-krijgt.
-
-| **Object**                    | **ID**  | **Voorkomen** | **beginTijd**  | **eindTijd** | **Begin Geldigheid** | **Eind Geldigheid** |
-|-------------------------------|---------|---------------|----------------|--------------|----------------------|---------------------|
-| Grondwatergebruiksysteem      | 001     | 1             | 01-02-2021     | «leeg»       | 01-02-2021           | 01-03-2021          |
-| Grondwatergebruiksysteem      | 001     | 2             | 01-02-2021     | «leeg»       | 01-03-2021           | 01-06-2021          |
-| **Grondwatergebruiksysteem**  | **001** | **3**         | **01-02-2021** | **«leeg»**   | **01-06-2021**       | **«leeg»**          |
-| Recht grondwatergebruik       | 101     | 1             | 01-02-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Recht grondwatergebruik       | 102     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 201     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 202     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 301     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 302     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| **Gerealiseerde installatie** | **401** | **1**         | **01-06-2021** | **«leeg»**   | **01-06-2021**       | **«leeg»**          |
-| **Gerealiseerde put**         | **501** | **1**         | **01-06-2021** | **«leeg»**   | **01-06-2021**       | **«leeg»**          |
-
-Per 01-09-2021 wordt een wijzigingsvergunning verleend voor het toevoegen van
-een extra put aan de installatie. De wijzigingsvergunning wordt toegevoegd aan
-het grondwatergebruikssysteem. Samen met dit nieuwe Recht Grondwatergebruik
-wordt een nieuwe ontwerpinstallatie en beide ontwerpputten geregistreerd in de
-BRO.
-
-| **Object**                   | **ID**  | **Voorkomen** | **beginTijd**  | **eindTijd** | **Begin Geldigheid** | **Eind Geldigheid** |
-|------------------------------|---------|---------------|----------------|--------------|----------------------|---------------------|
-| Grondwatergebruiksysteem     | 001     | 1             | 01-02-2021     | «leeg»       | 01-02-2021           | 01-03-2021          |
-| Grondwatergebruiksysteem     | 001     | 2             | 01-02-2021     | «leeg»       | 01-03-2021           | 01-06-2021          |
-| Grondwatergebruiksysteem     | 001     | 3             | 01-02-2021     | «leeg»       | 01-06-2021           | 01-09-2021          |
-| **Grondwatergebruiksysteem** | **001** | **4**         | **01-02-2021** | **«leeg»**   | **01-09-2021**       | **«leeg»**          |
-| Recht grondwatergebruik      | 101     | 1             | 01-02-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Recht grondwatergebruik      | 102     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| **Rechtgrondwatergebruik**   | **103** | **1**         | **01-09-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
-| Ontwerpinstallatie           | 201     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie           | 202     | 1             | 01-03-2021     | 01-09-2021   | n.v.t.               | n.v.t.              |
-| **Ontwerpinstallatie**       | **203** | **1**         | **01-09-2021** | **«leeg»**   | n.v.t.               | n.v.t.              |
-| Ontwerpput                   | 301     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpput                   | 302     | 1             | 01-03-2021     | 01-09-2021   | n.v.t.               | n.v.t.              |
-| **Ontwerpput**               | **303** | **1**         | **01-09-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
-| **Ontwerpput**               | **304** | **1**         | **01-09-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
-| Gerealiseerde installatie    | 401     | 1             | 01-06-2021     | «leeg»       | 01-06-2021           | «leeg»              |
-| Gerealiseerde put            | 501     | 1             | 01-06-2021     | «leeg»       | 01-06-2021           | «leeg»              |
-
-Per 01-10-2021 is de extra ontwerpput gerealiseerd en wordt de gerealiseerde put
-toegevoegd aan de gerealiseerde installatie in de BRO.
-
-| **Object**                    | **ID**  | **Voorkomen** | **beginTijd**  | **eindTijd** | **Begin Geldigheid** | **Eind Geldigheid** |
-|-------------------------------|---------|---------------|----------------|--------------|----------------------|---------------------|
-| Grondwatergebruiksysteem      | 001     | 1             | 01-02-2021     | «leeg»       | 01-02-2021           | 01-03-2021          |
-| Grondwatergebruiksysteem      | 001     | 2             | 01-02-2021     | «leeg»       | 01-03-2021           | 01-06-2021          |
-| Grondwatergebruiksysteem      | 001     | 3             | 01-02-2021     | «leeg»       | 01-06-2021           | 01-09-2021          |
-| Grondwatergebruiksysteem      | 001     | 4             | 01-02-2021     | «leeg»       | 01-09-2021           | «leeg»              |
-| Recht grondwatergebruik       | 101     | 1             | 01-02-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Recht grondwatergebruik       | 102     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Rechtgrondwatergebruik        | 103     | 1             | 01-09-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 201     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 202     | 1             | 01-03-2021     | 01-09-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 203     | 1             | 01-09-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 301     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 302     | 1             | 01-03-2021     | 01-09-2021   | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 303     | 1             | 01-09-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 304     | 1             | 01-09-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Gerealiseerde installatie     | 401     | 1             | 01-06-2021     | «leeg»       | 01-06-2021           | 1-10-2021           |
-| **Gerealiseerde installatie** | **401** | **2**         | **01-06-2021** | **«leeg»**   | **1-10-2021**        | **«leeg»**          |
-| Gerealiseerde put             | 501     | 1             | 01-06-2021     | «leeg»       | 01-06-2021           | «leeg»              |
-| **Gerealiseerde put**         | **502** | **1**         | **01-10-2021** | **«leeg»**   | **01-10-2021**       | **«leeg»**          |
-
-Per 01-01-2022 worden de gerealiseerde installatie en putten buiten werking
-gesteld. De vergunning blijft wel geldig. In de BRO worden de gerealiseerde
-installatie en putten beëindigd.
-
-| **Object**                    | **ID** | **Voorkomen** | **beginTijd** | **eindTijd**   | **Begin Geldigheid** | **Eind Geldigheid** |
-|-------------------------------|--------|---------------|---------------|----------------|----------------------|---------------------|
-| Grondwatergebruiksysteem      | 001    | 1             | 01-02-2021    | «leeg»         | 01-02-2021           | 01-03-2021          |
-| Grondwatergebruiksysteem      | 001    | 2             | 01-02-2021    | «leeg»         | 01-03-2021           | 01-06-2021          |
-| Grondwatergebruiksysteem      | 001    | 3             | 01-02-2021    | «leeg»         | 01-06-2021           | 01-09-2021          |
-| Grondwatergebruiksysteem      | 001    | 4             | 01-02-2021    | «leeg»         | 01-09-2021           | «leeg»              |
-| Recht grondwatergebruik       | 101    | 1             | 01-02-2021    | «leeg»         | n.v.t.               | n.v.t.              |
-| Recht grondwatergebruik       | 102    | 1             | 01-03-2021    | «leeg»         | n.v.t.               | n.v.t.              |
-| Rechtgrondwatergebruik        | 103    | 1             | 01-09-2021    | «leeg»         | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 201    | 1             | 01-02-2021    | 01-03-2021     | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 202    | 1             | 01-03-2021    | 01-09-2021     | n.v.t.               | n.v.t.              |
-| Ontwerpinstallatie            | 203    | 1             | 01-09-2021    | «leeg»         | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 301    | 1             | 01-02-2021    | 01-03-2021     | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 302    | 1             | 01-03-2021    | 01-09-2021     | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 303    | 1             | 01-09-2021    | «leeg»         | n.v.t.               | n.v.t.              |
-| Ontwerpput                    | 304    | 1             | 01-09-2021    | «leeg»         | n.v.t.               | n.v.t.              |
-| Gerealiseerde installatie     | 401    | 1             | 01-06-2021    | «leeg»         | 01-06-2021           | 1-10-2021           |
-| **Gerealiseerde installatie** | 401    | 2             | 01-06-2021    | **01-01-2022** | 1-10-2021            | **01-01-2022**      |
-| **Gerealiseerde put**         | 501    | 1             | 01-06-2021    | **01-01-2022** | 01-06-2021           | **01-01-2022**      |
-| **Gerealiseerde put**         | 502    | 1             | 01-10-2021    | **01-01-2022** | 01-10-2021           | **01-01-2022**      |
