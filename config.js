@@ -1,8 +1,8 @@
 var respecConfig = {
-  specStatus: "GN-WV",
+  specStatus: "GN-VV",
   specType: "IM",
   //canonicalURI: "WV",
-  //publishDate: "2021-06-23",
+  publishDate: "2021-06-23",
  maxTocLevel: 4,
 logos: [
   {
@@ -22,8 +22,8 @@ logos: [
   shortName: "guf",
   pubDomain: "bro",
   github: "https://github.com/BROprogramma/GUF",
-  previousPublishDate: "2021-06-23",
- previousStatus: "GN-VV",
+  //previousPublishDate: "2021-06-23",
+ //previousStatus: "GN-VV",
   //localBiblio: {
   //  "ISO19136": {
   //    "href": "https://www.iso.org/standard/32554.html",
