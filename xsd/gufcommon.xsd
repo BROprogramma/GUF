@@ -620,7 +620,7 @@ Explanation: Onder kwaliteitsregime IMBRO worden individuele bodemlussen geregis
                             </xs:simpleContent>
                         </xs:complexType>
                     </xs:element>
-                    <xs:element minOccurs="1"
+                    <xs:element minOccurs="0"
                            maxOccurs="1"
                            name="lifespan"
                            nillable="false"
@@ -735,7 +735,7 @@ Explanation: Indien dit nee is, is de geometrie van het gerealiseerde filter nie
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De periode waarin het betreffende voorkomen van het gerealiseerde filter geldig is.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="1"
+                    <xs:element minOccurs="0"
                            maxOccurs="1"
                            name="lifespan"
                            nillable="false"
@@ -804,7 +804,7 @@ Explanation: Indien dit nee is, is de geometrie van de gerealiseerde oppervlakte
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De periode waarin het betreffende voorkomen van een gerealiseerde oppervlakteinfiltratie geldig is.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="1"
+                    <xs:element minOccurs="0"
                            maxOccurs="1"
                            name="lifespan"
                            nillable="false"
@@ -923,7 +923,7 @@ Explanation: Bij een warmte- en koudeopslagsysteem is er minimaal 1 put met een 
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De periode waarin het betreffende voorkomen van een gerealiseerde put geldig is.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="1"
+                    <xs:element minOccurs="0"
                            maxOccurs="1"
                            name="lifespan"
                            nillable="false"
