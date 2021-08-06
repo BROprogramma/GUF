@@ -84,6 +84,8 @@ toegevoegd aan de gerealiseerde installatie in de BRO.
 | Grondwatergebruiksysteem      | 001     | 2             | 01-02-2021     | «leeg»       | 01-03-2021           | 01-06-2021          |
 | Grondwatergebruiksysteem      | 001     | 3             | 01-02-2021     | «leeg»       | 01-06-2021           | 01-09-2021          |
 | Grondwatergebruiksysteem      | 001     | 4             | 01-02-2021     | «leeg»       | 01-09-2021           | «leeg»              |
+| **Grondwatergebruiksysteem**  | **001** | **5**         | **01-02-2021** | **«leeg»**   | **01-01-2022**       | **«leeg»**          |
+|                               |         |               |                |              |                      |                     |
 | Recht grondwatergebruik       | 101     | 1             | 01-02-2021     | «leeg»       | n.v.t.               | n.v.t.              |
 | Recht grondwatergebruik       | 102     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
 | Rechtgrondwatergebruik        | 103     | 1             | 01-09-2021     | «leeg»       | n.v.t.               | n.v.t.              |
