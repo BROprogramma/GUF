@@ -461,14 +461,12 @@ Explanation: In het geval van een vergunning betreft dit de, door het bevoegd ge
 Explanation: De toegestande maximale waterverplaatsing kan zowel bij het gebruiksrecht voor het gehele systeem, als voor de verschillende installaties geregistreerd worden. De optelsom van de maximale volumes van de verschillende installaties komt niet altijd overeen met de maximale volumes van het gehele grondwatergebruiksysteem ofwel de gehele inrichting. In het geval het grondwatergebruiksysteem 2 functies vervult namelijk onttrekken en in de bodem brengen, wordt de gegevensgroep 2 keer geregistreerd: 1 keer voor de maximale volumes die onttrokken mogen worden en 1 keer voor volumes die in de bodem gebracht mogen worden. Het betreft de maximale hoeveelheden tijdens het reguliere verbruik, inclusief onderhoud. Het is exclusief de maximale volumes die aanvullend bij de aanleg van het systeem mogen worden gebruikt.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="1"
-                           name="lifespan"
-                           nillable="false"
-                           type="gufcom:LifespanType">
+                    <xs:element name="startTime"
+                           type="brocom:PartialDateType"
+                           minOccurs="1"
+                           maxOccurs="1">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De periode van datum van het eerste ontstaan tot datum van het definitieve einde van een Recht grondwatergebruik.
-Explanation: Het Recht grondwatergebruik ontstaat bij de ingangsdatum van de vergunning. Bij meldingen ontstaat het Recht grondwatergebruik bij het bevestigen van de melding. Het intrekken van de vergunning of wanneer de einddatum is bereikt, betekent het einde van het Recht grondwatergebruik.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid is ontstaan.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element minOccurs="0"
@@ -498,7 +496,7 @@ Explanation: Het Recht grondwatergebruik ontstaat bij de ingangsdatum van de ver
             <xs:extension base="gml:AbstractFeatureType">
                 <xs:sequence>
                     <xs:element name="objectIdAccountableParty"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            type="xs:string">
                         <xs:annotation>
