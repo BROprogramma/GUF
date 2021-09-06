@@ -330,6 +330,119 @@ Explanation: Een voorkomen van een grondwatergebruiksysteem is geldig wanneer de
         </xs:sequence>
     </xs:complexType>
 
+    <xs:element name="GUF_PPO2_DP" type="dsguf:GUF_PPO2_DPType" substitutionGroup="brocom:RegistrationObject"/>
+    <xs:complexType name="GUF_PPO2_DPType">
+        <xs:complexContent>
+            <xs:extension base="brocom:RegistrationObjectType">
+				<xs:sequence>
+                    <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="objectHistory"
+                           nillable="false"
+                           type="dsguf:ObjectHistoryType">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De geschiedenis van het grondwatergebruiksysteem in de werkelijkheid.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					<xs:element name="featureMember" type="gml:FeaturePropertyType" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Definition: De lijst met voorkomens van het registratieobject en de gerelateerde features binnen het registratieobject.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GUF_PPO2_DPPropertyType">
+        <xs:sequence minOccurs="1">
+            <xs:element ref="dsguf:GUF_PPO2_DP"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="GUF_PPO3_DP"
+               type="dsguf:GUF_PPO3_DPType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het uitgiftedocument met de actuele gegevens van een grondwatergebruiksysteem, dat wordt uitgeleverd als de afnemer tevens de bronhouder of dataleverancier is van het registratieobject, ongeacht of registratieobject uit registratie is genomen of niet.
+Explanation: Een grondwatergebruiksysteem, ook wel inrichting genoemd, omvat alle onderdelen die een technische en/of organisatorische samenhang kennen.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="GUF_PPO3_DPType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="deliveryContext"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="gufcom:DeliveryContextType">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <CodeListName>DeliveryContext</CodeListName>
+                                <CodeListURI/>
+                            </xs:appinfo>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De rechtsgrond op basis waarvan, of bij afwezigheid daarvan, de activiteit naar aanleiding waarvan, het betreffende gegeven is aangeleverd aan de basisregistratie ondergrond.
+Explanation: De wetgever stipuleert dat het gegeven moet zijn vastgelegd om inzicht te geven in de relatie met de taken van een bestuursorgaan. Het gegeven geeft inzicht in de maatschappelijke betekenis van de informatie. Het betreft hier de rechtsgrond in het heden. Wanneer tijdens de levensduur van het registratieobject de rechtsgrond veranderd, dan wordt deze verandering inclusief het moment waarop de verandering plaats vond geregistreerd.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="standardizedLocation"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           nillable="false"
+                           type="brocom:StandardizedLocationType">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De gegevens over de locatie van de een grondwatergebruiksysteem en over het bepalen van die locatie zoals die door de basisregistratie ondergrond zijn getransformeerd.
+Explanation: De gegevens staan niet in een brondocument. De gestandaardiseerde locatie wordt door de basisregistratie ondergrond berekend ten behoeve van afnemers. Het maakt het mogelijk alle gegevens in de registratie ondergrond in een en hetzelfde referentiestelsel te ontsluiten. De locatie van een grondwatergebruiksysteem is in de meeste gevallen een multi-point dat bestaat uit de locaties van de verschillende ontwerpinstallaties en gerealiseerde installaties.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="registrationHistory"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           nillable="false"
+                           type="brocom:RegistrationHistoryType">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De gegevens die de geschiedenis van het object in de registratie ondergrond markeren.
+Explanation: De gegevens staan niet in een brondocument maar worden automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="validity"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           nillable="false"
+                           type="gufcom:ValidityPeriodType">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De periode waarin het betreffende voorkomen van een grondwatergebruiksysteem geldig is in de werkelijkheid.
+Explanation: Een voorkomen van een grondwatergebruiksysteem is geldig wanneer de combinatie van (waarden voor) gegevens over een grondwatergebruiksysteem, geldig is in de werkelijkheid.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="lifespan"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           nillable="false"
+                           type="gufcom:LifespanType">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De periode van de datum waarop het eerste ontwerp middels een verleende vergunning wordt goedgekeurd of in een melding wordt gemeld (begindatum) tot datum van definitieve beëindiging van de beschikking of melding en de definitieve beëindiging van de gerealiseerde installaties (einddatum) van een grondwatergebruiksysteem.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="licence"
+                           minOccurs="0"
+                           maxOccurs="unbounded"
+                           nillable="false"
+                           type="gufcom:LicenceGroundwaterUsagePropertyType"/>
+                    <xs:element name="realisedInstallation"
+                           minOccurs="0"
+                           maxOccurs="unbounded"
+                           nillable="false"
+                           type="gufcom:RealisedInstallationPropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GUF_PPO3_DPPropertyType">
+        <xs:sequence minOccurs="1">
+            <xs:element ref="dsguf:GUF_PPO3_DP"/>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:element name="DesignInstallation"
                type="dsguf:DesignInstallationType"
                substitutionGroup="gml:AbstractFeature">
