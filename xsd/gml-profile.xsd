@@ -402,14 +402,15 @@ This property element either references a surface via the XLink-attributes or co
 		</complexContent>
 	</complexType>
 	<!-- ================================================= -->
-	<element name="LineStringSegment" type="gml:LineStringSegmentType" substitutionGroup="gml:AbstractCurve"/>
+	<element name="LineStringSegment" type="gml:LineStringSegmentType" substitutionGroup="gml:AbstractCurveSegment"/>
 	<!-- ================================================= -->
 	<complexType name="LineStringSegmentType">
 		<complexContent>
-			<extension base="gml:AbstractCurveType">
+			<extension base="gml:AbstractCurveSegmentType">
 				<sequence>
 					<element ref="gml:posList"/>
 				</sequence>
+				<attribute name="interpolation" type="gml:CurveInterpolationType" fixed="linear" />
 			</extension>
 		</complexContent>
 	</complexType>
