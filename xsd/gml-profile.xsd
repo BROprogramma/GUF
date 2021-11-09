@@ -638,7 +638,7 @@ All curve segments shall have an attribute interpolation with type gml:CurveInte
 					</choice>
                     -->
 				</sequence>
-				<attribute name="interpolation" type="gml:CurveInterpolationType"/>
+				<attribute name="interpolation" type="gml:CurveInterpolationType" fixed="circularArc3Points"/>
 				<attribute name="numArc" type="integer"/>
 			</extension>
 		</complexContent>
