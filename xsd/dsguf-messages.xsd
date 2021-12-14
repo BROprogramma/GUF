@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright TNO Geologische Dienst Nederland
+
+    Alle rechten voorbehouden.
+    Niets uit deze software mag worden vermenigvuldigd en/of openbaar gemaakt door middel van druk, fotokopie,
+    microfilm of op welke andere wijze dan ook, zonder voorafgaande toestemming van TNO.
+
+    Indien deze software in opdracht werd uitgebracht, wordt voor de rechten en verplichtingen van opdrachtgever
+    en opdrachtnemer verwezen naar de Algemene Voorwaarden voor opdrachten aan TNO, dan wel de betreffende
+    terzake tussen de partijen gesloten overeenkomst.
+
+-->
 <xs:schema xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
            xmlns:dsguf="http://www.broservices.nl/xsd/dsguf/1.0"
            xmlns:gml="http://www.opengis.net/gml/3.2"
            xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0"
            xmlns:gufcom="http://www.broservices.nl/xsd/gufcommon/1.0"
-           xmlns:isguf="http://www.broservices.nl/xsd/isguf/1.0"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            targetNamespace="http://www.broservices.nl/xsd/dsguf/1.0"
            elementFormDefault="qualified"
@@ -17,17 +29,15 @@
         </xs:appinfo>
     </xs:annotation>
 
-    <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd"/>
-    <xs:import namespace="http://www.broservices.nl/xsd/gufcommon/1.0" schemaLocation="gufcommon.xsd"/>
-    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
-    <xs:import namespace="http://www.broservices.nl/xsd/isguf/1.0" schemaLocation="isguf-messages.xsd"/>
     <!--
     <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
     <xs:import namespace="http://www.broservices.nl/xsd/gufcommon/1.0" schemaLocation="https://schema.broservices.nl/xsd/gufcommon/1.0/gufcommon.xsd"/>
     <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
-    <xs:import namespace="http://www.broservices.nl/xsd/isguf/1.0" schemaLocation="https://schema.broservices.nl/xsd/isguf/1.0/isguf-messages.xsd"/>
     -->
-    
+    <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd"/>
+    <xs:import namespace="http://www.broservices.nl/xsd/gufcommon/1.0" schemaLocation="gufcommon.xsd"/>
+    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
+
     <xs:element name="parseFault" type="brocom:ParseFaultType" />
     
     <xs:element name="dispatchCharacteristicsRequest" type="dsguf:DispatchCharacteristicsRequestType">
@@ -513,7 +523,7 @@ Explanation: In het geval van een vergunning betreft dit de, door het bevoegd ge
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="100"/>
+                                <xs:length value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -840,7 +850,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
                 </xs:simpleType>
             </xs:element>
             <xs:element name="sourceDocument"
-                     type="isguf:SourceDocumentType"
+                     type="gufcom:SourceDocumentType"
                      minOccurs="0"
                      maxOccurs="1">
                 <xs:annotation>
@@ -1008,7 +1018,6 @@ Explanation: Het belangrijkste doel is ook het doel waarvoor het grootste deel v
             <xs:enumeration value="actueelHistorisch"/>
         </xs:restriction>
     </xs:simpleType>
-
     <xs:complexType name="EventNameType">
         <xs:simpleContent>
             <xs:restriction base="gml:CodeWithAuthorityType">

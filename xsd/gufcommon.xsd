@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright TNO Geologische Dienst Nederland
+
+    Alle rechten voorbehouden.
+    Niets uit deze software mag worden vermenigvuldigd en/of openbaar gemaakt door middel van druk, fotokopie,
+    microfilm of op welke andere wijze dan ook, zonder voorafgaande toestemming van TNO.
+
+    Indien deze software in opdracht werd uitgebracht, wordt voor de rechten en verplichtingen van opdrachtgever
+    en opdrachtnemer verwezen naar de Algemene Voorwaarden voor opdrachten aan TNO, dan wel de betreffende
+    terzake tussen de partijen gesloten overeenkomst.
+
+-->
 <xs:schema xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
            xmlns:gml="http://www.opengis.net/gml/3.2"
            xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0"
@@ -15,12 +28,12 @@
         </xs:appinfo>
     </xs:annotation>
 
-    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
-    <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd"/>
     <!--
     <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
     <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
     -->
+    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
+    <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd"/>
 
     <xs:element name="DesignInstallation"
                type="gufcom:DesignInstallationType"
@@ -40,7 +53,7 @@ Explanation: Een ontwerpinstallatie bestaat uit 1 of meer ontwerpputten waarmee 
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="100"/>
+                                <xs:length value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -139,7 +152,7 @@ Explanation: De bodemlus is een constructie die geboord of gegraven is onder het
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="100"/>
+                                <xs:length value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -206,7 +219,7 @@ Explanation: Het betreft een infiltratieplas of een infiltratiekanaal.</xs:docum
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="100"/>
+                                <xs:length value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -266,7 +279,7 @@ Explanation: De put is een constructie die geboord of gegraven is onder het maai
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="100"/>
+                                <xs:length value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -385,6 +398,693 @@ Explanation: Het filter is het deel van de put dat voorzien is van openingen waa
         <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
+    <xs:element name="GUF_AddRealisedInstallation"
+               type="gufcom:GUF_AddRealisedInstallationType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition:   Het brondocument wordt aangeboden wanneer één of meer bodemlussen / oppervlakte-infiltraties / putten zijn gerealiseerd die deel uitmaken van een eerste of extra Gerealiseerde installatie. Dit brondocument bevat ook de verschillende gerealiseerde onderdelen (volgend uit de business rules GUF). Dit brondocument bevat, indien het een uitbreiding met een put betreft, ook het gerealiseerde filter. Daarnaast kan het eventueel gerelateerde verkenningen bevatten.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="GUF_AddRealisedInstallationType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="realisedInstallationId" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van de gerealiseerde installatie.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="100"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="installationFunction"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="gufcom:InstallationTypeType">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <CodeListName>InstallationType</CodeListName>
+                                <CodeListURI/>
+                            </xs:appinfo>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De functie van de installatie zoals die gebruikt wordt voor het primaire gebruiksdoel.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="geometry"
+                           type="gml:PointPropertyType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De puntgeometrie van de globale horizontale positie van de Gerealiseerde installatie in het tweedimensionale vlak.
+Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. De puntgeometrie kan bepaald worden door het gemiddelde (centroide) van de verzameling van puntgeometrie(en) van de putten of bodemlussen. Het kan ook de locatie van een van putten of lussen betreffen of een op een andere manier bepaalde locatie.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startTime"
+                           type="brocom:PartialDateType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid is ontstaan.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0"
+                           maxOccurs="unbounded"
+                           name="realisedLoop"
+                           nillable="false"
+                           type="gufcom:RealisedLoopPropertyType"/>
+                    <xs:element minOccurs="0"
+                           maxOccurs="unbounded"
+                           name="realisedSurfaceInfiltration"
+                           nillable="false"
+                           type="gufcom:RealisedSurfaceInfiltrationPropertyType"/>
+                    <xs:element minOccurs="0"
+                           maxOccurs="unbounded"
+                           name="realisedWell"
+                           nillable="false"
+                           type="gufcom:RealisedWellPropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GUF_AddRealisedInstallationPropertyType">
+        <xs:sequence minOccurs="1">
+            <xs:element ref="gufcom:GUF_AddRealisedInstallation"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="GUF_Closure"
+               type="gufcom:GUF_ClosureType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition:   Het brondocument wordt aangeboden wanneer het grondwatergebruiksysteem wordt beëindigd omdat alle Recht grondwatergebruik zijn beëindigd. Bij de beëindiging van het GUF worden daarom ook al het nog actieve Recht grondwatergebruik beëindigd en alle gerealiseerde installaties en subonderdelen. De registratie is met dit brondocument voltooid en het registratieobject kan niet meer worden aangevuld.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="GUF_ClosureType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.
+Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:complexContent>
+                                <xs:extension base="brocom:PartialDateType">
+                                    <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                                </xs:extension>
+                            </xs:complexContent>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GUF_ClosurePropertyType">
+        <xs:sequence minOccurs="1">
+            <xs:element ref="gufcom:GUF_Closure"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="GUF_ClosureRealisedPart"
+               type="gufcom:GUF_ClosureRealisedPartType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer een of meer van de gerealiseerde onderdelen (gerealiseerde installatie (met subonderdelen), gerealiseerde bodemlus, oppervlakte-infiltratie of put (met filter(s)) is afgesloten, afgedicht of buiten gebruik is gesteld. Bij het afsluiten van een onderdeel kan tevens de installatiefunctie en de geometrie van de bijbehorende installatie aangepast worden. Het betreffende gerealiseerde onderdeel krijgt een einddatum en bij wijzigingen van de Gerealiseerde installatie ontstaat daarvan een nieuw voorkomen.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="GUF_ClosureRealisedPartType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element minOccurs="0"
+                           maxOccurs="unbounded"
+                           name="realisedLoop"
+                           nillable="false"
+                           type="gufcom:RealisedLoopClosurePartPropertyType"/>
+                    <xs:element minOccurs="0"
+                           maxOccurs="unbounded"
+                           name="realisedSurfaceInfiltration"
+                           nillable="false"
+                           type="gufcom:RealisedSurfaceInfiltrationClosurePartPropertyType"/>
+                    <xs:element minOccurs="0"
+                           maxOccurs="unbounded"
+                           name="realisedWell"
+                           nillable="false"
+                           type="gufcom:RealisedWellClosurePartPropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GUF_ClosureRealisedPartPropertyType">
+        <xs:sequence minOccurs="1">
+            <xs:element ref="gufcom:GUF_ClosureRealisedPart"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="GUF_EndLicense"
+               type="gufcom:GUF_EndLicenseType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition:   Het brondocument wordt aangeboden wanneer een Recht grondwatergebruik wordt beëindigd (wanneer een beschikking of melding niet meer geldig is).</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="GUF_EndLicenseType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="identificationLicence" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van de beschikking of de melding
+Explanation: In het geval van een vergunning betreft dit de, door het bevoegd gezag toegekende unieke aanduiding, uit de registratie van de bronhouder, van de desbetreffende beschikking of van het document waarin die beschikking is vastgelegd, ook wel kenmerk geheten. In het geval van een melding betreft dit de unieke aanduiding, uit de registratie van de bronhouder, van het document, ook wel kenmerk geheten, waarin de melding is vastgelegd.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="100"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.
+Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:complexContent>
+                                <xs:extension base="brocom:PartialDateType">
+                                    <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                                </xs:extension>
+                            </xs:complexContent>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GUF_EndLicensePropertyType">
+        <xs:sequence minOccurs="1">
+            <xs:element ref="gufcom:GUF_EndLicense"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="GUF_ExpandRealisedInstallation"
+               type="gufcom:GUF_ExpandRealisedInstallationType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition:   Het brondocument wordt aangeboden wanneer één of meer bodemlussen / oppervlakte-infiltraties / putten zijn gerealiseerd die deel uitmaken van een bestaande Gerealiseerde installatie (volgend uit de business rules GUF). Dit brondocument kan ook het gerealiseerde filter en eventueel gerelateerde verkenningen bevatten. Bij dit brondocument wordt daarnaast de geometrie en eventueel (bij wijziging) de installatiefunctie van de Gerealiseerde installatie aangeleverd. Er ontstaat een nieuw voorkomen van de Gerealiseerde installatie.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="GUF_ExpandRealisedInstallationType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="realisedInstallationId" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van de gerealiseerde installatie.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="100"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="installationFunction"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="gufcom:InstallationTypeType">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <CodeListName>InstallationType</CodeListName>
+                                <CodeListURI/>
+                            </xs:appinfo>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De functie van de installatie zoals die gebruikt wordt voor het primaire gebruiksdoel.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="geometry"
+                           type="gml:PointPropertyType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De puntgeometrie van de globale horizontale positie van de Gerealiseerde installatie in het tweedimensionale vlak.
+Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. De puntgeometrie kan bepaald worden door het gemiddelde (centroide) van de verzameling van puntgeometrie(en) van de putten of bodemlussen. Het kan ook de locatie van een van putten of lussen betreffen of een op een andere manier bepaalde locatie.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startValidity"
+                           type="brocom:PartialDateType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Start van de periode waarop deze instantie van het object geldig is in de werkelijkheid.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0"
+                           maxOccurs="unbounded"
+                           name="realisedLoop"
+                           nillable="false"
+                           type="gufcom:RealisedLoopPropertyType"/>
+                    <xs:element minOccurs="0"
+                           maxOccurs="unbounded"
+                           name="realisedSurfaceInfiltration"
+                           nillable="false"
+                           type="gufcom:RealisedSurfaceInfiltrationPropertyType"/>
+                    <xs:element minOccurs="0"
+                           maxOccurs="unbounded"
+                           name="realisedWell"
+                           nillable="false"
+                           type="gufcom:RealisedWellPropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GUF_ExpandRealisedInstallationPropertyType">
+        <xs:sequence minOccurs="1">
+            <xs:element ref="gufcom:GUF_ExpandRealisedInstallation"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="GUF_GeometryRealisedSurfaceInfiltration"
+               type="gufcom:GUF_GeometryRealisedSurfaceInfiltrationType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition:   Het brondocument wordt aangeboden wanneer de geometrie van de gerealiseerde oppervlakte-infiltratie in de werkelijkheid wordt aangepast. Bijvoorbeeld wanneer er een nieuwe vergunning is afgegeven waarin er een groter volume geïnfiltreerd mag worden en de infiltratieplas groter is gemaakt. Er ontstaat een nieuw voorkomen van de Gerealiseerde oppervlakteinfiltratie.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="GUF_GeometryRealisedSurfaceInfiltrationType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="infiltrationBasinId" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van de gerealiseerde oppervlakte-infiltratie.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="100"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="geometry"
+                           type="gufcom:PointOrCurveOrSurfacePropertyType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De punt-, lijn- of vlakgeometrie, in het tweedimensionale (2D) vlak, van de infiltratieplas of het infiltratiekanaal zoals het in de werkelijkheid is gerealiseerd.
+Explanation: De geometrie is gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. Wanneer gekozen wordt voor een punt is dit het centroide binnen de begrenzing van de plas of het kanaal. Bij een kanaal mag ook het type lijn gekozen worden en bij een plas mag een vlak gekozen worden.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startTime"
+                           type="brocom:PartialDateType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid is ontstaan.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GUF_GeometryRealisedSurfaceInfiltrationPropertyType">
+        <xs:sequence minOccurs="1">
+            <xs:element ref="gufcom:GUF_GeometryRealisedSurfaceInfiltration"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="GUF_Height"
+               type="gufcom:GUF_HeightType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition:   Het brondocument wordt aangeboden wanneer de maaiveldhoogte verandert door een natuurlijk proces of door ophoging of afgraving van het maaiveld. Hiermee verandert, naast de maaiveldhoogte mogelijk (afhankelijk of de put wel/niet stabiel is) ook de putdiepte en de diepte bovenkant filter (van het Gerealiseerd filter). Er ontstaat een nieuw voorkomen van de Gerealiseerde put en mogelijk ook van het Gerealiseerde filter.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="GUF_HeightType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="realisedWellId" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van de gerealiseerde de put.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="100"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="height" minOccurs="1" maxOccurs="1" nillable="true">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De hoogte van het maaiveld t.o.v. NAP ter plaatse van de put.</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:simpleContent>
+                                <xs:restriction base="gml:MeasureType">
+                                    <xs:attribute name="uom" type="gml:UomIdentifier" use="required" fixed="m"/>
+                                </xs:restriction>
+                            </xs:simpleContent>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="wellDepth" minOccurs="1" maxOccurs="1" nillable="true">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De diepte van de gerealiseerde put zoals, ten opzichte van het maaiveld.</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:simpleContent>
+                                <xs:restriction base="gml:MeasureType">
+                                    <xs:attribute name="uom" type="gml:UomIdentifier" use="required" fixed="m"/>
+                                </xs:restriction>
+                            </xs:simpleContent>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="startValidity"
+                           type="brocom:PartialDateType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Start van de periode waarop deze instantie van het object geldig is in de werkelijkheid.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0"
+                           maxOccurs="unbounded"
+                           name="realisedScreen"
+                           nillable="false"
+                           type="gufcom:RealisedScreenChangesPropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GUF_HeightPropertyType">
+        <xs:sequence minOccurs="1">
+            <xs:element ref="gufcom:GUF_Height"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="GUF_NewLicence"
+               type="gufcom:GUF_NewLicenceType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition:   Het brondocument wordt aangeboden wanneer er een nieuw Recht grondwatergebruik ontstaat (bij een nieuwe beschikking of melding). In sommige gevallen wordt het oude Recht grondwatergebruik beëindigd (met een apart brondocument) en in sommige gevallen is het een aanvulling op het bestaande Recht grondwatergebruik en blijft de oude ook geldig. In beide gevallen bevat dit brondocument ook alle subonderdelen en worden de subonderdelen die aan het vorige Recht gekoppeld waren automatisch beëindigd. De registratie is met dit brondocument aangevuld. Het Grondwatergebruiksysteem krijgt een nieuw voorkomen.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="GUF_NewLicenceType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="identificationLicence" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van de beschikking of de melding
+Explanation: In het geval van een vergunning betreft dit de, door het bevoegd gezag toegekende unieke aanduiding, uit de registratie van de bronhouder, van de desbetreffende beschikking of van het document waarin die beschikking is vastgelegd, ook wel kenmerk geheten. In het geval van een melding betreft dit de unieke aanduiding, uit de registratie van de bronhouder, van het document, ook wel kenmerk geheten, waarin de melding is vastgelegd.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="100"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="legalType"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="gufcom:LegalTypeType">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <CodeListName>LegalType</CodeListName>
+                                <CodeListURI/>
+                            </xs:appinfo>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De juridische procedurevorm waaruit het recht het grondwater te gebruiken is ontstaan.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="usageTypeFacility"
+                           nillable="false"
+                           type="gufcom:UsageTypeFacilityType">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kenmerken van de gebruikstoepassing of -toepassingen van het registratieobject.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0"
+                           maxOccurs="2"
+                           name="licensedQuantity"
+                           nillable="false"
+                           type="gufcom:LicensedQuantityType">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De in de beschikking of melding genoemde kenmerken van de maximale volumes water die door het gehele systeem aan de ondergrond onttrokken mogen worden en de maximale volumes die in de bodem gebracht mogen worden.
+Explanation: De toegestande maximale waterverplaatsing kan zowel bij het gebruiksrecht voor het gehele systeem, als voor de verschillende installaties geregistreerd worden. De optelsom van de maximale volumes van de verschillende installaties komt niet altijd overeen met de maximale volumes van het gehele grondwatergebruiksysteem ofwel de gehele inrichting. In het geval het grondwatergebruiksysteem 2 functies vervult namelijk onttrekken en in de bodem brengen, wordt de gegevensgroep 2 keer geregistreerd: 1 keer voor de maximale volumes die onttrokken mogen worden en 1 keer voor volumes die in de bodem gebracht mogen worden. Het betreft de maximale hoeveelheden tijdens het reguliere verbruik, inclusief onderhoud. Het is exclusief de maximale volumes die aanvullend bij de aanleg van het systeem mogen worden gebruikt.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startTime"
+                           type="brocom:PartialDateType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid is ontstaan.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0"
+                           maxOccurs="unbounded"
+                           name="designInstallation"
+                           nillable="false"
+                           type="gufcom:DesignInstallationPropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GUF_NewLicencePropertyType">
+        <xs:sequence minOccurs="1">
+            <xs:element ref="gufcom:GUF_NewLicence"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="GUF_StartRegistration"
+               type="gufcom:GUF_StartRegistrationType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer er een nieuw grondwatergebruiksysteem wordt gestart. Het GUF wordt altijd met een Recht grondwatergebruik gestart, maar zonder gerealiseerde installatie(s).</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="GUF_StartRegistrationType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="objectIdAccountableParty"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie die door of voor de bronhouder is gebruikt om het object in de eigen administratie te kunnen vinden, voordat het was geregistreerd in de basisregistratie ondergrond.
+Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de bronhouder. Het is in de registratie opgenomen om de communicatie tussen de registerbeheerder en de bronhouder of dataleverancier te vergemakkelijken.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="deliveryContext"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="gufcom:DeliveryContextType">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <CodeListName>DeliveryContext</CodeListName>
+                                <CodeListURI/>
+                            </xs:appinfo>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De rechtsgrond op basis waarvan, of bij afwezigheid daarvan, de activiteit naar aanleiding waarvan, het betreffende gegeven is aangeleverd aan de basisregistratie ondergrond.
+Explanation: De wetgever stipuleert dat het gegeven moet zijn vastgelegd om inzicht te geven in de relatie met de taken van een bestuursorgaan. Het gegeven geeft inzicht in de maatschappelijke betekenis van de informatie. Het betreft hier de rechtsgrond in het heden. Wanneer tijdens de levensduur van het registratieobject de rechtsgrond veranderd, dan wordt deze verandering inclusief het moment waarop de verandering plaats vond geregistreerd.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="lifespan"
+                           nillable="false"
+                           type="gufcom:LifespanType">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De periode van de datum waarop het eerste ontwerp middels een verleende vergunning wordt goedgekeurd of in een melding wordt gemeld (begindatum) tot datum van definitieve beëindiging van de beschikking of melding en de definitieve beëindiging van de gerealiseerde installaties (einddatum) van een grondwatergebruiksysteem.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="licence"
+                           nillable="false"
+                           type="gufcom:LicenceGroundwaterUsagePropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GUF_StartRegistrationPropertyType">
+        <xs:sequence minOccurs="1">
+            <xs:element ref="gufcom:GUF_StartRegistration"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="GUF_WellFunction"
+               type="gufcom:GUF_WellFunctionType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition:   Het brondocument wordt aangeboden wanneer de putfunctie van de gerealiseerde put verandert. Samen met de putfunctie kan ook relatieve temperatuur aangepast worden en kan de installatiefunctie van de gerealiseerde installatie aangepast worden. Er ontstaat een nieuw voorkomen van de Gerealiseerde put en mogelijk ook van de Gerealiseerde installatie.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="GUF_WellFunctionType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="realisedWellId" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van de gerealiseerde de put.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="100"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="wellFunction"
+                           minOccurs="1"
+                           maxOccurs="2"
+                           type="gufcom:WellFunctionType">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <CodeListName>WellFunction</CodeListName>
+                                <CodeListURI/>
+                            </xs:appinfo>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De functie van de gerealiseerde put.
+Explanation: Een put kan twee functies combineren. Dat is het geval wanneer de put afwisselend gebruikt wordt voor infiltratie en onttrekking of voor infiltratie en retournering. Het water dat door de put stroomt verandert, op het moment van het wisselen van functie, van richting. Een eventueel afwijkende putfunctie voor sporadische activiteiten zoals onderhoudswerkzaamheden wordt niet geregistreerd.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="relativeTemperature"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="gufcom:RelativeTemperatureType">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <CodeListName>RelativeTemperature</CodeListName>
+                                <CodeListURI/>
+                            </xs:appinfo>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De relatieve temperatuur van de ondergrond in de nabijheid van het filter ten opzichte van de natuurlijke grondwatertemperatuur op de diepte van het filter.
+Explanation: Bij een warmte- en koudeopslagsysteem is er minimaal 1 put met een zogenaamde warme bel en minimaal 1 put met een zogenaamde koude bel. In het koude seizoen wordt er grondwater onttrokken uit de relatief warme bel en in het warme seizoen wordt er water geretourneerd in deze relatief warme bel. De put heeft in dit geval 2 functies en bij dit attribuut wordt geregistreerd of het de relatief warme bel of de koude bel betreft.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startValidity"
+                           type="brocom:PartialDateType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Start van de periode waarop deze instantie van het object geldig is in de werkelijkheid.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element minOccurs="0"
+                           maxOccurs="1"
+                           name="realisedInstallation"
+                           nillable="false"
+                           type="gufcom:RealisedInstallationFunctionPropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GUF_WellFunctionPropertyType">
+        <xs:sequence minOccurs="1">
+            <xs:element ref="gufcom:GUF_WellFunction"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="RealisedInstallationClosurePart"
+               type="gufcom:RealisedInstallationClosurePartType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kenmerken van de gerealiseerde installatie, zoals in werkelijkheid aanwezig, naar aanleiding van het afsluiten, afdichten of buiten gebruik stellen van een gerealiseerd onderdeel.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="RealisedInstallationClosurePartType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="realisedInstallationId" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van de gerealiseerde installatie.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="100"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="installationFunction"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="gufcom:InstallationTypeType">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <CodeListName>InstallationType</CodeListName>
+                                <CodeListURI/>
+                            </xs:appinfo>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De functie van de installatie zoals die gebruikt wordt voor het primaire gebruiksdoel.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="geometry"
+                           type="gml:PointPropertyType"
+                           minOccurs="0"
+                           maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De puntgeometrie van de globale horizontale positie van de Gerealiseerde installatie in het tweedimensionale vlak.
+Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. De puntgeometrie kan bepaald worden door het gemiddelde (centroide) van de verzameling van puntgeometrie(en) van de putten of bodemlussen. Het kan ook de locatie van een van putten of lussen betreffen of een op een andere manier bepaalde locatie.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="RealisedInstallationClosurePartPropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gufcom:RealisedInstallationClosurePart"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+    </xs:complexType>
+
+    <xs:element name="RealisedLoopClosurePart"
+               type="gufcom:RealisedLoopClosurePartType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kenmerken van de gerealiseerde bodemlus, zoals in de werkelijkheid aanwezig, naar aanleiding van het afsluiten, afdichten of buiten gebruik stellen van de bodemlus.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="RealisedLoopClosurePartType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="realisedLoopId" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van de gerealiseerde bodemlus.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="100"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.
+Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:complexContent>
+                                <xs:extension base="brocom:PartialDateType">
+                                    <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                                </xs:extension>
+                            </xs:complexContent>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0"
+                           maxOccurs="1"
+                           name="realisedInstallation"
+                           nillable="false"
+                           type="gufcom:RealisedInstallationClosurePartPropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="RealisedLoopClosurePartPropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gufcom:RealisedLoopClosurePart"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+    </xs:complexType>
+
     <xs:element name="LicenceGroundwaterUsage"
                type="gufcom:LicenceGroundwaterUsageType"
                substitutionGroup="gml:AbstractFeature">
@@ -403,7 +1103,7 @@ Explanation: In het geval van een vergunning betreft dit de, door het bevoegd ge
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="100"/>
+                                <xs:length value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -482,7 +1182,7 @@ Explanation: Een installatie bestaat uit 1 of meer putten waarmee water aan de b
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="100"/>
+                                <xs:length value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -552,6 +1252,100 @@ Explanation: Het gegeven staat niet in een brondocument, maar wordt automatisch 
         <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
+    <xs:element name="RealisedInstallationFunction"
+               type="gufcom:RealisedInstallationFunctionType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Verandering van de installatiefunctie van een gerealiseerde installatie, zoals in werkelijkheid aanwezig, naar aanleiding van een verandering van een putfunctie.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="RealisedInstallationFunctionType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="realisedInstallationId" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van de gerealiseerde installatie.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="100"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="installationFunction"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="gufcom:InstallationTypeType">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <CodeListName>InstallationType</CodeListName>
+                                <CodeListURI/>
+                            </xs:appinfo>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De functie van de installatie zoals die gebruikt wordt voor het primaire gebruiksdoel.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="RealisedInstallationFunctionPropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gufcom:RealisedInstallationFunction"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+    </xs:complexType>
+
+    <xs:element name="RealisedSurfaceInfiltrationClosurePart"
+               type="gufcom:RealisedSurfaceInfiltrationClosurePartType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kenmerken van het gerealiseerde oppervlaktelichaam voor de infiltratie van water, zoals in de werkelijkheid aanwezig, naar aanleiding van het buiten gebruik stellen van het oppervlaktelichaam.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="RealisedSurfaceInfiltrationClosurePartType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="infiltrationBasinId" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van de gerealiseerde oppervlakte-infiltratie.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="100"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.
+Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:complexContent>
+                                <xs:extension base="brocom:PartialDateType">
+                                    <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                                </xs:extension>
+                            </xs:complexContent>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0"
+                           maxOccurs="1"
+                           name="realisedInstallation"
+                           nillable="false"
+                           type="gufcom:RealisedInstallationClosurePartPropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="RealisedSurfaceInfiltrationClosurePartPropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gufcom:RealisedSurfaceInfiltrationClosurePart"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+    </xs:complexType>
+
     <xs:element name="RealisedLoop"
                type="gufcom:RealisedLoopType"
                substitutionGroup="gml:AbstractFeature">
@@ -570,7 +1364,7 @@ Explanation: De bodemlus is een constructie die geboord of gegraven is onder het
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="100"/>
+                                <xs:length value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -646,6 +1440,56 @@ Explanation: De begindatum kan een andere datum zijn dan de datum waarop de bode
         <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
+    <xs:element name="RealisedWellClosurePart"
+               type="gufcom:RealisedWellClosurePartType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kenmerken van de gerealiseerde put, zoals in de werkelijkheid aanwezig, naar aanleiding van het afsluiten van de put.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="RealisedWellClosurePartType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="realisedWellId" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van de gerealiseerde de put.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="100"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.
+Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:complexContent>
+                                <xs:extension base="brocom:PartialDateType">
+                                    <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                                </xs:extension>
+                            </xs:complexContent>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0"
+                           maxOccurs="1"
+                           name="realisedInstallation"
+                           nillable="false"
+                           type="gufcom:RealisedInstallationClosurePartPropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="RealisedWellClosurePartPropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gufcom:RealisedWellClosurePart"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+    </xs:complexType>
+
     <xs:element name="RealisedScreen"
                type="gufcom:RealisedScreenType"
                substitutionGroup="gml:AbstractFeature">
@@ -664,7 +1508,7 @@ Explanation: Het filter is het deel van de put dat voorzien is van openingen waa
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="100"/>
+                                <xs:length value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -755,6 +1599,50 @@ Explanation: Indien dit nee is, is de geometrie van het gerealiseerde filter nie
         <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
+    <xs:element name="RealisedScreenChanges"
+               type="gufcom:RealisedScreenChangesType"
+               substitutionGroup="gml:AbstractFeature">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kenmerken van een wijziging van het gerealiseerde filter van de put, zoals in de werkelijkheid aanwezig, naar aanleiding van een natuurlijk proces of door ophoging of afgraving van het maaiveld.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="RealisedScreenChangesType">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="realisedScreenId" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van het gerealiseerde filter.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="100"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="topScreenDepth" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De diepte van de bovenkant van het filter in meter ten opzichte van het maaiveld.</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:simpleContent>
+                                <xs:restriction base="gml:MeasureType">
+                                    <xs:attribute name="uom" type="gml:UomIdentifier" use="required" fixed="m"/>
+                                </xs:restriction>
+                            </xs:simpleContent>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="RealisedScreenChangesPropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gufcom:RealisedScreenChanges"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+    </xs:complexType>
+
     <xs:element name="RealisedSurfaceInfiltration"
                type="gufcom:RealisedSurfaceInfiltrationType"
                substitutionGroup="gml:AbstractFeature">
@@ -773,7 +1661,7 @@ Explanation: Het betreft een infiltratieplas of een infiltratiekanaal.</xs:docum
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="100"/>
+                                <xs:length value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -842,7 +1730,7 @@ Explanation: De put is een constructie die geboord of gegraven is onder het maai
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="100"/>
+                                <xs:length value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1459,6 +2347,26 @@ Explanation: In sommige gevallen zijn er naast het belangrijkste gebruiksdoel no
                           fixed="urn:bro:guf:WellFunction"/>
             </xs:restriction>
         </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:element name="SourceDocument" type="gufcom:SourceDocumentType">
+        <xs:annotation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De Union (Keuze) SourceDocument bevat alle gedefinieerde types brondocumenten die met betrekking tot een GUF (grondwatergebruiksysteem) kunnen worden aangeboden bij het BRO-systeem.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="SourceDocumentType">
+        <xs:choice minOccurs="1" maxOccurs="1">
+            <xs:element ref="gufcom:GUF_AddRealisedInstallation"/>
+            <xs:element ref="gufcom:GUF_Closure"/>
+            <xs:element ref="gufcom:GUF_ClosureRealisedPart"/>
+            <xs:element ref="gufcom:GUF_EndLicense"/>
+            <xs:element ref="gufcom:GUF_ExpandRealisedInstallation"/>
+            <xs:element ref="gufcom:GUF_GeometryRealisedSurfaceInfiltration"/>
+            <xs:element ref="gufcom:GUF_Height"/>
+            <xs:element ref="gufcom:GUF_NewLicence"/>
+            <xs:element ref="gufcom:GUF_StartRegistration"/>
+            <xs:element ref="gufcom:GUF_WellFunction"/>
+        </xs:choice>
     </xs:complexType>
 
     <xs:element name="PointOrCurve" type="gufcom:PointOrCurveType">
