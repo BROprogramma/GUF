@@ -53,7 +53,7 @@ Explanation: Een ontwerpinstallatie bestaat uit 1 of meer ontwerpputten waarmee 
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -152,7 +152,7 @@ Explanation: De bodemlus is een constructie die geboord of gegraven is onder het
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -219,7 +219,7 @@ Explanation: Het betreft een infiltratieplas of een infiltratiekanaal.</xs:docum
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -279,7 +279,7 @@ Explanation: De put is een constructie die geboord of gegraven is onder het maai
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -415,7 +415,7 @@ Explanation: Het filter is het deel van de put dat voorzien is van openingen waa
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -561,7 +561,7 @@ Explanation: In het geval van een vergunning betreft dit de, door het bevoegd ge
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -605,7 +605,7 @@ Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch d
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -680,7 +680,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -728,7 +728,7 @@ Explanation: De geometrie is gebaseerd op ISO19107. Aangegeven wordt of de coör
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -797,7 +797,7 @@ Explanation: In het geval van een vergunning betreft dit de, door het bevoegd ge
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -929,7 +929,7 @@ Explanation: De wetgever stipuleert dat het gegeven moet zijn vastgelegd om inzi
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -999,7 +999,7 @@ Explanation: Bij een warmte- en koudeopslagsysteem is er minimaal 1 put met een 
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1052,7 +1052,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1103,7 +1103,7 @@ Explanation: In het geval van een vergunning betreft dit de, door het bevoegd ge
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1182,7 +1182,7 @@ Explanation: Een installatie bestaat uit 1 of meer putten waarmee water aan de b
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1269,7 +1269,7 @@ Explanation: Het gegeven staat niet in een brondocument, maar wordt automatisch 
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1313,7 +1313,7 @@ Explanation: Het gegeven staat niet in een brondocument, maar wordt automatisch 
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1364,7 +1364,7 @@ Explanation: De bodemlus is een constructie die geboord of gegraven is onder het
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1457,7 +1457,7 @@ Explanation: De begindatum kan een andere datum zijn dan de datum waarop de bode
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1508,7 +1508,7 @@ Explanation: Het filter is het deel van de put dat voorzien is van openingen waa
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1616,7 +1616,7 @@ Explanation: Indien dit nee is, is de geometrie van het gerealiseerde filter nie
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1661,7 +1661,7 @@ Explanation: Het betreft een infiltratieplas of een infiltratiekanaal.</xs:docum
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1730,7 +1730,7 @@ Explanation: De put is een constructie die geboord of gegraven is onder het maai
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:length value="100"/>
+                                <xs:maxLength value="100"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
