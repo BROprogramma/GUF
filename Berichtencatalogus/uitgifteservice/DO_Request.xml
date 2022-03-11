@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dispatchDataRequest
-		xmlns="http://www.broservices.nl/xsd/dsguf/1.0"
-		xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+<soap:Envelope 
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.broservices.nl/xsd/dsguf/1.0 ../../XSD/dsguf-messages.xsd">
-    <!--Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de innameservice.
-        Het is niet gevalideert door de innameservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
-        xsi:schemaLocation="http://www.broservices.nl/xsd/dsguf/1.0 https://schema.broservices.nl/xsd/dsguf/1.0/dsguf-messages.xsd">
-    -->
-    <brocom:requestReference>uitgifte-GUF-PPO</brocom:requestReference>
-    <brocom:broId>GUF123456789012</brocom:broId>
-    <dataToBeDelivered>actueelHistorisch</dataToBeDelivered>
-</dispatchDataRequest>
+        xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <dispatchDataRequest
+                xmlns="http://www.broservices.nl/xsd/dsguf/1.0"
+                xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.broservices.nl/xsd/dsguf/1.0 https://raw.githubusercontent.com/BROprogramma/GUF/master/xsd/dsguf-messages.xsd">
+            <!--Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de innameservice.
+                Het is niet gevalideert door de innameservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
+                xsi:schemaLocation="http://www.broservices.nl/xsd/dsguf/1.0 https://schema.broservices.nl/xsd/dsguf/1.0/dsguf-messages.xsd">
+            -->
+            <brocom:requestReference>uitgifte-GUF-PPO</brocom:requestReference>
+            <brocom:broId>GUF123456789012</brocom:broId>
+            <dataToBeDelivered>actueelHistorisch</dataToBeDelivered>
+        </dispatchDataRequest>
+    </soap:Body>
+</soap:Envelope>
