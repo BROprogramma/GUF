@@ -91,7 +91,7 @@ Explanation: Maximale waterverplaatsing kan zowel bij het gebruiksrecht voor het
                     <xs:element minOccurs="0"
                            maxOccurs="1"
                            name="energyCharacteristics"
-                           nillable="true"
+                           nillable="false"
                            type="gufcom:EnergyCharacteristicsType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De energiegerelateerde eigenschappen van de ontwerpinstallatie. Vastgelegd worden de hoeveelheden die worden toegevoegd aan de ondergrond. Veel van deze kenmerken worden in de beschikking of melding vastgelegd.
@@ -115,7 +115,7 @@ Explanation: Het eerste ontwerp is het ontwerp dat is vastgelegd in de beschikki
                            type="gufcom:DesignLoopPropertyType"/>
                     <xs:element minOccurs="0"
                            maxOccurs="unbounded"
-                           name="designSurfaceIinfiltration"
+                           name="designSurfaceInfiltration"
                            nillable="false"
                            type="gufcom:DesignSurfaceInfiltrationPropertyType"/>
                     <xs:element minOccurs="0"
@@ -168,7 +168,7 @@ Explanation: De bodemlus is een constructie die geboord of gegraven is onder het
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het type van de ontwerpbodemlus.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="geometry" minOccurs="1" maxOccurs="1" nillable="true">
+                    <xs:element name="geometry" minOccurs="0" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De punt-, lijn- of vlakgeometrie, in het tweedimensionale (2D) vlak, van de ontwerpbodemlus.
 Explanation: Punt-, lijn-, of vlakgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. Bij horizontale bodemlussen wordt een puntgeometrie gebruikt als de lus niet verder reikt dan 10 meter vanaf het middelpunt van de lus. Er wordt een lijngeometrie gebruikt als het een enkele lus over langere afstand betreft, die verder reikt dan 10 meter vanaf het middelpunt van de lus. Er wordt een vlakgeometrie gebruikt als de horizontale lus verder reikt dan 10 meter vanaf het middelpunt van de lus. In dat laatste geval wordt het vlak geregistreerd waarbinnen de horizontale ontwerpbodemlus zich zal bevinden.</xs:documentation>
@@ -232,7 +232,7 @@ Explanation: Het betreft een infiltratieplas of een infiltratiekanaal.</xs:docum
 Explanation: De geometrie is gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. Wanneer gekozen wordt voor een punt is dit het centroide binnen de begrenzing van de plas of het kanaal. Bij een kanaal mag ook het type lijn gekozen worden en bij een plas mag een vlak gekozen worden.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="publiclyAvailable"
+                    <xs:element name="geometryPubliclyAvailable"
                            type="brocom:IndicationYesNoType"
                            minOccurs="0"
                            maxOccurs="1">
@@ -317,7 +317,7 @@ Explanation: Een put kan twee functies combineren. Dat is het geval wanneer de p
 Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="publiclyAvailable"
+                    <xs:element name="geometryPubliclyAvailable"
                            type="brocom:IndicationYesNoType"
                            minOccurs="0"
                            maxOccurs="1">
@@ -341,6 +341,15 @@ Explanation: De gerealiseerde put mag volgens regelgeving van bevoegd gezag niet
                                 </xs:restriction>
                             </xs:simpleContent>
                         </xs:complexType>
+                    </xs:element>
+                    <xs:element name="maximumWellDepthPubliclyAvailable"
+                            type="brocom:IndicationYesNoType"
+                            minOccurs="0"
+                            maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De indicatie die aangeeft of het attribuut maximale diepte voor alle gebruikers te raadplegen is.
+                            Explanation: Indien dit nee is, is de maximale diepte van de ontwerpput niet voor alle gebruikers te raadplegen in het kader van de Wet beveiliging netwerk- en informatiesystemen.</xs:documentation>
+                    </xs:annotation>
                     </xs:element>
                     <xs:element name="maximumWellCapacity" minOccurs="0" maxOccurs="1">
                         <xs:annotation>
@@ -376,6 +385,15 @@ Explanation: Bij een warmte- en koudeopslagsysteem is er minimaal 1 put met een 
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kenmerken van het ontworpen filtertraject van de ontwerpput zoals in de beschikking of melding is opgenomen.
 Explanation: Het filter is het deel van de put dat voorzien is van openingen waardoor het grondwater kan binnenstromen of uitstromen. Het al dan niet opdelen van het filtertraject in afzonderlijke filters wordt niet bij het ontwerp geregistreerd. Dit wordt normaal gesproken tijdens de realisatie bepaald omdat ten tijde van het ontwerp de exacte bodemopbouw ter plaatse nog niet bekend is.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="designScreenPubliclyAvailable"
+                                type="brocom:IndicationYesNoType"
+                                minOccurs="0"
+                                maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De indicatie die aangeeft of het attribuut filtertraject voor alle gebruikers te raadplegen is.
+                                Explanation: Indien dit nee is, is de filtertraject van de ontwerpput niet voor alle gebruikers te raadplegen in het kader van de Wet beveiliging netwerk- en informatiesystemen.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element minOccurs="0"
@@ -1209,7 +1227,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
                     </xs:element>
                     <xs:element minOccurs="1"
                            maxOccurs="1"
-                           name="validity"
+                           name="validityPeriod"
                            nillable="false"
                            type="gufcom:ValidityPeriodType">
                         <xs:annotation>
@@ -1368,7 +1386,7 @@ Explanation: De bodemlus is een constructie die geboord of gegraven is onder het
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
-                    <xs:element name="geometry" minOccurs="1" maxOccurs="1" nillable="true">
+                    <xs:element name="geometry" minOccurs="0" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De punt-, lijn- of vlakgeometrie, in het tweedimensionale (2D) vlak, van de in de werkelijkheid gerealiseerde bodemlus.
 Explanation: Punt-, lijn- of vlakgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. Bij horizontale bodemlussen wordt een puntgeometrie gebruikt als de lus niet verder reikt dan 10 meter vanaf het middelpunt van de lus. Er wordt een lijngeometrie gebruikt als het een enkele lus over langere afstand betreft, die verder reikt dan 10 meter vanaf het middelpunt van de lus. Er wordt een vlakgeometrie gebruikt als de horizontale lus verder reikt dan 10 meter vanaf het middelpunt van de lus. In dat laatste geval wordt het vlak geregistreerd waarbinnen de horizontale gerealiseerde bodemlus zich bevindt.</xs:documentation>
@@ -1425,7 +1443,7 @@ Explanation: De begindatum kan een andere datum zijn dan de datum waarop de bode
                         </xs:annotation>
                     </xs:element>
                     <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
+                           maxOccurs="1"
                            name="soilResearch"
                            nillable="false"
                            type="gufcom:SoilResearchPropertyType"/>
@@ -1536,6 +1554,15 @@ Explanation: Het filter is het deel van de put dat voorzien is van openingen waa
                             </xs:simpleContent>
                         </xs:complexType>
                     </xs:element>
+                    <xs:element name="topScreenDepthPubliclyAvailable"
+                                type="brocom:IndicationYesNoType"
+                                minOccurs="0"
+                                maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De indicatie die aangeeft of het attribuut boverkant van het filter voor alle gebruikers te raadplegen is.
+                                Explanation: Indien dit nee is, is de boverkant van het filter van de gerealiseerde put niet voor alle gebruikers te raadplegen in het kader van de Wet beveiliging netwerk- en informatiesystemen.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
                     <xs:element name="length" minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De lengte van het filter in meter.</xs:documentation>
@@ -1561,7 +1588,7 @@ Explanation: In sommige gevallen is de put niet loodrecht naar beneden gegraven 
                             </xs:complexContent>
                         </xs:complexType>
                     </xs:element>
-                    <xs:element name="publiclyAvailable"
+                    <xs:element name="geometryPubliclyAvailable"
                            type="brocom:IndicationYesNoType"
                            minOccurs="0"
                            maxOccurs="1">
@@ -1572,7 +1599,7 @@ Explanation: Indien dit nee is, is de geometrie van het gerealiseerde filter nie
                     </xs:element>
                     <xs:element minOccurs="0"
                            maxOccurs="1"
-                           name="validity"
+                           name="validityPeriod"
                            nillable="false"
                            type="gufcom:ValidityPeriodType">
                         <xs:annotation>
@@ -1674,7 +1701,7 @@ Explanation: Het betreft een infiltratieplas of een infiltratiekanaal.</xs:docum
 Explanation: De geometrie is gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. Wanneer gekozen wordt voor een punt is dit het centroide binnen de begrenzing van de plas of het kanaal. Bij een kanaal mag ook het type lijn gekozen worden en bij een plas mag een vlak gekozen worden.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="publiclyAvailable"
+                    <xs:element name="geometryPubliclyAvailable"
                            type="brocom:IndicationYesNoType"
                            minOccurs="0"
                            maxOccurs="1">
@@ -1685,7 +1712,7 @@ Explanation: Indien dit nee is, is de geometrie van de gerealiseerde oppervlakte
                     </xs:element>
                     <xs:element minOccurs="0"
                            maxOccurs="1"
-                           name="validity"
+                           name="validityPeriod"
                            nillable="false"
                            type="gufcom:ValidityPeriodType">
                         <xs:annotation>
@@ -1771,6 +1798,15 @@ Explanation: Een put kan twee functies combineren. Dat is het geval wanneer de p
                             </xs:simpleContent>
                         </xs:complexType>
                     </xs:element>
+                    <xs:element name="wellDepthPubliclyAvailable"
+                                type="brocom:IndicationYesNoType"
+                                minOccurs="0"
+                                maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De indicatie die aangeeft of het attribuut diepte voor alle gebruikers te raadplegen is.
+                                Explanation: Indien dit nee is, is de diepte van de gerealiseerde put niet voor alle gebruikers te raadplegen in het kader van de Wet beveiliging netwerk- en informatiesystemen.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
                     <xs:element name="geometry"
                            type="gml:PointPropertyType"
                            minOccurs="0"
@@ -1780,7 +1816,7 @@ Explanation: Een put kan twee functies combineren. Dat is het geval wanneer de p
 Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="publiclyAvailable"
+                    <xs:element name="geometryPubliclyAvailable"
                            type="brocom:IndicationYesNoType"
                            minOccurs="0"
                            maxOccurs="1">
@@ -1804,7 +1840,7 @@ Explanation: Bij een warmte- en koudeopslagsysteem is er minimaal 1 put met een 
                     </xs:element>
                     <xs:element minOccurs="0"
                            maxOccurs="1"
-                           name="validity"
+                           name="validityPeriod"
                            nillable="false"
                            type="gufcom:ValidityPeriodType">
                         <xs:annotation>
@@ -1827,10 +1863,10 @@ Explanation: De begindatum kan een andere datum zijn dan de datum waarop de put 
                            nillable="false"
                            type="gufcom:RealisedScreenPropertyType"/>
                     <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
+                           maxOccurs="1"
                            name="soilResearch"
                            nillable="false"
-                           type="gufcom:SoilResearchPropertyType"/>
+                           type="gufcom:SoilResearchType"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -1855,8 +1891,8 @@ Explanation: Er kunnen meerdere verkenningen zijn uitgevoerd. Het kan bijvoorbee
             <xs:extension base="gml:AbstractFeatureType">
                 <xs:sequence>
                     <xs:element name="broId"
-                           minOccurs="0"
-                           maxOccurs="1"
+                           minOccurs="1"
+                           maxOccurs="unbounded"
                            type="brocom:RegistrationObjectCodeType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie van een registratieobject binnen het registratiedomein bodem- en grondonderzoek in de registratie ondergrond.</xs:documentation>
