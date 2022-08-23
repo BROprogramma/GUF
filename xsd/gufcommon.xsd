@@ -20,7 +20,7 @@
            targetNamespace="http://www.broservices.nl/xsd/gufcommon/1.0"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
-           version="0.1.1">
+           version="0.1.2">
 
     <xs:annotation>
         <xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
@@ -504,8 +504,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
                 <xs:sequence>
                     <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.
-Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.</xs:documentation>
                         </xs:annotation>
                         <xs:complexType>
                             <xs:complexContent>
@@ -585,8 +584,7 @@ Explanation: In het geval van een vergunning betreft dit de, door het bevoegd ge
                     </xs:element>
                     <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.
-Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.</xs:documentation>
                         </xs:annotation>
                         <xs:complexType>
                             <xs:complexContent>
@@ -1076,8 +1074,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
                     </xs:element>
                     <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.
-Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.</xs:documentation>
                         </xs:annotation>
                         <xs:complexType>
                             <xs:complexContent>
@@ -1337,8 +1334,7 @@ Explanation: Het gegeven staat niet in een brondocument, maar wordt automatisch 
                     </xs:element>
                     <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.
-Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.</xs:documentation>
                         </xs:annotation>
                         <xs:complexType>
                             <xs:complexContent>
@@ -1481,8 +1477,7 @@ Explanation: De begindatum kan een andere datum zijn dan de datum waarop de bode
                     </xs:element>
                     <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.
-Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.</xs:documentation>
                         </xs:annotation>
                         <xs:complexType>
                             <xs:complexContent>
