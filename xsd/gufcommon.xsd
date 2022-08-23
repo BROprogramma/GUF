@@ -20,7 +20,7 @@
            targetNamespace="http://www.broservices.nl/xsd/gufcommon/1.0"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
-           version="0.1.0">
+           version="0.1.1">
 
     <xs:annotation>
         <xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
@@ -561,14 +561,14 @@ Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch d
         </xs:sequence>
     </xs:complexType>
 
-    <xs:element name="GUF_EndLicense"
-               type="gufcom:GUF_EndLicenseType"
+    <xs:element name="GUF_EndLicence"
+               type="gufcom:GUF_EndLicenceType"
                substitutionGroup="gml:AbstractFeature">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition:   Het brondocument wordt aangeboden wanneer een Recht grondwatergebruik wordt beëindigd (wanneer een beschikking of melding niet meer geldig is).</xs:documentation>
         </xs:annotation>
     </xs:element>
-    <xs:complexType name="GUF_EndLicenseType">
+    <xs:complexType name="GUF_EndLicenceType">
         <xs:complexContent>
             <xs:extension base="gml:AbstractFeatureType">
                 <xs:sequence>
@@ -600,9 +600,9 @@ Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch d
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    <xs:complexType name="GUF_EndLicensePropertyType">
+    <xs:complexType name="GUF_EndLicencePropertyType">
         <xs:sequence minOccurs="1">
-            <xs:element ref="gufcom:GUF_EndLicense"/>
+            <xs:element ref="gufcom:GUF_EndLicence"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -2395,7 +2395,7 @@ Explanation: In sommige gevallen zijn er naast het belangrijkste gebruiksdoel no
             <xs:element ref="gufcom:GUF_AddRealisedInstallation"/>
             <xs:element ref="gufcom:GUF_Closure"/>
             <xs:element ref="gufcom:GUF_ClosureRealisedPart"/>
-            <xs:element ref="gufcom:GUF_EndLicense"/>
+            <xs:element ref="gufcom:GUF_EndLicence"/>
             <xs:element ref="gufcom:GUF_ExpandRealisedInstallation"/>
             <xs:element ref="gufcom:GUF_GeometryRealisedSurfaceInfiltration"/>
             <xs:element ref="gufcom:GUF_Height"/>
