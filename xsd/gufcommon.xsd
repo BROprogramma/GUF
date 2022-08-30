@@ -20,7 +20,7 @@
            targetNamespace="http://www.broservices.nl/xsd/gufcommon/1.0"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
-           version="0.1.2">
+           version="1.0.0">
 
     <xs:annotation>
         <xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
@@ -502,17 +502,13 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
         <xs:complexContent>
             <xs:extension base="gml:AbstractFeatureType">
                 <xs:sequence>
-                    <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
+                    <xs:element name="endTime"
+                             type="brocom:PartialDateType"
+                             minOccurs="1"
+                             maxOccurs="1">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
                         </xs:annotation>
-                        <xs:complexType>
-                            <xs:complexContent>
-                                <xs:extension base="brocom:PartialDateType">
-                                    <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                                </xs:extension>
-                            </xs:complexContent>
-                        </xs:complexType>
                     </xs:element>
                 </xs:sequence>
             </xs:extension>
@@ -582,17 +578,13 @@ Explanation: In het geval van een vergunning betreft dit de, door het bevoegd ge
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
-                    <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
+                    <xs:element name="endTime"
+                             type="brocom:PartialDateType"
+                             minOccurs="1"
+                             maxOccurs="1">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
                         </xs:annotation>
-                        <xs:complexType>
-                            <xs:complexContent>
-                                <xs:extension base="brocom:PartialDateType">
-                                    <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                                </xs:extension>
-                            </xs:complexContent>
-                        </xs:complexType>
                     </xs:element>
                 </xs:sequence>
             </xs:extension>
@@ -1072,17 +1064,13 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
-                    <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
+                    <xs:element name="endTime"
+                             type="brocom:PartialDateType"
+                             minOccurs="1"
+                             maxOccurs="1">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
                         </xs:annotation>
-                        <xs:complexType>
-                            <xs:complexContent>
-                                <xs:extension base="brocom:PartialDateType">
-                                    <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                                </xs:extension>
-                            </xs:complexContent>
-                        </xs:complexType>
                     </xs:element>
                     <xs:element minOccurs="0"
                            maxOccurs="1"
@@ -1332,17 +1320,13 @@ Explanation: Het gegeven staat niet in een brondocument, maar wordt automatisch 
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
-                    <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
+                    <xs:element name="endTime"
+                             type="brocom:PartialDateType"
+                             minOccurs="1"
+                             maxOccurs="1">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
                         </xs:annotation>
-                        <xs:complexType>
-                            <xs:complexContent>
-                                <xs:extension base="brocom:PartialDateType">
-                                    <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                                </xs:extension>
-                            </xs:complexContent>
-                        </xs:complexType>
                     </xs:element>
                     <xs:element minOccurs="0"
                            maxOccurs="1"
@@ -1442,7 +1426,7 @@ Explanation: De begindatum kan een andere datum zijn dan de datum waarop de bode
                            maxOccurs="1"
                            name="soilResearch"
                            nillable="false"
-                           type="gufcom:SoilResearchPropertyType"/>
+                           type="gufcom:SoilResearchType"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -1475,17 +1459,13 @@ Explanation: De begindatum kan een andere datum zijn dan de datum waarop de bode
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
-                    <xs:element name="endTime" minOccurs="1" maxOccurs="1" nillable="true">
+                    <xs:element name="endTime"
+                             type="brocom:PartialDateType"
+                             minOccurs="1"
+                             maxOccurs="1">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
                         </xs:annotation>
-                        <xs:complexType>
-                            <xs:complexContent>
-                                <xs:extension base="brocom:PartialDateType">
-                                    <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                                </xs:extension>
-                            </xs:complexContent>
-                        </xs:complexType>
                     </xs:element>
                     <xs:element minOccurs="0"
                            maxOccurs="1"
@@ -1570,7 +1550,7 @@ Explanation: Het filter is het deel van de put dat voorzien is van openingen waa
                             </xs:simpleContent>
                         </xs:complexType>
                     </xs:element>
-                    <xs:element name="geometry" minOccurs="0" maxOccurs="1" nillable="true">
+                    <xs:element name="geometry" minOccurs="0" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De geometrie van het filter in het tweedimensionale vlak.
 Explanation: In sommige gevallen is de put niet loodrecht naar beneden gegraven of geboord maar schuin. In dat geval wordt informatie over de geometrie van het niet-verticale filter geregistreerd als punt of als lijn. Bij horizontale filters wordt een lijngeometrie gebruikt.</xs:documentation>
@@ -1897,12 +1877,6 @@ Explanation: Er kunnen meerdere verkenningen zijn uitgevoerd. Het kan bijvoorbee
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    <xs:complexType name="SoilResearchPropertyType">
-        <xs:sequence minOccurs="0">
-            <xs:element ref="gufcom:SoilResearch"/>
-        </xs:sequence>
-        <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-    </xs:complexType>
 
     <xs:complexType name="DesignScreenType">
         <xs:sequence>
@@ -2211,18 +2185,13 @@ Explanation: In de Omgevingswet wordt een maximaal volume per kwartaal niet meer
                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid is ontstaan.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="endTime" minOccurs="0" maxOccurs="1" nillable="true">
+            <xs:element name="endTime"
+                     type="brocom:PartialDateType"
+                     minOccurs="0"
+                     maxOccurs="1">
                 <xs:annotation>
-                    <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is.
-Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                    <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
                 </xs:annotation>
-                <xs:complexType>
-                    <xs:complexContent>
-                        <xs:extension base="brocom:PartialDateType">
-                            <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                        </xs:extension>
-                    </xs:complexContent>
-                </xs:complexType>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
@@ -2241,7 +2210,7 @@ Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch d
 Explanation: Het belangrijkste doel is ook het doel waarvoor het grootste deel van de maximale waterverplaatsing wordt gebruikt.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="secundaryUsageType"
+            <xs:element name="secondaryUsageType"
                      minOccurs="0"
                      maxOccurs="unbounded"
                      type="gufcom:UsageTypeType">
@@ -2274,17 +2243,14 @@ Explanation: In sommige gevallen zijn er naast het belangrijkste gebruiksdoel no
                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Start van de periode waarop deze instantie van het object geldig is in de werkelijkheid.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="endValidity" minOccurs="0" maxOccurs="1" nillable="true">
+            <xs:element name="endValidity" 
+                     type="brocom:PartialDateType"
+                     minOccurs="0"
+                     maxOccurs="1">
                 <xs:annotation>
-                    <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Einde van de periode waarop deze instantie van het object geldig is in de werkelijkheid. Wanneer deze waarde niet is ingevuld is de instantie nog geldig.</xs:documentation>
+                    <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Einde van de periode waarop deze instantie van het object geldig is in de werkelijkheid. De instantie is nog geldig als het attribuut niet aanwezig is.
+Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
                 </xs:annotation>
-                <xs:complexType>
-                    <xs:complexContent>
-                        <xs:extension base="brocom:PartialDateType">
-                            <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                        </xs:extension>
-                    </xs:complexContent>
-                </xs:complexType>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
