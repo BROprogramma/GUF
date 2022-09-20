@@ -752,7 +752,7 @@ Explanation: De geometrie is gebaseerd op ISO19107. Aangegeven wordt of de coör
                             </xs:simpleContent>
                         </xs:complexType>
                     </xs:element>
-                    <xs:element name="wellDepth" minOccurs="1" maxOccurs="1" nillable="true">
+                    <xs:element name="wellDepth" minOccurs="0" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De diepte van de gerealiseerde put zoals, ten opzichte van het maaiveld.</xs:documentation>
                         </xs:annotation>
