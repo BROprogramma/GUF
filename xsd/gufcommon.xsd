@@ -168,18 +168,14 @@ Explanation: De bodemlus is een constructie die geboord of gegraven is onder het
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het type van de ontwerpbodemlus.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="geometry" minOccurs="0" maxOccurs="1">
+                    <xs:element name="geometry"
+                           type="gufcom:PointOrCurveOrSurfacePropertyType"
+                           minOccurs="0"
+                           maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De punt-, lijn- of vlakgeometrie, in het tweedimensionale (2D) vlak, van de ontwerpbodemlus.
 Explanation: Punt-, lijn-, of vlakgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. Bij horizontale bodemlussen wordt een puntgeometrie gebruikt als de lus niet verder reikt dan 10 meter vanaf het middelpunt van de lus. Er wordt een lijngeometrie gebruikt als het een enkele lus over langere afstand betreft, die verder reikt dan 10 meter vanaf het middelpunt van de lus. Er wordt een vlakgeometrie gebruikt als de horizontale lus verder reikt dan 10 meter vanaf het middelpunt van de lus. In dat laatste geval wordt het vlak geregistreerd waarbinnen de horizontale ontwerpbodemlus zich zal bevinden.</xs:documentation>
                         </xs:annotation>
-                        <xs:complexType>
-                            <xs:complexContent>
-                                <xs:extension base="gufcom:PointOrCurveOrSurfacePropertyType">
-                                    <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                                </xs:extension>
-                            </xs:complexContent>
-                        </xs:complexType>
                     </xs:element>
                     <xs:element minOccurs="0"
                            maxOccurs="1"
@@ -524,13 +520,53 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
                type="gufcom:GUF_ClosureRealisedPartType"
                substitutionGroup="gml:AbstractFeature">
         <xs:annotation>
-            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer een of meer van de gerealiseerde onderdelen (gerealiseerde installatie (met subonderdelen), gerealiseerde bodemlus, oppervlakte-infiltratie of put (met filter(s)) is afgesloten, afgedicht of buiten gebruik is gesteld. Bij het afsluiten van een onderdeel kan tevens de installatiefunctie en de geometrie van de bijbehorende installatie aangepast worden. Het betreffende gerealiseerde onderdeel krijgt een einddatum en bij wijzigingen van de Gerealiseerde installatie ontstaat daarvan een nieuw voorkomen.</xs:documentation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer een of meer van de gerealiseerde onderdelen (gerealiseerde bodemlus, oppervlakte-infiltratie of put inclusief filter) van een gerealiseerde installatie is afgesloten, afgedicht of buiten gebruik gesteld. De afgesloten onderdelen krijgen een einddatum. Bij het afsluiten van een onderdeel kan tevens de installatiefunctie en/of de geometrie van de bijbehorende installatie aangepast worden. In dat geval ontstaat een nieuw voorkomen van de Gerealiseerde installatie.</xs:documentation>
         </xs:annotation>
     </xs:element>
     <xs:complexType name="GUF_ClosureRealisedPartType">
         <xs:complexContent>
             <xs:extension base="gml:AbstractFeatureType">
                 <xs:sequence>
+                    <xs:element name="realisedInstallationId" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van de gerealiseerde installatie.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="100"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="installationFunction"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="gufcom:InstallationTypeType">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <CodeListName>InstallationType</CodeListName>
+                                <CodeListURI/>
+                            </xs:appinfo>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De functie van de installatie zoals die gebruikt wordt voor het primaire gebruiksdoel.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="geometry"
+                           type="gml:PointPropertyType"
+                           minOccurs="0"
+                           maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De puntgeometrie van de globale horizontale positie van de Gerealiseerde installatie in het tweedimensionale vlak.
+Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. De puntgeometrie kan bepaald worden door het gemiddelde (centroide) van de verzameling van puntgeometrie(en) van de putten of bodemlussen. Het kan ook de locatie van een van putten of lussen betreffen of een op een andere manier bepaalde locatie.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="endTime"
+                           type="brocom:PartialDateType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Datum waarop het object in de werkelijkheid niet meer geldig is, dat wil zeggen de datum waarop de aangeboden gerealiseerde onderdelen van het grondwatergebruiksysteem ophouden te bestaan. Het object is nog geldig als het attribuut niet aanwezig is.
+Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
                     <xs:element minOccurs="0"
                            maxOccurs="unbounded"
                            name="realisedLoop"
@@ -583,7 +619,8 @@ Explanation: In het geval van een vergunning betreft dit de, door het bevoegd ge
                              minOccurs="1"
                              maxOccurs="1">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.
+Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -990,59 +1027,6 @@ Explanation: Bij een warmte- en koudeopslagsysteem is er minimaal 1 put met een 
         </xs:sequence>
     </xs:complexType>
 
-    <xs:element name="RealisedInstallationClosurePart"
-               type="gufcom:RealisedInstallationClosurePartType"
-               substitutionGroup="gml:AbstractFeature">
-        <xs:annotation>
-            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kenmerken van de gerealiseerde installatie, zoals in werkelijkheid aanwezig, naar aanleiding van het afsluiten, afdichten of buiten gebruik stellen van een gerealiseerd onderdeel.</xs:documentation>
-        </xs:annotation>
-    </xs:element>
-    <xs:complexType name="RealisedInstallationClosurePartType">
-        <xs:complexContent>
-            <xs:extension base="gml:AbstractFeatureType">
-                <xs:sequence>
-                    <xs:element name="realisedInstallationId" minOccurs="1" maxOccurs="1">
-                        <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het door de bronhouder aangeleverde, identificerend gegeven van de gerealiseerde installatie.</xs:documentation>
-                        </xs:annotation>
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:maxLength value="100"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:element>
-                    <xs:element name="installationFunction"
-                           minOccurs="0"
-                           maxOccurs="1"
-                           type="gufcom:InstallationTypeType">
-                        <xs:annotation>
-                            <xs:appinfo>
-                                <CodeListName>InstallationType</CodeListName>
-                                <CodeListURI/>
-                            </xs:appinfo>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De functie van de installatie zoals die gebruikt wordt voor het primaire gebruiksdoel.</xs:documentation>
-                        </xs:annotation>
-                    </xs:element>
-                    <xs:element name="geometry"
-                           type="gml:PointPropertyType"
-                           minOccurs="0"
-                           maxOccurs="1">
-                        <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De puntgeometrie van de globale horizontale positie van de Gerealiseerde installatie in het tweedimensionale vlak.
-Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. De puntgeometrie kan bepaald worden door het gemiddelde (centroide) van de verzameling van puntgeometrie(en) van de putten of bodemlussen. Het kan ook de locatie van een van putten of lussen betreffen of een op een andere manier bepaalde locatie.</xs:documentation>
-                        </xs:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-    <xs:complexType name="RealisedInstallationClosurePartPropertyType">
-        <xs:sequence minOccurs="0">
-            <xs:element ref="gufcom:RealisedInstallationClosurePart"/>
-        </xs:sequence>
-        <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-    </xs:complexType>
-
     <xs:element name="RealisedLoopClosurePart"
                type="gufcom:RealisedLoopClosurePartType"
                substitutionGroup="gml:AbstractFeature">
@@ -1064,19 +1048,6 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
-                    <xs:element name="endTime"
-                             type="brocom:PartialDateType"
-                             minOccurs="1"
-                             maxOccurs="1">
-                        <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
-                        </xs:annotation>
-                    </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="1"
-                           name="realisedInstallation"
-                           nillable="false"
-                           type="gufcom:RealisedInstallationClosurePartPropertyType"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -1320,19 +1291,6 @@ Explanation: Het gegeven staat niet in een brondocument, maar wordt automatisch 
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
-                    <xs:element name="endTime"
-                             type="brocom:PartialDateType"
-                             minOccurs="1"
-                             maxOccurs="1">
-                        <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
-                        </xs:annotation>
-                    </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="1"
-                           name="realisedInstallation"
-                           nillable="false"
-                           type="gufcom:RealisedInstallationClosurePartPropertyType"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -1366,18 +1324,14 @@ Explanation: De bodemlus is een constructie die geboord of gegraven is onder het
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
-                    <xs:element name="geometry" minOccurs="0" maxOccurs="1">
+                    <xs:element name="geometry"
+                           type="gufcom:PointOrCurveOrSurfacePropertyType"
+                           minOccurs="0"
+                           maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De punt-, lijn- of vlakgeometrie, in het tweedimensionale (2D) vlak, van de in de werkelijkheid gerealiseerde bodemlus.
 Explanation: Punt-, lijn- of vlakgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. Bij horizontale bodemlussen wordt een puntgeometrie gebruikt als de lus niet verder reikt dan 10 meter vanaf het middelpunt van de lus. Er wordt een lijngeometrie gebruikt als het een enkele lus over langere afstand betreft, die verder reikt dan 10 meter vanaf het middelpunt van de lus. Er wordt een vlakgeometrie gebruikt als de horizontale lus verder reikt dan 10 meter vanaf het middelpunt van de lus. In dat laatste geval wordt het vlak geregistreerd waarbinnen de horizontale gerealiseerde bodemlus zich bevindt.</xs:documentation>
                         </xs:annotation>
-                        <xs:complexType>
-                            <xs:complexContent>
-                                <xs:extension base="gufcom:PointOrCurveOrSurfacePropertyType">
-                                    <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                                </xs:extension>
-                            </xs:complexContent>
-                        </xs:complexType>
                     </xs:element>
                     <xs:element name="loopType"
                            minOccurs="1"
@@ -1426,7 +1380,7 @@ Explanation: De begindatum kan een andere datum zijn dan de datum waarop de bode
                            maxOccurs="1"
                            name="soilResearch"
                            nillable="false"
-                           type="gufcom:SoilResearchType"/>
+                           type="gufcom:SoilResearchPropertyType"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -1459,19 +1413,6 @@ Explanation: De begindatum kan een andere datum zijn dan de datum waarop de bode
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
-                    <xs:element name="endTime"
-                             type="brocom:PartialDateType"
-                             minOccurs="1"
-                             maxOccurs="1">
-                        <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
-                        </xs:annotation>
-                    </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="1"
-                           name="realisedInstallation"
-                           nillable="false"
-                           type="gufcom:RealisedInstallationClosurePartPropertyType"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -1530,9 +1471,9 @@ Explanation: Het filter is het deel van de put dat voorzien is van openingen waa
                         </xs:complexType>
                     </xs:element>
                     <xs:element name="topScreenDepthPubliclyAvailable"
-                                type="brocom:IndicationYesNoType"
-                                minOccurs="0"
-                                maxOccurs="1">
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="0"
+                           maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De indicatie die aangeeft of het attribuut boverkant van het filter voor alle gebruikers te raadplegen is.
                                 Explanation: Indien dit nee is, is de boverkant van het filter van de gerealiseerde put niet voor alle gebruikers te raadplegen in het kader van de Wet beveiliging netwerk- en informatiesystemen.</xs:documentation>
@@ -1550,18 +1491,14 @@ Explanation: Het filter is het deel van de put dat voorzien is van openingen waa
                             </xs:simpleContent>
                         </xs:complexType>
                     </xs:element>
-                    <xs:element name="geometry" minOccurs="0" maxOccurs="1">
+                    <xs:element name="geometry"
+                           type="gufcom:PointOrCurvePropertyType"
+                           minOccurs="0"
+                           maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De geometrie van het filter in het tweedimensionale vlak.
 Explanation: In sommige gevallen is de put niet loodrecht naar beneden gegraven of geboord maar schuin. In dat geval wordt informatie over de geometrie van het niet-verticale filter geregistreerd als punt of als lijn. Bij horizontale filters wordt een lijngeometrie gebruikt.</xs:documentation>
                         </xs:annotation>
-                        <xs:complexType>
-                            <xs:complexContent>
-                                <xs:extension base="gufcom:PointOrCurvePropertyType">
-                                    <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                                </xs:extension>
-                            </xs:complexContent>
-                        </xs:complexType>
                     </xs:element>
                     <xs:element name="geometryPubliclyAvailable"
                            type="brocom:IndicationYesNoType"
@@ -1774,9 +1711,9 @@ Explanation: Een put kan twee functies combineren. Dat is het geval wanneer de p
                         </xs:complexType>
                     </xs:element>
                     <xs:element name="wellDepthPubliclyAvailable"
-                                type="brocom:IndicationYesNoType"
-                                minOccurs="0"
-                                maxOccurs="1">
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="0"
+                           maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De indicatie die aangeeft of het attribuut diepte voor alle gebruikers te raadplegen is.
                                 Explanation: Indien dit nee is, is de diepte van de gerealiseerde put niet voor alle gebruikers te raadplegen in het kader van de Wet beveiliging netwerk- en informatiesystemen.</xs:documentation>
@@ -1841,7 +1778,7 @@ Explanation: De begindatum kan een andere datum zijn dan de datum waarop de put 
                            maxOccurs="1"
                            name="soilResearch"
                            nillable="false"
-                           type="gufcom:SoilResearchType"/>
+                           type="gufcom:SoilResearchPropertyType"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -1857,8 +1794,8 @@ Explanation: De begindatum kan een andere datum zijn dan de datum waarop de put 
                type="gufcom:SoilResearchType"
                substitutionGroup="gml:AbstractFeature">
         <xs:annotation>
-            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het kenmerk van de verkenning die is uitgevoerd voorafgaand aan de plaatsing van de constructie.
-Explanation: Er kunnen meerdere verkenningen zijn uitgevoerd. Het kan bijvoorbeeld gaan om een booronderzoek met een boormonsterbeschrijving maar ook bijvoorbeeld een boormonsteranalyse, een boorgatmeting of een sondering. Elke gerelateerde verkenning wordt geregistreerd.</xs:documentation>
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De verkenning(en) die is/zijn uitgevoerd voorafgaand aan de plaatsing van de constructie.
+Explanation: Er kunnen meerdere verkenningen zijn uitgevoerd. Het kan bijvoorbeeld gaan om een booronderzoek met een boormonsterbeschrijving maar ook bijvoorbeeld een boormonsteranalyse, een boorgatmeting of een sondering. Van elke uitgevoerde verkenning wordt de identificatie geregistreerd.</xs:documentation>
         </xs:annotation>
     </xs:element>
     <xs:complexType name="SoilResearchType">
@@ -1876,6 +1813,12 @@ Explanation: Er kunnen meerdere verkenningen zijn uitgevoerd. Het kan bijvoorbee
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="SoilResearchPropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gufcom:SoilResearch"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
     <xs:complexType name="DesignScreenType">
@@ -2190,7 +2133,8 @@ Explanation: In de Omgevingswet wordt een maximaal volume per kwartaal niet meer
                      minOccurs="0"
                      maxOccurs="1">
                 <xs:annotation>
-                    <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
+                    <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.
+Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
                 </xs:annotation>
             </xs:element>
         </xs:sequence>
