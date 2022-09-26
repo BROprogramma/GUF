@@ -1,1 +1,497 @@
-<?xml version="1.0" encoding="UTF-8"?><soap:Envelope         xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"        xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">    <soap:Body>        <dispatchDataResponse                xmlns="http://www.broservices.nl/xsd/dsguf/1.0"                xmlns:isguf="http://www.broservices.nl/xsd/isguf/1.0"                xmlns:gufcom="http://www.broservices.nl/xsd/gufcommon/1.0"                xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"                xmlns:gml="http://www.opengis.net/gml/3.2"                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"                xsi:schemaLocation="http://www.broservices.nl/xsd/dsguf/1.0 https://raw.githubusercontent.com/BROprogramma/GUF/master/xsd/dsguf-messages.xsd">            <!--Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de uitgifteservice.                Het is niet gevalideert door de uitgifteservice en is vaktechnisch/inhoudelijk niet voorbeeldig.                xsi:schemaLocation="http://www.broservices.nl/xsd/dsguf/1.0 https://schema.broservices.nl/xsd/dsguf/1.0/dsguf-messages.xsd">            -->            <brocom:responseType>dispatch</brocom:responseType>            <brocom:requestReference>uitgifte-GUF-PPO</brocom:requestReference>            <!-- Optional: only present if responseType is rejection.            <brocom:rejectionTime></brocom:rejectionTime>            -->            <!-- Optional: only present if responseType is dispatch. -->            <brocom:dispatchTime>2021-08-05T09:58:21+02:00</brocom:dispatchTime>            <!-- Optional: only present if responseType is rejection.            <brocom:rejectionReason>...</brocom:rejectionReason>            -->            <dispatchDocument>                <GUF_PPO gml:id="id_0001">                    <brocom:broId>GUF123456789012</brocom:broId>                    <!-- Optional: -->                    <brocom:deliveryAccountableParty>27376655</brocom:deliveryAccountableParty>                    <!-- Optional: not present in dispatchDocument GUF_PPO                    <brocom:objectIdAccountableParty>...</brocom:objectIdAccountableParty>                    -->                    <!-- Optional: not present in dispatchDocument GUF_PPO                    <brocom:deliveryResponsibleParty>...</brocom:deliveryResponsibleParty>                    -->                    <brocom:qualityRegime>IMBRO</brocom:qualityRegime>                    <deliveryContext codeSpace="urn:bro:guf:DeliveryContext">waterwet</deliveryContext>                    <standardizedLocation>                        <brocom:location srsName="urn:ogc:def:crs:EPSG::4258" gml:id="id_0002">                            <gml:pos>51.88458 5.27972</gml:pos>                        </brocom:location>                        <brocom:coordinateTransformation codeSpace="urn:bro:CoordinateTransformation">RDNAPTRANS2018</brocom:coordinateTransformation>                    </standardizedLocation>                    <registrationHistory>                        <brocom:objectRegistrationTime>2021-08-06T16:57:49+02:00</brocom:objectRegistrationTime>                        <brocom:registrationStatus codeSpace="urn:bro:RegistrationStatus">aangevuld</brocom:registrationStatus>                        <brocom:latestAdditionTime>2022-01-18T09:19:21+01:00</brocom:latestAdditionTime>                        <brocom:corrected>nee</brocom:corrected>                        <brocom:underReview>nee</brocom:underReview>                        <brocom:deregistered>nee</brocom:deregistered>                        <brocom:reregistered>nee</brocom:reregistered>                    </registrationHistory>                    <validity>                        <gufcom:startValidity>                            <brocom:date>2021-02-01</brocom:date>                        </gufcom:startValidity>                    </validity>                    <lifespan>                        <gufcom:startTime>                            <brocom:date>2021-02-01</brocom:date>                        </gufcom:startTime>                    </lifespan>                    <objectHistory>                        <event>                            <date>                                <brocom:date>2021-02-01</brocom:date>                            </date>                            <name codeSpace="urn:bro:guf:EventName">StartRegistratie</name>                            <!-- Optional: not applicable for event name StartRegistratie                            <identifier>...</identifier>                            -->                            <!-- Optional: mandatory for dispatchDocument GUF_PPO -->                            <sourceDocument>                                <gufcom:GUF_StartRegistration gml:id="id_9501">                                    <gufcom:objectIdAccountableParty>001</gufcom:objectIdAccountableParty>                                    <gufcom:deliveryContext codeSpace="urn:bro:guf:DeliveryContext">waterwet</gufcom:deliveryContext>                                    <gufcom:lifespan>                                        <gufcom:startTime>                                            <brocom:date>2021-02-01</brocom:date>                                        </gufcom:startTime>                                    </gufcom:lifespan>                                    <gufcom:licence>                                        <gufcom:LicenceGroundwaterUsage gml:id="id_9502">                                            <gufcom:identificationLicence>101</gufcom:identificationLicence>                                            <gufcom:legalType codeSpace="urn:bro:guf:LegalType">beschikking</gufcom:legalType>                                            <gufcom:usageTypeFacility>                                                <gufcom:primaryUsageType codeSpace="urn:bro:guf:UsageType">openbareDrinkwatervoorziening</gufcom:primaryUsageType>                                                <gufcom:humanConsumption>ja</gufcom:humanConsumption>                                            </gufcom:usageTypeFacility>                                            <gufcom:licensedQuantity>                                                <gufcom:licensedInOut codeSpace="urn:bro:guf:LicensedInOut">onttrekken</gufcom:licensedInOut>                                                <gufcom:maximumPerMonth uom="m3">200000</gufcom:maximumPerMonth>                                            </gufcom:licensedQuantity>                                            <gufcom:designInstallation>                                                <gufcom:DesignInstallation gml:id="id_9503">                                                    <gufcom:designInstallationId>201</gufcom:designInstallationId>                                                    <gufcom:installationFunction codeSpace="urn:bro:guf:InstallationType">onttrekking</gufcom:installationFunction>                                                    <gufcom:geometry>                                                        <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="id_9504">                                                            <gml:pos>147600.000 432900.000</gml:pos>                                                        </gml:Point>                                                    </gufcom:geometry>                                                    <gufcom:designWell>                                                        <gufcom:DesignWell gml:id="id_9505">                                                            <gufcom:designWellId>301</gufcom:designWellId>                                                            <gufcom:wellFunction codeSpace="urn:bro:guf:WellFunction">onttrekking</gufcom:wellFunction>                                                            <gufcom:height uom="m">2.53</gufcom:height>                                                            <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee                                                            <gufcom:geometry>...</gufcom:geometry>                                                            -->                                                            <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>                                                            <gufcom:maximumWellDepth uom="m">60</gufcom:maximumWellDepth>                                                            <gufcom:maximumWellDepthPubliclyAvailable>nee</gufcom:maximumWellDepthPubliclyAvailable>                                                            <gufcom:maximumWellCapacity uom="m3/h">500</gufcom:maximumWellCapacity>                                                            <gufcom:designScreen>                                                                <gufcom:screenType codeSpace="urn:bro:guf:ScreenType">verticaal</gufcom:screenType>                                                                <gufcom:designScreenTop uom="m">40.0</gufcom:designScreenTop>                                                                <gufcom:designScreenBottom uom="m">60.0</gufcom:designScreenBottom>                                                            </gufcom:designScreen>                                                            <gufcom:designScreenPubliclyAvailable>nee</gufcom:designScreenPubliclyAvailable>                                                        </gufcom:DesignWell>                                                    </gufcom:designWell>                                                </gufcom:DesignInstallation>                                            </gufcom:designInstallation>                                        </gufcom:LicenceGroundwaterUsage>                                    </gufcom:licence>                                </gufcom:GUF_StartRegistration>                            </sourceDocument>                        </event>                        <event>                            <date>                                <brocom:date>2021-03-01</brocom:date>                            </date>                            <name codeSpace="urn:bro:guf:EventName">NieuwRecht</name>                            <!-- Optional: mandatory for event name NieuwRecht -->                            <identifier>102</identifier>                            <!-- Optional: mandatory for dispatchDocument GUF_PPO -->                            <sourceDocument>                                <gufcom:GUF_NewLicence gml:id="id_9507">                                    <gufcom:identificationLicence>102</gufcom:identificationLicence>                                    <gufcom:legalType codeSpace="urn:bro:guf:LegalType">beschikking</gufcom:legalType>                                    <gufcom:usageTypeFacility>                                        <gufcom:primaryUsageType codeSpace="urn:bro:guf:UsageType">openbareDrinkwatervoorziening</gufcom:primaryUsageType>                                        <gufcom:humanConsumption>ja</gufcom:humanConsumption>                                    </gufcom:usageTypeFacility>                                    <gufcom:licensedQuantity>                                        <gufcom:licensedInOut codeSpace="urn:bro:guf:LicensedInOut">onttrekken</gufcom:licensedInOut>                                        <gufcom:maximumPerMonth uom="m3">1000000</gufcom:maximumPerMonth>                                    </gufcom:licensedQuantity>                                    <gufcom:startTime>                                        <brocom:date>2021-03-01</brocom:date>                                    </gufcom:startTime>                                    <gufcom:designInstallation>                                        <gufcom:DesignInstallation gml:id="id_9508">                                            <gufcom:designInstallationId>202</gufcom:designInstallationId>                                            <gufcom:installationFunction codeSpace="urn:bro:guf:InstallationType">onttrekking</gufcom:installationFunction>                                            <gufcom:geometry>                                                <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="id_9509">                                                    <gml:pos>147600.000 432900.000</gml:pos>                                                </gml:Point>                                            </gufcom:geometry>                                            <gufcom:designWell>                                                <gufcom:DesignWell gml:id="id_9510">                                                    <gufcom:designWellId>302</gufcom:designWellId>                                                    <gufcom:wellFunction codeSpace="urn:bro:guf:WellFunction">onttrekking</gufcom:wellFunction>                                                    <gufcom:height uom="m">2.53</gufcom:height>                                                    <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee                                                    <gufcom:geometry>...</gufcom:geometry>                                                    -->                                                    <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>                                                    <gufcom:maximumWellDepth uom="m">60</gufcom:maximumWellDepth>                                                    <gufcom:maximumWellDepthPubliclyAvailable>nee</gufcom:maximumWellDepthPubliclyAvailable>                                                    <gufcom:maximumWellCapacity uom="m3/h">1000</gufcom:maximumWellCapacity>                                                    <gufcom:designScreen>                                                        <gufcom:screenType codeSpace="urn:bro:guf:ScreenType">verticaal</gufcom:screenType>                                                        <gufcom:designScreenTop uom="m">40.0</gufcom:designScreenTop>                                                        <gufcom:designScreenBottom uom="m">60.0</gufcom:designScreenBottom>                                                    </gufcom:designScreen>                                                    <gufcom:designScreenPubliclyAvailable>nee</gufcom:designScreenPubliclyAvailable>                                                </gufcom:DesignWell>                                            </gufcom:designWell>                                        </gufcom:DesignInstallation>                                    </gufcom:designInstallation>                                </gufcom:GUF_NewLicence>                            </sourceDocument>                        </event>                        <event>                            <date>                                <brocom:date>2021-06-01</brocom:date>                            </date>                            <name codeSpace="urn:bro:guf:EventName">ToevoegingGerealiseerdeInstallatie</name>                            <!-- Optional: mandatory for event name ToevoegingGerealiseerdeInstallatie -->                            <identifier>401</identifier>                            <!-- Optional: mandatory for dispatchDocument GUF_PPO -->                            <sourceDocument>                                <gufcom:GUF_AddRealisedInstallation gml:id="id_9512">                                    <gufcom:realisedInstallationId>401</gufcom:realisedInstallationId>                                    <gufcom:installationFunction codeSpace="urn:bro:guf:InstallationType">onttrekking</gufcom:installationFunction>                                    <gufcom:geometry>                                        <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="id_9513">                                            <gml:pos>147600.000 432900.000</gml:pos>                                        </gml:Point>                                    </gufcom:geometry>                                    <gufcom:startTime>                                        <brocom:date>2021-06-01</brocom:date>                                    </gufcom:startTime>                                    <gufcom:realisedWell>                                        <gufcom:RealisedWell gml:id="id_9514">                                            <gufcom:realisedWellId>501</gufcom:realisedWellId>                                            <gufcom:wellFunction codeSpace="urn:bro:guf:WellFunction">onttrekking</gufcom:wellFunction>                                            <gufcom:height uom="m">2.53</gufcom:height>                                            <gufcom:wellDepth uom="m">57.9</gufcom:wellDepth>                                            <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee                                            <gufcom:geometry>...</gufcom:geometry>                                            -->                                            <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>                                            <gufcom:realisedScreen>                                                <gufcom:RealisedScreen gml:id="id_9516">                                                    <gufcom:realisedScreenId>601</gufcom:realisedScreenId>                                                    <gufcom:screenType codeSpace="urn:bro:guf:ScreenType">verticaal</gufcom:screenType>                                                    <gufcom:topScreenDepth uom="m">42.9</gufcom:topScreenDepth>                                                    <gufcom:topScreenDepthPubliclyAvailable>nee</gufcom:topScreenDepthPubliclyAvailable>                                                    <gufcom:length uom="m">15.0</gufcom:length>                                                    <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee                                                    <gufcom:geometry>...</gufcom:geometry>                                                    -->                                                    <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>                                                </gufcom:RealisedScreen>                                            </gufcom:realisedScreen>                                            <gufcom:soilResearch>                                                <gufcom:SoilResearch gml:id="id_9518">                                                    <gufcom:broId>BHR123456789012</gufcom:broId>                                                </gufcom:SoilResearch>                                            </gufcom:soilResearch>                                            <gufcom:soilResearch>                                                <gufcom:SoilResearch gml:id="id_9519">                                                    <gufcom:broId>BHR210987654321</gufcom:broId>                                                </gufcom:SoilResearch>                                            </gufcom:soilResearch>                                        </gufcom:RealisedWell>                                    </gufcom:realisedWell>                                </gufcom:GUF_AddRealisedInstallation>                            </sourceDocument>                        </event>                        <event>                            <date>                                <brocom:date>2021-09-01</brocom:date>                            </date>                            <name codeSpace="urn:bro:guf:EventName">NieuwRecht</name>                            <!-- Optional: mandatory for event name NieuwRecht -->                            <identifier>103</identifier>                            <!-- Optional: mandatory for dispatchDocument GUF_PPO -->                            <sourceDocument>                                <gufcom:GUF_NewLicence gml:id="id_9520">                                    <gufcom:identificationLicence>103</gufcom:identificationLicence>                                    <gufcom:legalType codeSpace="urn:bro:guf:LegalType">beschikking</gufcom:legalType>                                    <gufcom:usageTypeFacility>                                        <gufcom:primaryUsageType codeSpace="urn:bro:guf:UsageType">openbareDrinkwatervoorziening</gufcom:primaryUsageType>                                        <gufcom:humanConsumption>ja</gufcom:humanConsumption>                                    </gufcom:usageTypeFacility>                                    <gufcom:licensedQuantity>                                        <gufcom:licensedInOut codeSpace="urn:bro:guf:LicensedInOut">onttrekken</gufcom:licensedInOut>                                        <gufcom:maximumPerMonth uom="m3">1000000</gufcom:maximumPerMonth>                                    </gufcom:licensedQuantity>                                    <gufcom:startTime>                                        <brocom:date>2021-09-01</brocom:date>                                    </gufcom:startTime>                                    <gufcom:designInstallation>                                        <gufcom:DesignInstallation gml:id="id_9521">                                            <gufcom:designInstallationId>203</gufcom:designInstallationId>                                            <gufcom:installationFunction codeSpace="urn:bro:guf:InstallationType">onttrekking</gufcom:installationFunction>                                            <gufcom:geometry>                                                <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="id_9522">                                                    <gml:pos>147600.000 432900.000</gml:pos>                                                </gml:Point>                                            </gufcom:geometry>                                            <gufcom:designWell>                                                <gufcom:DesignWell gml:id="id_9523">                                                    <gufcom:designWellId>303</gufcom:designWellId>                                                    <gufcom:wellFunction codeSpace="urn:bro:guf:WellFunction">onttrekking</gufcom:wellFunction>                                                    <gufcom:height uom="m">2.53</gufcom:height>                                                    <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee                                                    <gufcom:geometry>...</gufcom:geometry>                                                    -->                                                    <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>                                                    <gufcom:maximumWellDepth uom="m">60</gufcom:maximumWellDepth>                                                    <gufcom:maximumWellDepthPubliclyAvailable>nee</gufcom:maximumWellDepthPubliclyAvailable>                                                    <gufcom:maximumWellCapacity uom="m3/h">1000</gufcom:maximumWellCapacity>                                                    <gufcom:designScreen>                                                        <gufcom:screenType codeSpace="urn:bro:guf:ScreenType">verticaal</gufcom:screenType>                                                        <gufcom:designScreenTop uom="m">40.0</gufcom:designScreenTop>                                                        <gufcom:designScreenBottom uom="m">60.0</gufcom:designScreenBottom>                                                    </gufcom:designScreen>                                                    <gufcom:designScreenPubliclyAvailable>nee</gufcom:designScreenPubliclyAvailable>                                                </gufcom:DesignWell>                                            </gufcom:designWell>                                            <gufcom:designWell>                                                <gufcom:DesignWell gml:id="id_9525">                                                    <gufcom:designWellId>304</gufcom:designWellId>                                                    <gufcom:wellFunction codeSpace="urn:bro:guf:WellFunction">onttrekking</gufcom:wellFunction>                                                    <gufcom:height uom="m">2.53</gufcom:height>                                                    <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee                                                    <gufcom:geometry>...</gufcom:geometry>                                                    -->                                                    <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>                                                    <gufcom:maximumWellDepth uom="m">60</gufcom:maximumWellDepth>                                                    <gufcom:maximumWellDepthPubliclyAvailable>nee</gufcom:maximumWellDepthPubliclyAvailable>                                                    <gufcom:maximumWellCapacity uom="m3/h">1000</gufcom:maximumWellCapacity>                                                    <gufcom:designScreen>                                                        <gufcom:screenType codeSpace="urn:bro:guf:ScreenType">verticaal</gufcom:screenType>                                                        <gufcom:designScreenTop uom="m">40.0</gufcom:designScreenTop>                                                        <gufcom:designScreenBottom uom="m">60.0</gufcom:designScreenBottom>                                                    </gufcom:designScreen>                                                    <gufcom:designScreenPubliclyAvailable>nee</gufcom:designScreenPubliclyAvailable>                                                </gufcom:DesignWell>                                            </gufcom:designWell>                                        </gufcom:DesignInstallation>                                    </gufcom:designInstallation>                                </gufcom:GUF_NewLicence>                            </sourceDocument>                        </event>                        <event>                            <date>                                <brocom:date>2021-10-01</brocom:date>                            </date>                            <name codeSpace="urn:bro:guf:EventName">UitbreidingGerealiseerdeInstallatie</name>                            <!-- Optional: mandatory for event name UitbreidingGerealiseerdeInstallatie -->                            <identifier>401</identifier>                            <!-- Optional: mandatory for dispatchDocument GUF_PPO -->                            <sourceDocument>                                <gufcom:GUF_ExpandRealisedInstallation gml:id="id_9527">                                    <gufcom:realisedInstallationId>401</gufcom:realisedInstallationId>                                    <gufcom:installationFunction codeSpace="urn:bro:guf:InstallationType">onttrekking</gufcom:installationFunction>                                    <gufcom:geometry>                                        <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="id_9528">                                            <gml:pos>147600.000 432900.000</gml:pos>                                        </gml:Point>                                    </gufcom:geometry>                                    <gufcom:startValidity>                                        <brocom:date>2021-10-01</brocom:date>                                    </gufcom:startValidity>                                    <gufcom:realisedWell>                                        <gufcom:RealisedWell gml:id="id_9529">                                            <gufcom:realisedWellId>502</gufcom:realisedWellId>                                            <gufcom:wellFunction codeSpace="urn:bro:guf:WellFunction">onttrekking</gufcom:wellFunction>                                            <gufcom:height uom="m">2.53</gufcom:height>                                            <gufcom:wellDepth uom="m">59.7</gufcom:wellDepth>                                            <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee                                            <gufcom:geometry>...</gufcom:geometry>                                            -->                                            <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>                                            <gufcom:realisedScreen>                                                <gufcom:RealisedScreen gml:id="id_9531">                                                    <gufcom:realisedScreenId>601</gufcom:realisedScreenId>                                                    <gufcom:screenType codeSpace="urn:bro:guf:ScreenType">verticaal</gufcom:screenType>                                                    <gufcom:topScreenDepth uom="m">44.7</gufcom:topScreenDepth>                                                    <gufcom:topScreenDepthPubliclyAvailable>nee</gufcom:topScreenDepthPubliclyAvailable>                                                    <gufcom:length uom="m">15.0</gufcom:length>                                                    <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee                                                    <gufcom:geometry>...</gufcom:geometry>                                                    -->                                                    <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>                                                </gufcom:RealisedScreen>                                            </gufcom:realisedScreen>                                            <gufcom:soilResearch>                                                <gufcom:SoilResearch gml:id="id_9533">                                                    <gufcom:broId>BHR123456789012</gufcom:broId>                                                </gufcom:SoilResearch>                                            </gufcom:soilResearch>                                            <gufcom:soilResearch>                                                <gufcom:SoilResearch gml:id="id_9534">                                                    <gufcom:broId>BHR210987654321</gufcom:broId>                                                </gufcom:SoilResearch>                                            </gufcom:soilResearch>                                        </gufcom:RealisedWell>                                    </gufcom:realisedWell>                                </gufcom:GUF_ExpandRealisedInstallation>                            </sourceDocument>                        </event>                        <event>                            <date>                                <brocom:date>2022-01-01</brocom:date>                            </date>                            <name codeSpace="urn:bro:guf:EventName">BeeindigingGerealiseerdOnderdeel</name>                            <!-- Optional: not applicable for event name BeeindigingGerealiseerdOnderdeel                            <identifier>...</identifier>                            -->                            <!-- Optional: mandatory for dispatchDocument GUF_PPO -->                            <sourceDocument>                                <gufcom:GUF_ClosureRealisedPart gml:id="id_9535">                                    <gufcom:realisedWell>                                        <gufcom:RealisedWellClosurePart gml:id="id_9536">                                            <gufcom:realisedWellId>501</gufcom:realisedWellId>                                            <gufcom:endTime>                                                <brocom:date>2022-01-01</brocom:date>                                            </gufcom:endTime>                                        </gufcom:RealisedWellClosurePart>                                    </gufcom:realisedWell>                                    <gufcom:realisedWell>                                        <gufcom:RealisedWellClosurePart gml:id="id_9537">                                            <gufcom:realisedWellId>502</gufcom:realisedWellId>                                            <gufcom:endTime>                                                <brocom:date>2022-01-01</brocom:date>                                            </gufcom:endTime>                                        </gufcom:RealisedWellClosurePart>                                    </gufcom:realisedWell>                                </gufcom:GUF_ClosureRealisedPart>                            </sourceDocument>                        </event>                    </objectHistory>                    <licence>                        <gufcom:LicenceGroundwaterUsage gml:id="id_0003">                            <gufcom:identificationLicence>101</gufcom:identificationLicence>                            <gufcom:legalType codeSpace="urn:bro:guf:LegalType">beschikking</gufcom:legalType>                            <gufcom:usageTypeFacility>                                <gufcom:primaryUsageType codeSpace="urn:bro:guf:UsageType">openbareDrinkwatervoorziening</gufcom:primaryUsageType>                                <gufcom:humanConsumption>ja</gufcom:humanConsumption>                            </gufcom:usageTypeFacility>                            <gufcom:licensedQuantity>                                <gufcom:licensedInOut codeSpace="urn:bro:guf:LicensedInOut">onttrekken</gufcom:licensedInOut>                                <gufcom:maximumPerMonth uom="m3">200000</gufcom:maximumPerMonth>                            </gufcom:licensedQuantity>                            <gufcom:lifespan>                                <gufcom:startTime>                                    <brocom:date>2021-02-01</brocom:date>                                </gufcom:startTime>                            </gufcom:lifespan>                            <gufcom:designInstallation>                                <gufcom:DesignInstallation gml:id="id_0004">                                    <gufcom:designInstallationId>201</gufcom:designInstallationId>                                    <gufcom:installationFunction codeSpace="urn:bro:guf:InstallationType">onttrekking</gufcom:installationFunction>                                    <gufcom:geometry>                                        <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="id_0005">                                            <gml:pos>147600.000 432900.000</gml:pos>                                        </gml:Point>                                    </gufcom:geometry>                                    <gufcom:lifespan>                                        <gufcom:startTime>                                            <brocom:date>2021-02-01</brocom:date>                                        </gufcom:startTime>                                    </gufcom:lifespan>                                    <gufcom:designWell>                                        <gufcom:DesignWell gml:id="id_0006">                                            <gufcom:designWellId>301</gufcom:designWellId>                                            <gufcom:wellFunction codeSpace="urn:bro:guf:WellFunction">onttrekking</gufcom:wellFunction>                                            <gufcom:height uom="m">2.53</gufcom:height>                                            <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee                                            <gufcom:geometry>...</gufcom:geometry>                                            -->                                            <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>                                            <gufcom:maximumWellDepth uom="m">60</gufcom:maximumWellDepth>                                            <gufcom:maximumWellDepthPubliclyAvailable>nee</gufcom:maximumWellDepthPubliclyAvailable>                                            <gufcom:maximumWellCapacity uom="m3/h">500</gufcom:maximumWellCapacity>                                            <gufcom:designScreen>                                                <gufcom:screenType codeSpace="urn:bro:guf:ScreenType">verticaal</gufcom:screenType>                                                <gufcom:designScreenTop uom="m">40.0</gufcom:designScreenTop>                                                <gufcom:designScreenBottom uom="m">60.0</gufcom:designScreenBottom>                                            </gufcom:designScreen>                                            <gufcom:designScreenPubliclyAvailable>nee</gufcom:designScreenPubliclyAvailable>                                            <gufcom:lifespan>                                                <gufcom:startTime>                                                    <brocom:date>2021-02-01</brocom:date>                                                </gufcom:startTime>                                            </gufcom:lifespan>                                        </gufcom:DesignWell>                                    </gufcom:designWell>                                </gufcom:DesignInstallation>                            </gufcom:designInstallation>                        </gufcom:LicenceGroundwaterUsage>                    </licence>                </GUF_PPO>            </dispatchDocument>        </dispatchDataResponse>    </soap:Body></soap:Envelope>
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope 
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <dispatchDataResponse
+                xmlns="http://www.broservices.nl/xsd/dsguf/1.0"
+                xmlns:isguf="http://www.broservices.nl/xsd/isguf/1.0"
+                xmlns:gufcom="http://www.broservices.nl/xsd/gufcommon/1.0"
+                xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+                xmlns:gml="http://www.opengis.net/gml/3.2"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.broservices.nl/xsd/dsguf/1.0 ../../XSD/dsguf-messages.xsd">
+            <!--Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de uitgifteservice.
+                Het is niet gevalideert door de uitgifteservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
+                xsi:schemaLocation="http://www.broservices.nl/xsd/dsguf/1.0 https://schema.broservices.nl/xsd/dsguf/1.0/dsguf-messages.xsd">
+            -->
+            <brocom:responseType>dispatch</brocom:responseType>
+            <brocom:requestReference>uitgifte-GUF-PPO</brocom:requestReference>
+            <!-- Optional: only present if responseType is rejection.
+            <brocom:rejectionTime></brocom:rejectionTime>
+            -->
+            <!-- Optional: only present if responseType is dispatch. -->
+            <brocom:dispatchTime>2021-08-05T09:58:21+02:00</brocom:dispatchTime>
+            <!-- Optional: only present if responseType is rejection.
+            <brocom:rejectionReason>...</brocom:rejectionReason>
+            -->
+            <dispatchDocument>
+                <GUF_PPO gml:id="id_0001">
+                    <brocom:broId>GUF123456789012</brocom:broId>
+                    <!-- Optional: -->
+                    <brocom:deliveryAccountableParty>27376655</brocom:deliveryAccountableParty>
+                    <!-- Optional: not present in dispatchDocument GUF_PPO
+                    <brocom:objectIdAccountableParty>...</brocom:objectIdAccountableParty>
+                    -->
+                    <!-- Optional: not present in dispatchDocument GUF_PPO
+                    <brocom:deliveryResponsibleParty>...</brocom:deliveryResponsibleParty>
+                    -->
+                    <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
+                    <deliveryContext codeSpace="urn:bro:guf:DeliveryContext">waterwet</deliveryContext>
+                    <standardizedLocation>
+                        <brocom:location>
+                            <gml:Point srsName="urn:ogc:def:crs:EPSG::4258" gml:id="id_0002">
+                                <gml:pos>51.88458 5.27972</gml:pos>
+                            </gml:Point>
+                        </brocom:location>
+                        <brocom:coordinateTransformation codeSpace="urn:bro:CoordinateTransformation">RDNAPTRANS2018</brocom:coordinateTransformation>
+                    </standardizedLocation>
+                    <registrationHistory>
+                        <brocom:objectRegistrationTime>2021-08-06T16:57:49+02:00</brocom:objectRegistrationTime>
+                        <brocom:registrationStatus codeSpace="urn:bro:RegistrationStatus">aangevuld</brocom:registrationStatus>
+                        <brocom:latestAdditionTime>2022-01-18T09:19:21+01:00</brocom:latestAdditionTime>
+                        <brocom:corrected>nee</brocom:corrected>
+                        <brocom:underReview>nee</brocom:underReview>
+                        <brocom:deregistered>nee</brocom:deregistered>
+                        <brocom:reregistered>nee</brocom:reregistered>
+                    </registrationHistory>
+                    <validityPeriod>
+                        <gufcom:startValidity>
+                            <brocom:date>2021-02-01</brocom:date>
+                        </gufcom:startValidity>
+                    </validityPeriod>
+                    <lifespan>
+                        <gufcom:startTime>
+                            <brocom:date>2021-02-01</brocom:date>
+                        </gufcom:startTime>
+                    </lifespan>
+                    <objectHistory>
+                        <event>
+                            <date>
+                                <brocom:date>2021-02-01</brocom:date>
+                            </date>
+                            <name codeSpace="urn:bro:guf:EventName">StartRegistratie</name>
+                            <!-- Optional: not applicable for event name StartRegistratie
+                            <identifier>...</identifier>
+                            -->
+                            <!-- Optional: mandatory for dispatchDocument GUF_PPO -->
+                            <sourceDocument>
+                                <gufcom:GUF_StartRegistration gml:id="id_9501">
+                                    <gufcom:objectIdAccountableParty>001</gufcom:objectIdAccountableParty>
+                                    <gufcom:deliveryContext codeSpace="urn:bro:guf:DeliveryContext">waterwet</gufcom:deliveryContext>
+                                    <gufcom:lifespan>
+                                        <gufcom:startTime>
+                                            <brocom:date>2021-02-01</brocom:date>
+                                        </gufcom:startTime>
+                                    </gufcom:lifespan>
+                                    <gufcom:licence>
+                                        <gufcom:LicenceGroundwaterUsage gml:id="id_9502">
+                                            <gufcom:identificationLicence>101</gufcom:identificationLicence>
+                                            <gufcom:legalType codeSpace="urn:bro:guf:LegalType">beschikking</gufcom:legalType>
+                                            <gufcom:usageTypeFacility>
+                                                <gufcom:primaryUsageType codeSpace="urn:bro:guf:UsageType">openbareDrinkwatervoorziening</gufcom:primaryUsageType>
+                                                <gufcom:humanConsumption>ja</gufcom:humanConsumption>
+                                            </gufcom:usageTypeFacility>
+                                            <gufcom:licensedQuantity>
+                                                <gufcom:licensedInOut codeSpace="urn:bro:guf:LicensedInOut">onttrekken</gufcom:licensedInOut>
+                                                <gufcom:maximumPerMonth uom="m3">200000</gufcom:maximumPerMonth>
+                                            </gufcom:licensedQuantity>
+                                            <gufcom:designInstallation>
+                                                <gufcom:DesignInstallation gml:id="id_9503">
+                                                    <gufcom:designInstallationId>201</gufcom:designInstallationId>
+                                                    <gufcom:installationFunction codeSpace="urn:bro:guf:InstallationType">onttrekking</gufcom:installationFunction>
+                                                    <gufcom:geometry>
+                                                        <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="id_9504">
+                                                            <gml:pos>147600.000 432900.000</gml:pos>
+                                                        </gml:Point>
+                                                    </gufcom:geometry>
+                                                    <gufcom:designWell>
+                                                        <gufcom:DesignWell gml:id="id_9505">
+                                                            <gufcom:designWellId>301</gufcom:designWellId>
+                                                            <gufcom:wellFunction codeSpace="urn:bro:guf:WellFunction">onttrekking</gufcom:wellFunction>
+                                                            <gufcom:height uom="m">2.53</gufcom:height>
+                                                            <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee
+                                                            <gufcom:geometry>...</gufcom:geometry>
+                                                            -->
+                                                            <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>
+                                                            <gufcom:maximumWellDepth uom="m">60</gufcom:maximumWellDepth>
+                                                            <gufcom:maximumWellDepthPubliclyAvailable>nee</gufcom:maximumWellDepthPubliclyAvailable>
+                                                            <gufcom:maximumWellCapacity uom="m3/h">500</gufcom:maximumWellCapacity>
+                                                            <gufcom:designScreen>
+                                                                <gufcom:screenType codeSpace="urn:bro:guf:ScreenType">verticaal</gufcom:screenType>
+                                                                <gufcom:designScreenTop uom="m">40.0</gufcom:designScreenTop>
+                                                                <gufcom:designScreenBottom uom="m">60.0</gufcom:designScreenBottom>
+                                                            </gufcom:designScreen>
+                                                            <gufcom:designScreenPubliclyAvailable>nee</gufcom:designScreenPubliclyAvailable>
+                                                        </gufcom:DesignWell>
+                                                    </gufcom:designWell>
+                                                </gufcom:DesignInstallation>
+                                            </gufcom:designInstallation>
+                                        </gufcom:LicenceGroundwaterUsage>
+                                    </gufcom:licence>
+                                </gufcom:GUF_StartRegistration>
+                            </sourceDocument>
+                        </event>
+                        <event>
+                            <date>
+                                <brocom:date>2021-03-01</brocom:date>
+                            </date>
+                            <name codeSpace="urn:bro:guf:EventName">NieuwRecht</name>
+                            <!-- Optional: mandatory for event name NieuwRecht -->
+                            <identifier>102</identifier>
+                            <!-- Optional: mandatory for dispatchDocument GUF_PPO -->
+                            <sourceDocument>
+                                <gufcom:GUF_NewLicence gml:id="id_9507">
+                                    <gufcom:identificationLicence>102</gufcom:identificationLicence>
+                                    <gufcom:legalType codeSpace="urn:bro:guf:LegalType">beschikking</gufcom:legalType>
+                                    <gufcom:usageTypeFacility>
+                                        <gufcom:primaryUsageType codeSpace="urn:bro:guf:UsageType">openbareDrinkwatervoorziening</gufcom:primaryUsageType>
+                                        <gufcom:humanConsumption>ja</gufcom:humanConsumption>
+                                    </gufcom:usageTypeFacility>
+                                    <gufcom:licensedQuantity>
+                                        <gufcom:licensedInOut codeSpace="urn:bro:guf:LicensedInOut">onttrekken</gufcom:licensedInOut>
+                                        <gufcom:maximumPerMonth uom="m3">1000000</gufcom:maximumPerMonth>
+                                    </gufcom:licensedQuantity>
+                                    <gufcom:startTime>
+                                        <brocom:date>2021-03-01</brocom:date>
+                                    </gufcom:startTime>
+                                    <gufcom:designInstallation>
+                                        <gufcom:DesignInstallation gml:id="id_9508">
+                                            <gufcom:designInstallationId>202</gufcom:designInstallationId>
+                                            <gufcom:installationFunction codeSpace="urn:bro:guf:InstallationType">onttrekking</gufcom:installationFunction>
+                                            <gufcom:geometry>
+                                                <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="id_9509">
+                                                    <gml:pos>147600.000 432900.000</gml:pos>
+                                                </gml:Point>
+                                            </gufcom:geometry>
+                                            <gufcom:designWell>
+                                                <gufcom:DesignWell gml:id="id_9510">
+                                                    <gufcom:designWellId>302</gufcom:designWellId>
+                                                    <gufcom:wellFunction codeSpace="urn:bro:guf:WellFunction">onttrekking</gufcom:wellFunction>
+                                                    <gufcom:height uom="m">2.53</gufcom:height>
+                                                    <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee
+                                                    <gufcom:geometry>...</gufcom:geometry>
+                                                    -->
+                                                    <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>
+                                                    <gufcom:maximumWellDepth uom="m">60</gufcom:maximumWellDepth>
+                                                    <gufcom:maximumWellDepthPubliclyAvailable>nee</gufcom:maximumWellDepthPubliclyAvailable>
+                                                    <gufcom:maximumWellCapacity uom="m3/h">1000</gufcom:maximumWellCapacity>
+                                                    <gufcom:designScreen>
+                                                        <gufcom:screenType codeSpace="urn:bro:guf:ScreenType">verticaal</gufcom:screenType>
+                                                        <gufcom:designScreenTop uom="m">40.0</gufcom:designScreenTop>
+                                                        <gufcom:designScreenBottom uom="m">60.0</gufcom:designScreenBottom>
+                                                    </gufcom:designScreen>
+                                                    <gufcom:designScreenPubliclyAvailable>nee</gufcom:designScreenPubliclyAvailable>
+                                                </gufcom:DesignWell>
+                                            </gufcom:designWell>
+                                        </gufcom:DesignInstallation>
+                                    </gufcom:designInstallation>
+                                </gufcom:GUF_NewLicence>
+                            </sourceDocument>
+                        </event>
+                        <event>
+                            <date>
+                                <brocom:date>2021-06-01</brocom:date>
+                            </date>
+                            <name codeSpace="urn:bro:guf:EventName">ToevoegingGerealiseerdeInstallatie</name>
+                            <!-- Optional: mandatory for event name ToevoegingGerealiseerdeInstallatie -->
+                            <identifier>401</identifier>
+                            <!-- Optional: mandatory for dispatchDocument GUF_PPO -->
+                            <sourceDocument>
+                                <gufcom:GUF_AddRealisedInstallation gml:id="id_9512">
+                                    <gufcom:realisedInstallationId>401</gufcom:realisedInstallationId>
+                                    <gufcom:installationFunction codeSpace="urn:bro:guf:InstallationType">onttrekking</gufcom:installationFunction>
+                                    <gufcom:geometry>
+                                        <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="id_9513">
+                                            <gml:pos>147600.000 432900.000</gml:pos>
+                                        </gml:Point>
+                                    </gufcom:geometry>
+                                    <gufcom:startTime>
+                                        <brocom:date>2021-06-01</brocom:date>
+                                    </gufcom:startTime>
+                                    <gufcom:realisedWell>
+                                        <gufcom:RealisedWell gml:id="id_9514">
+                                            <gufcom:realisedWellId>501</gufcom:realisedWellId>
+                                            <gufcom:wellFunction codeSpace="urn:bro:guf:WellFunction">onttrekking</gufcom:wellFunction>
+                                            <gufcom:height uom="m">2.53</gufcom:height>
+                                            <gufcom:wellDepth uom="m">57.9</gufcom:wellDepth>
+                                            <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee
+                                            <gufcom:geometry>...</gufcom:geometry>
+                                            -->
+                                            <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>
+                                            <gufcom:realisedScreen>
+                                                <gufcom:RealisedScreen gml:id="id_9516">
+                                                    <gufcom:realisedScreenId>601</gufcom:realisedScreenId>
+                                                    <gufcom:screenType codeSpace="urn:bro:guf:ScreenType">verticaal</gufcom:screenType>
+                                                    <gufcom:topScreenDepth uom="m">42.9</gufcom:topScreenDepth>
+                                                    <gufcom:topScreenDepthPubliclyAvailable>nee</gufcom:topScreenDepthPubliclyAvailable>
+                                                    <gufcom:length uom="m">15.0</gufcom:length>
+                                                    <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee
+                                                    <gufcom:geometry>...</gufcom:geometry>
+                                                    -->
+                                                    <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>
+                                                </gufcom:RealisedScreen>
+                                            </gufcom:realisedScreen>
+                                            <!-- Optional: -->
+                                            <gufcom:soilResearch>
+                                                <gufcom:SoilResearch gml:id="id_9518">
+                                                    <!-- 1 or more repetitions: -->
+                                                    <gufcom:broId>BHR123456789012</gufcom:broId>
+                                                    <gufcom:broId>BHR210987654321</gufcom:broId>
+                                                </gufcom:SoilResearch>
+                                            </gufcom:soilResearch>
+                                        </gufcom:RealisedWell>
+                                    </gufcom:realisedWell>
+                                </gufcom:GUF_AddRealisedInstallation>
+                            </sourceDocument>
+                        </event>
+                        <event>
+                            <date>
+                                <brocom:date>2021-09-01</brocom:date>
+                            </date>
+                            <name codeSpace="urn:bro:guf:EventName">NieuwRecht</name>
+                            <!-- Optional: mandatory for event name NieuwRecht -->
+                            <identifier>103</identifier>
+                            <!-- Optional: mandatory for dispatchDocument GUF_PPO -->
+                            <sourceDocument>
+                                <gufcom:GUF_NewLicence gml:id="id_9520">
+                                    <gufcom:identificationLicence>103</gufcom:identificationLicence>
+                                    <gufcom:legalType codeSpace="urn:bro:guf:LegalType">beschikking</gufcom:legalType>
+                                    <gufcom:usageTypeFacility>
+                                        <gufcom:primaryUsageType codeSpace="urn:bro:guf:UsageType">openbareDrinkwatervoorziening</gufcom:primaryUsageType>
+                                        <gufcom:humanConsumption>ja</gufcom:humanConsumption>
+                                    </gufcom:usageTypeFacility>
+                                    <gufcom:licensedQuantity>
+                                        <gufcom:licensedInOut codeSpace="urn:bro:guf:LicensedInOut">onttrekken</gufcom:licensedInOut>
+                                        <gufcom:maximumPerMonth uom="m3">1000000</gufcom:maximumPerMonth>
+                                    </gufcom:licensedQuantity>
+                                    <gufcom:startTime>
+                                        <brocom:date>2021-09-01</brocom:date>
+                                    </gufcom:startTime>
+                                    <gufcom:designInstallation>
+                                        <gufcom:DesignInstallation gml:id="id_9521">
+                                            <gufcom:designInstallationId>203</gufcom:designInstallationId>
+                                            <gufcom:installationFunction codeSpace="urn:bro:guf:InstallationType">onttrekking</gufcom:installationFunction>
+                                            <gufcom:geometry>
+                                                <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="id_9522">
+                                                    <gml:pos>147600.000 432900.000</gml:pos>
+                                                </gml:Point>
+                                            </gufcom:geometry>
+                                            <gufcom:designWell>
+                                                <gufcom:DesignWell gml:id="id_9523">
+                                                    <gufcom:designWellId>303</gufcom:designWellId>
+                                                    <gufcom:wellFunction codeSpace="urn:bro:guf:WellFunction">onttrekking</gufcom:wellFunction>
+                                                    <gufcom:height uom="m">2.53</gufcom:height>
+                                                    <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee
+                                                    <gufcom:geometry>...</gufcom:geometry>
+                                                    -->
+                                                    <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>
+                                                    <gufcom:maximumWellDepth uom="m">60</gufcom:maximumWellDepth>
+                                                    <gufcom:maximumWellDepthPubliclyAvailable>nee</gufcom:maximumWellDepthPubliclyAvailable>
+                                                    <gufcom:maximumWellCapacity uom="m3/h">1000</gufcom:maximumWellCapacity>
+                                                    <gufcom:designScreen>
+                                                        <gufcom:screenType codeSpace="urn:bro:guf:ScreenType">verticaal</gufcom:screenType>
+                                                        <gufcom:designScreenTop uom="m">40.0</gufcom:designScreenTop>
+                                                        <gufcom:designScreenBottom uom="m">60.0</gufcom:designScreenBottom>
+                                                    </gufcom:designScreen>
+                                                    <gufcom:designScreenPubliclyAvailable>nee</gufcom:designScreenPubliclyAvailable>
+                                                </gufcom:DesignWell>
+                                            </gufcom:designWell>
+                                            <gufcom:designWell>
+                                                <gufcom:DesignWell gml:id="id_9525">
+                                                    <gufcom:designWellId>304</gufcom:designWellId>
+                                                    <gufcom:wellFunction codeSpace="urn:bro:guf:WellFunction">onttrekking</gufcom:wellFunction>
+                                                    <gufcom:height uom="m">2.53</gufcom:height>
+                                                    <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee
+                                                    <gufcom:geometry>...</gufcom:geometry>
+                                                    -->
+                                                    <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>
+                                                    <gufcom:maximumWellDepth uom="m">60</gufcom:maximumWellDepth>
+                                                    <gufcom:maximumWellDepthPubliclyAvailable>nee</gufcom:maximumWellDepthPubliclyAvailable>
+                                                    <gufcom:maximumWellCapacity uom="m3/h">1000</gufcom:maximumWellCapacity>
+                                                    <gufcom:designScreen>
+                                                        <gufcom:screenType codeSpace="urn:bro:guf:ScreenType">verticaal</gufcom:screenType>
+                                                        <gufcom:designScreenTop uom="m">40.0</gufcom:designScreenTop>
+                                                        <gufcom:designScreenBottom uom="m">60.0</gufcom:designScreenBottom>
+                                                    </gufcom:designScreen>
+                                                    <gufcom:designScreenPubliclyAvailable>nee</gufcom:designScreenPubliclyAvailable>
+                                                </gufcom:DesignWell>
+                                            </gufcom:designWell>
+                                        </gufcom:DesignInstallation>
+                                    </gufcom:designInstallation>
+                                </gufcom:GUF_NewLicence>
+                            </sourceDocument>
+                        </event>
+                        <event>
+                            <date>
+                                <brocom:date>2021-10-01</brocom:date>
+                            </date>
+                            <name codeSpace="urn:bro:guf:EventName">UitbreidingGerealiseerdeInstallatie</name>
+                            <!-- Optional: mandatory for event name UitbreidingGerealiseerdeInstallatie -->
+                            <identifier>401</identifier>
+                            <!-- Optional: mandatory for dispatchDocument GUF_PPO -->
+                            <sourceDocument>
+                                <gufcom:GUF_ExpandRealisedInstallation gml:id="id_9527">
+                                    <gufcom:realisedInstallationId>401</gufcom:realisedInstallationId>
+                                    <gufcom:installationFunction codeSpace="urn:bro:guf:InstallationType">onttrekking</gufcom:installationFunction>
+                                    <gufcom:geometry>
+                                        <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="id_9528">
+                                            <gml:pos>147600.000 432900.000</gml:pos>
+                                        </gml:Point>
+                                    </gufcom:geometry>
+                                    <gufcom:startValidity>
+                                        <brocom:date>2021-10-01</brocom:date>
+                                    </gufcom:startValidity>
+                                    <gufcom:realisedWell>
+                                        <gufcom:RealisedWell gml:id="id_9529">
+                                            <gufcom:realisedWellId>502</gufcom:realisedWellId>
+                                            <gufcom:wellFunction codeSpace="urn:bro:guf:WellFunction">onttrekking</gufcom:wellFunction>
+                                            <gufcom:height uom="m">2.53</gufcom:height>
+                                            <gufcom:wellDepth uom="m">59.7</gufcom:wellDepth>
+                                            <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee
+                                            <gufcom:geometry>...</gufcom:geometry>
+                                            -->
+                                            <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>
+                                            <gufcom:realisedScreen>
+                                                <gufcom:RealisedScreen gml:id="id_9531">
+                                                    <gufcom:realisedScreenId>601</gufcom:realisedScreenId>
+                                                    <gufcom:screenType codeSpace="urn:bro:guf:ScreenType">verticaal</gufcom:screenType>
+                                                    <gufcom:topScreenDepth uom="m">44.7</gufcom:topScreenDepth>
+                                                    <gufcom:topScreenDepthPubliclyAvailable>nee</gufcom:topScreenDepthPubliclyAvailable>
+                                                    <gufcom:length uom="m">15.0</gufcom:length>
+                                                    <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee
+                                                    <gufcom:geometry>...</gufcom:geometry>
+                                                    -->
+                                                    <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>
+                                                </gufcom:RealisedScreen>
+                                            </gufcom:realisedScreen>
+                                            <!-- Optional: -->
+                                            <gufcom:soilResearch>
+                                                <gufcom:SoilResearch gml:id="id_9533">
+                                                    <!-- 1 or more repetitions: -->
+                                                    <gufcom:broId>BHR123456789012</gufcom:broId>
+                                                    <gufcom:broId>BHR210987654321</gufcom:broId>
+                                                </gufcom:SoilResearch>
+                                            </gufcom:soilResearch>
+                                        </gufcom:RealisedWell>
+                                    </gufcom:realisedWell>
+                                </gufcom:GUF_ExpandRealisedInstallation>
+                            </sourceDocument>
+                        </event>
+                        <event>
+                            <date>
+                                <brocom:date>2022-01-01</brocom:date>
+                            </date>
+                            <name codeSpace="urn:bro:guf:EventName">BeeindigingGerealiseerdOnderdeel</name>
+                            <!-- Optional: not applicable for event name BeeindigingGerealiseerdOnderdeel
+                            <identifier>...</identifier>
+                            -->
+                            <!-- Optional: mandatory for dispatchDocument GUF_PPO -->
+                            <sourceDocument>
+                                <gufcom:GUF_ClosureRealisedPart gml:id="id_9535">
+                                    <gufcom:realisedInstallationId>401</gufcom:realisedInstallationId>
+                                    <!-- Optional:
+                                    <gufcom:installationFunction codeSpace="?">?</gufcom:installationFunction>
+                                    -->
+                                    <!-- Optional: 
+                                    <gufcom:geometry>...</gufcom:geometry>
+                                    -->
+                                    <gufcom:endTime>
+                                        <!-- You have a CHOICE of the next 4 items at this level
+                                        <brocom:date>2022-01-01</brocom:date>
+                                        <brocom:yearMonth>2022-01</brocom:yearMonth>
+                                        <brocom:year>2022</brocom:year>
+                                        <brocom:voidReason>onbekend</brocom:voidReason>
+                                        -->
+                                        <brocom:date>2022-01-01</brocom:date>
+                                    </gufcom:endTime>
+                                    <!--
+                                    One list with one and only one of the three types of features must follow: realisedLoop, realisedSurfaceInfiltration or realisedWell.
+                                    -->
+                                    <!-- 0 or more repetitions:
+                                    <gufcom:realisedLoop>...</gufcom:realisedLoop>
+                                    -->
+                                    <!-- 0 or more repetitions:
+                                    <gufcom:realisedSurfaceInfiltration>...</gufcom:realisedSurfaceInfiltration>
+                                    -->
+                                    <!-- 0 or more repetitions: -->
+                                    <gufcom:realisedWell>
+                                        <gufcom:RealisedWellClosurePart gml:id="id_9536">
+                                            <gufcom:realisedWellId>501</gufcom:realisedWellId>
+                                        </gufcom:RealisedWellClosurePart>
+                                    </gufcom:realisedWell>
+                                    <gufcom:realisedWell>
+                                        <gufcom:RealisedWellClosurePart gml:id="id_9537">
+                                            <gufcom:realisedWellId>502</gufcom:realisedWellId>
+                                        </gufcom:RealisedWellClosurePart>
+                                    </gufcom:realisedWell>
+                                </gufcom:GUF_ClosureRealisedPart>
+                            </sourceDocument>
+                        </event>
+                    </objectHistory>
+                    <licence>
+                        <gufcom:LicenceGroundwaterUsage gml:id="id_0003">
+                            <gufcom:identificationLicence>101</gufcom:identificationLicence>
+                            <gufcom:legalType codeSpace="urn:bro:guf:LegalType">beschikking</gufcom:legalType>
+                            <gufcom:usageTypeFacility>
+                                <gufcom:primaryUsageType codeSpace="urn:bro:guf:UsageType">openbareDrinkwatervoorziening</gufcom:primaryUsageType>
+                                <gufcom:humanConsumption>ja</gufcom:humanConsumption>
+                            </gufcom:usageTypeFacility>
+                            <gufcom:licensedQuantity>
+                                <gufcom:licensedInOut codeSpace="urn:bro:guf:LicensedInOut">onttrekken</gufcom:licensedInOut>
+                                <gufcom:maximumPerMonth uom="m3">200000</gufcom:maximumPerMonth>
+                            </gufcom:licensedQuantity>
+                            <gufcom:lifespan>
+                                <gufcom:startTime>
+                                    <brocom:date>2021-02-01</brocom:date>
+                                </gufcom:startTime>
+                            </gufcom:lifespan>
+                            <gufcom:designInstallation>
+                                <gufcom:DesignInstallation gml:id="id_0004">
+                                    <gufcom:designInstallationId>201</gufcom:designInstallationId>
+                                    <gufcom:installationFunction codeSpace="urn:bro:guf:InstallationType">onttrekking</gufcom:installationFunction>
+                                    <gufcom:geometry>
+                                        <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="id_0005">
+                                            <gml:pos>147600.000 432900.000</gml:pos>
+                                        </gml:Point>
+                                    </gufcom:geometry>
+                                    <gufcom:lifespan>
+                                        <gufcom:startTime>
+                                            <brocom:date>2021-02-01</brocom:date>
+                                        </gufcom:startTime>
+                                    </gufcom:lifespan>
+                                    <gufcom:designWell>
+                                        <gufcom:DesignWell gml:id="id_0006">
+                                            <gufcom:designWellId>301</gufcom:designWellId>
+                                            <gufcom:wellFunction codeSpace="urn:bro:guf:WellFunction">onttrekking</gufcom:wellFunction>
+                                            <gufcom:height uom="m">2.53</gufcom:height>
+                                            <!-- Optional: not present in dispatchDocument GUF_PPO if geometryPubliclyAvailable=nee
+                                            <gufcom:geometry>...</gufcom:geometry>
+                                            -->
+                                            <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>
+                                            <gufcom:maximumWellDepth uom="m">60</gufcom:maximumWellDepth>
+                                            <gufcom:maximumWellDepthPubliclyAvailable>nee</gufcom:maximumWellDepthPubliclyAvailable>
+                                            <gufcom:maximumWellCapacity uom="m3/h">500</gufcom:maximumWellCapacity>
+                                            <gufcom:designScreen>
+                                                <gufcom:screenType codeSpace="urn:bro:guf:ScreenType">verticaal</gufcom:screenType>
+                                                <gufcom:designScreenTop uom="m">40.0</gufcom:designScreenTop>
+                                                <gufcom:designScreenBottom uom="m">60.0</gufcom:designScreenBottom>
+                                            </gufcom:designScreen>
+                                            <gufcom:designScreenPubliclyAvailable>nee</gufcom:designScreenPubliclyAvailable>
+                                            <gufcom:lifespan>
+                                                <gufcom:startTime>
+                                                    <brocom:date>2021-02-01</brocom:date>
+                                                </gufcom:startTime>
+                                            </gufcom:lifespan>
+                                        </gufcom:DesignWell>
+                                    </gufcom:designWell>
+                                </gufcom:DesignInstallation>
+                            </gufcom:designInstallation>
+                        </gufcom:LicenceGroundwaterUsage>
+                    </licence>
+                </GUF_PPO>
+            </dispatchDocument>
+        </dispatchDataResponse>
+    </soap:Body>
+</soap:Envelope>
