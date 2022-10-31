@@ -245,11 +245,14 @@
                                                     <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>
                                                 </gufcom:RealisedScreen>
                                             </gufcom:realisedScreen>
-                                            <!-- Optional: -->
+                                            <!-- 0 or more repetitions: -->
                                             <gufcom:soilResearch>
                                                 <gufcom:SoilResearch gml:id="id_9518">
-                                                    <!-- 1 or more repetitions: -->
                                                     <gufcom:broId>BHR123456789012</gufcom:broId>
+                                                </gufcom:SoilResearch>
+                                            </gufcom:soilResearch>
+                                            <gufcom:soilResearch>
+                                                <gufcom:SoilResearch gml:id="id_9519">
                                                     <gufcom:broId>BHR210987654321</gufcom:broId>
                                                 </gufcom:SoilResearch>
                                             </gufcom:soilResearch>
@@ -390,11 +393,14 @@
                                                     <gufcom:geometryPubliclyAvailable>nee</gufcom:geometryPubliclyAvailable>
                                                 </gufcom:RealisedScreen>
                                             </gufcom:realisedScreen>
-                                            <!-- Optional: -->
+                                            <!-- 0 or more repetitions: -->
                                             <gufcom:soilResearch>
                                                 <gufcom:SoilResearch gml:id="id_9533">
-                                                    <!-- 1 or more repetitions: -->
                                                     <gufcom:broId>BHR123456789012</gufcom:broId>
+                                                </gufcom:SoilResearch>
+                                            </gufcom:soilResearch>
+                                            <gufcom:soilResearch>
+                                                <gufcom:SoilResearch gml:id="id_9534">
                                                     <gufcom:broId>BHR210987654321</gufcom:broId>
                                                 </gufcom:SoilResearch>
                                             </gufcom:soilResearch>
