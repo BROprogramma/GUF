@@ -339,13 +339,13 @@ Explanation: De gerealiseerde put mag volgens regelgeving van bevoegd gezag niet
                         </xs:complexType>
                     </xs:element>
                     <xs:element name="maximumWellDepthPubliclyAvailable"
-                            type="brocom:IndicationYesNoType"
-                            minOccurs="0"
-                            maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De indicatie die aangeeft of het attribuut maximale diepte voor alle gebruikers te raadplegen is.
-                            Explanation: Indien dit nee is, is de maximale diepte van de ontwerpput niet voor alle gebruikers te raadplegen in het kader van de Wet beveiliging netwerk- en informatiesystemen.</xs:documentation>
-                    </xs:annotation>
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="0"
+                           maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De indicatie die aangeeft of het attribuut maximale putdiepte voor alle gebruikers te raadplegen is.
+Explanation: Indien dit nee is, is de maximale putdiepte van de ontwerpput niet voor alle gebruikers te raadplegen in het kader van de Wet beveiliging netwerk- en informatiesystemen.</xs:documentation>
+                        </xs:annotation>
                     </xs:element>
                     <xs:element name="maximumWellCapacity" minOccurs="0" maxOccurs="1">
                         <xs:annotation>
@@ -384,12 +384,12 @@ Explanation: Het filter is het deel van de put dat voorzien is van openingen waa
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="designScreenPubliclyAvailable"
-                                type="brocom:IndicationYesNoType"
-                                minOccurs="0"
-                                maxOccurs="1">
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="0"
+                           maxOccurs="1">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De indicatie die aangeeft of het attribuut filtertraject voor alle gebruikers te raadplegen is.
-                                Explanation: Indien dit nee is, is de filtertraject van de ontwerpput niet voor alle gebruikers te raadplegen in het kader van de Wet beveiliging netwerk- en informatiesystemen.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De indicatie die aangeeft of de kenmerken van het ontworpen filtertraject voor alle gebruikers te raadplegen zijn.
+Explanation: Indien dit nee is, zijn de kenmerken van het ontworpen filtertraject niet voor alle gebruikers te raadplegen in het kader van de Wet beveiliging netwerk- en informatiesystemen.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element minOccurs="0"
@@ -499,11 +499,11 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
             <xs:extension base="gml:AbstractFeatureType">
                 <xs:sequence>
                     <xs:element name="endTime"
-                             type="brocom:PartialDateType"
-                             minOccurs="1"
-                             maxOccurs="1">
+                           type="brocom:PartialDateType"
+                           minOccurs="1"
+                           maxOccurs="1">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Datum waarop het object in de werkelijkheid niet meer geldig is, dat wil zeggen de datum waarop het grondwatergebruiksysteem ophoudt te bestaan. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -563,8 +563,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
                            minOccurs="1"
                            maxOccurs="1">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Datum waarop het object in de werkelijkheid niet meer geldig is, dat wil zeggen de datum waarop de aangeboden gerealiseerde onderdelen van het grondwatergebruiksysteem ophouden te bestaan. Het object is nog geldig als het attribuut niet aanwezig is.
-Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Datum waarop het object in de werkelijkheid niet meer geldig is, dat wil zeggen de datum waarop de aangeboden gerealiseerde onderdelen van het grondwatergebruiksysteem ophouden te bestaan. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element minOccurs="0"
@@ -615,12 +614,11 @@ Explanation: In het geval van een vergunning betreft dit de, door het bevoegd ge
                         </xs:simpleType>
                     </xs:element>
                     <xs:element name="endTime"
-                             type="brocom:PartialDateType"
-                             minOccurs="1"
-                             maxOccurs="1">
+                           type="brocom:PartialDateType"
+                           minOccurs="1"
+                           maxOccurs="1">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.
-Explanation: Het gegeven staat niet in een brondocument maar wordt automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -1377,7 +1375,7 @@ Explanation: De begindatum kan een andere datum zijn dan de datum waarop de bode
                         </xs:annotation>
                     </xs:element>
                     <xs:element minOccurs="0"
-                           maxOccurs="1"
+                           maxOccurs="unbounded"
                            name="soilResearch"
                            nillable="false"
                            type="gufcom:SoilResearchPropertyType"/>
@@ -1475,8 +1473,8 @@ Explanation: Het filter is het deel van de put dat voorzien is van openingen waa
                            minOccurs="0"
                            maxOccurs="1">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De indicatie die aangeeft of het attribuut boverkant van het filter voor alle gebruikers te raadplegen is.
-                                Explanation: Indien dit nee is, is de boverkant van het filter van de gerealiseerde put niet voor alle gebruikers te raadplegen in het kader van de Wet beveiliging netwerk- en informatiesystemen.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De indicatie die aangeeft of het attribuut diepte bovenkant filter voor alle gebruikers te raadplegen is.
+Explanation: Indien dit nee is, is de diepte bovenkant filter van het gerealiseerde filter niet voor alle gebruikers te raadplegen in het kader van de Wet beveiliging netwerk- en informatiesystemen.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="length" minOccurs="1" maxOccurs="1">
@@ -1715,8 +1713,8 @@ Explanation: Een put kan twee functies combineren. Dat is het geval wanneer de p
                            minOccurs="0"
                            maxOccurs="1">
                         <xs:annotation>
-                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De indicatie die aangeeft of het attribuut diepte voor alle gebruikers te raadplegen is.
-                                Explanation: Indien dit nee is, is de diepte van de gerealiseerde put niet voor alle gebruikers te raadplegen in het kader van de Wet beveiliging netwerk- en informatiesystemen.</xs:documentation>
+                            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De indicatie die aangeeft of het attribuut putdiepte voor alle gebruikers te raadplegen is.
+Explanation: Indien dit nee is, is de putdiepte van de gerealiseerde put niet voor alle gebruikers te raadplegen in het kader van de Wet beveiliging netwerk- en informatiesystemen.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="geometry"
@@ -1775,7 +1773,7 @@ Explanation: De begindatum kan een andere datum zijn dan de datum waarop de put 
                            nillable="false"
                            type="gufcom:RealisedScreenPropertyType"/>
                     <xs:element minOccurs="0"
-                           maxOccurs="1"
+                           maxOccurs="unbounded"
                            name="soilResearch"
                            nillable="false"
                            type="gufcom:SoilResearchPropertyType"/>
@@ -1804,7 +1802,7 @@ Explanation: Er kunnen meerdere verkenningen zijn uitgevoerd. Het kan bijvoorbee
                 <xs:sequence>
                     <xs:element name="broId"
                            minOccurs="1"
-                           maxOccurs="unbounded"
+                           maxOccurs="1"
                            type="brocom:RegistrationObjectCodeType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie van een registratieobject binnen het registratiedomein bodem- en grondonderzoek in de registratie ondergrond.</xs:documentation>
@@ -2187,7 +2185,7 @@ Explanation: In sommige gevallen zijn er naast het belangrijkste gebruiksdoel no
                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Start van de periode waarop deze instantie van het object geldig is in de werkelijkheid.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="endValidity" 
+            <xs:element name="endValidity"
                      type="brocom:PartialDateType"
                      minOccurs="0"
                      maxOccurs="1">
