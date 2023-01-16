@@ -20,7 +20,7 @@
            targetNamespace="http://www.broservices.nl/xsd/gufcommon/1.0"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
-           version="1.0.0">
+           version="1.1.0">
 
     <xs:annotation>
         <xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
@@ -28,12 +28,12 @@
         </xs:appinfo>
     </xs:annotation>
 
+    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
+    <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd"/>
     <!--
     <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
     <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
     -->
-    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
-    <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd"/>
 
     <xs:element name="DesignInstallation"
                type="gufcom:DesignInstallationType"
@@ -1456,7 +1456,7 @@ Explanation: Het filter is het deel van de put dat voorzien is van openingen waa
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het type filter van de gerealiseerde put. Het type geeft de oriëntatierichtring van het filter aan.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="topScreenDepth" minOccurs="1" maxOccurs="1">
+                    <xs:element name="topScreenDepth" minOccurs="0" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De diepte van de bovenkant van het filter in meter ten opzichte van het maaiveld.</xs:documentation>
                         </xs:annotation>
@@ -1696,7 +1696,7 @@ Explanation: Een put kan twee functies combineren. Dat is het geval wanneer de p
                             </xs:simpleContent>
                         </xs:complexType>
                     </xs:element>
-                    <xs:element name="wellDepth" minOccurs="1" maxOccurs="1" nillable="true">
+                    <xs:element name="wellDepth" minOccurs="0" maxOccurs="1" nillable="true">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De diepte van de gerealiseerde put zoals, ten opzichte van het maaiveld.</xs:documentation>
                         </xs:annotation>
@@ -1792,7 +1792,7 @@ Explanation: De begindatum kan een andere datum zijn dan de datum waarop de put 
                type="gufcom:SoilResearchType"
                substitutionGroup="gml:AbstractFeature">
         <xs:annotation>
-            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De verkenning(en) die is/zijn uitgevoerd voorafgaand aan de plaatsing van de constructie.
+            <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het kenmerk van de verkenning die is uitgevoerd voorafgaand aan de plaatsing van de constructie.
 Explanation: Er kunnen meerdere verkenningen zijn uitgevoerd. Het kan bijvoorbeeld gaan om een booronderzoek met een boormonsterbeschrijving maar ook bijvoorbeeld een boormonsteranalyse, een boorgatmeting of een sondering. Van elke uitgevoerde verkenning wordt de identificatie geregistreerd.</xs:documentation>
         </xs:annotation>
     </xs:element>
