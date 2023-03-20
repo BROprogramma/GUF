@@ -16,15 +16,14 @@ In de LV BRO worden de volgende objecten opgevoerd.
 Per 01-03-2021 wordt een wijzigingsvergunning verleend waarbij de maximale
 putcapaciteit van de ontwerpinstallatie is verhoogd. In de BRO wordt bij het
 Grondwatergebruiksysteem een nieuw Recht grondwatergebruik geregistreerd, en een
-nieuwe ontwerpinstallatie en ontwerpput. De vorige installatie en put krijgen
-een eindtijd. Het vorige Recht grondwatergebruik krijgt geen eindtijd omdat een
-deel van de gegevens van de vorige vergunning nog geldig zijn.
+nieuwe ontwerpinstallatie en ontwerpput. Het vorige recht, de vorige installatie
+en de vorige put krijgen een eindtijd.
 
 | **Object**                   | **ID**  | **Voorkomen** | **beginTijd**  | **eindTijd** | **Begin Geldigheid** | **Eind Geldigheid** |
 |------------------------------|---------|---------------|----------------|--------------|----------------------|---------------------|
 | Grondwatergebruiksysteem     | 001     | 1             | 01-02-2021     | «leeg»       | 01-02-2021           | 01-03-2021          |
 | **Grondwatergebruiksysteem** | **001** | **2**         | **01-02-2021** | **«leeg»**   | **01-03-2021**       | **«leeg»**          |
-| Recht grondwatergebruik      | 101     | 1             | 01-02-2021     | «leeg»       | n.v.t.               | n.v.t.              |
+| Recht grondwatergebruik      | 101     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
 | **Recht grondwatergebruik**  | **102** | **1**         | **01-03-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
 | Ontwerpinstallatie           | 201     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
 | **Ontwerpinstallatie**       | **202** | **1**         | **01-03-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
@@ -41,7 +40,7 @@ krijgt.
 | Grondwatergebruiksysteem      | 001     | 1             | 01-02-2021     | «leeg»       | 01-02-2021           | 01-03-2021          |
 | Grondwatergebruiksysteem      | 001     | 2             | 01-02-2021     | «leeg»       | 01-03-2021           | 01-06-2021          |
 | **Grondwatergebruiksysteem**  | **001** | **3**         | **01-02-2021** | **«leeg»**   | **01-06-2021**       | **«leeg»**          |
-| Recht grondwatergebruik       | 101     | 1             | 01-02-2021     | «leeg»       | n.v.t.               | n.v.t.              |
+| Recht grondwatergebruik       | 101     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
 | Recht grondwatergebruik       | 102     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
 | Ontwerpinstallatie            | 201     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
 | Ontwerpinstallatie            | 202     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
@@ -62,9 +61,9 @@ BRO.
 | Grondwatergebruiksysteem     | 001     | 2             | 01-02-2021     | «leeg»       | 01-03-2021           | 01-06-2021          |
 | Grondwatergebruiksysteem     | 001     | 3             | 01-02-2021     | «leeg»       | 01-06-2021           | 01-09-2021          |
 | **Grondwatergebruiksysteem** | **001** | **4**         | **01-02-2021** | **«leeg»**   | **01-09-2021**       | **«leeg»**          |
-| Recht grondwatergebruik      | 101     | 1             | 01-02-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Recht grondwatergebruik      | 102     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| **Rechtgrondwatergebruik**   | **103** | **1**         | **01-09-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
+| Recht grondwatergebruik      | 101     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
+| Recht grondwatergebruik      | 102     | 1             | 01-03-2021     | 01-09-2021   | n.v.t.               | n.v.t.              |
+| **Recht grondwatergebruik**  | **103** | **1**         | **01-09-2021** | **«leeg»**   | **n.v.t.**           | **n.v.t.**          |
 | Ontwerpinstallatie           | 201     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
 | Ontwerpinstallatie           | 202     | 1             | 01-03-2021     | 01-09-2021   | n.v.t.               | n.v.t.              |
 | **Ontwerpinstallatie**       | **203** | **1**         | **01-09-2021** | **«leeg»**   | n.v.t.               | n.v.t.              |
@@ -84,8 +83,8 @@ toegevoegd aan de gerealiseerde installatie in de BRO.
 | Grondwatergebruiksysteem      | 001     | 2             | 01-02-2021     | «leeg»       | 01-03-2021           | 01-06-2021          |
 | Grondwatergebruiksysteem      | 001     | 3             | 01-02-2021     | «leeg»       | 01-06-2021           | 01-09-2021          |
 | Grondwatergebruiksysteem      | 001     | 4             | 01-02-2021     | «leeg»       | 01-09-2021           | «leeg»              |
-| Recht grondwatergebruik       | 101     | 1             | 01-02-2021     | «leeg»       | n.v.t.               | n.v.t.              |
-| Recht grondwatergebruik       | 102     | 1             | 01-03-2021     | «leeg»       | n.v.t.               | n.v.t.              |
+| Recht grondwatergebruik       | 101     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
+| Recht grondwatergebruik       | 102     | 1             | 01-03-2021     | 01-09-2021   | n.v.t.               | n.v.t.              |
 | Rechtgrondwatergebruik        | 103     | 1             | 01-09-2021     | «leeg»       | n.v.t.               | n.v.t.              |
 | Ontwerpinstallatie            | 201     | 1             | 01-02-2021     | 01-03-2021   | n.v.t.               | n.v.t.              |
 | Ontwerpinstallatie            | 202     | 1             | 01-03-2021     | 01-09-2021   | n.v.t.               | n.v.t.              |
@@ -109,8 +108,8 @@ installatie en putten beëindigd.
 | Grondwatergebruiksysteem      | 001    | 2             | 01-02-2021    | «leeg»         | 01-03-2021           | 01-06-2021          |
 | Grondwatergebruiksysteem      | 001    | 3             | 01-02-2021    | «leeg»         | 01-06-2021           | 01-09-2021          |
 | Grondwatergebruiksysteem      | 001    | 4             | 01-02-2021    | «leeg»         | 01-09-2021           | «leeg»              |
-| Recht grondwatergebruik       | 101    | 1             | 01-02-2021    | «leeg»         | n.v.t.               | n.v.t.              |
-| Recht grondwatergebruik       | 102    | 1             | 01-03-2021    | «leeg»         | n.v.t.               | n.v.t.              |
+| Recht grondwatergebruik       | 101    | 1             | 01-02-2021    | 01-03-2021     | n.v.t.               | n.v.t.              |
+| Recht grondwatergebruik       | 102    | 1             | 01-03-2021    | 01-09-2021     | n.v.t.               | n.v.t.              |
 | Rechtgrondwatergebruik        | 103    | 1             | 01-09-2021    | «leeg»         | n.v.t.               | n.v.t.              |
 | Ontwerpinstallatie            | 201    | 1             | 01-02-2021    | 01-03-2021     | n.v.t.               | n.v.t.              |
 | Ontwerpinstallatie            | 202    | 1             | 01-03-2021    | 01-09-2021     | n.v.t.               | n.v.t.              |

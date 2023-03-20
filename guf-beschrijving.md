@@ -405,7 +405,7 @@ betreft, wordt geregistreerd bij *rechtstype*. De identificatie van de melding
 of de beschikking waarop het grondwatergebruiksysteem is gebaseerd, wordt
 geregistreerd bij *identificatie beschikking-melding.* Dit is het vergunnings-
 of meldingsnummer. Gedurende de looptijd van een grondwatergebruiksysteem kunnen
-meerdere vergunningen of meldingen geldig zijn. 
+meerdere vergunningen of meldingen geldig zijn. Echter, op ieder moment kan slechts 1 vergunning of melding actief zijn.
 
 Bij het Recht grondwatergebruik wordt een aantal gegevens vastgelegd over het
 gebruiksdoel, namelijk het *primaire gebruiksdoel*, eventueel één of meerdere
@@ -824,7 +824,8 @@ vervallen wordt per object vastgelegd met de attributen *begintijd* en
 *eindtijd*.
 
 Het Recht grondwatergebruik krijgt een eindtijd wanneer de beschikking of
-melding is beëindigd. Op dat moment krijgen ook de ontwerpobjecten die onderdeel
+melding is beëindigd. De einddatum van een oud recht wordt automatisch bepaald op het moment dat deze wordt vervangen door een nieuw recht.
+Op dat moment krijgen ook de ontwerpobjecten die onderdeel
 uitmaken van deze beschikking of melding dezelfde datum voor eindtijd.
 
 De begintijd van bijvoorbeeld een ontwerpinstallatie is de datum waarop het
@@ -834,9 +835,9 @@ vergunning is verleend of de melding is afgehandeld. De eindtijd is in dit
 voorbeeld de datum waarop de beschikking of melding, waartoe het ontwerp
 behoort, vervalt. Het is ook mogelijk dat op een zeker moment de beschikking een
 opvolger krijgt met nieuwe gegevens over de betreffende ontwerpinstallatie en/of
-haar onderdelen. De datum van de wijzigingsvergunning is dan de eindtijd van de
-eerste ontwerpinstallatie en de begintijd van de nieuwe ontwerpinstallatie met
-haar aangepaste kenmerken.
+haar onderdelen. De datum van de wijzigingsvergunning is dan de eindtijd van
+het voorgaande recht en de voorgaande ontwerpinstallatie(s) en de begintijd van
+het nieuwe recht en de nieuwe ontwerpinstallatie(s) met haar aangepaste kenmerken.
 
 De begintijd van een gerealiseerd object (bijvoorbeeld een gerealiseerde
 bodemlus) is de datum waarop het object is gerealiseerd ofwel ingericht; de
@@ -874,17 +875,21 @@ uitgangspunten voor de levensduur en historie:
     verleend’ of 'Melding afgehandeld’. Recht grondwatergebruik krijgt een
     begintijd.
 
-2.  Ontwerpobjecten ontstaan in de BRO gelijk met het Recht grondwatergebruik na
+2.  Wanneer een recht grondwatergebruik wordt vervangen;
+	-	Ontstaat in de BRO een nieuw recht, met daaraan gekoppeld het geheel aan nieuwe danwel herziene ontwerpinstallatie(s).
+	-	Wordt in de BRO automatisch het het voorgaande recht, én de voorgaande ontwerpinstallatie(s) beëindigd.
+
+3.  Ontwerpobjecten ontstaan in de BRO gelijk met het Recht grondwatergebruik na
     een gebeurtenis ‘Vergunning verleend’ of 'Melding afgehandeld’. De
     ontwerpobjecten krijgen een begintijd met dezelfde datum. Dit is dezelfde
     datum als de begintijd van het Recht grondwatergebruik waar ze onderdeel van
     uitmaken.
 
-3.  Gerealiseerde objecten ontstaan in de BRO na de gebeurtenis ‘Ontwerp
+4.  Gerealiseerde objecten ontstaan in de BRO na de gebeurtenis ‘Ontwerp
     gerealiseerd’. De gerealiseerde objecten krijgen een begintijd en
     beginGeldigheid met beide dezelfde datum
 
-4.  Als een gerealiseerd object wijzigt, ontstaat een nieuw voorkomen van dit
+5.  Als een gerealiseerd object wijzigt, ontstaat een nieuw voorkomen van dit
     object, waarbij:
 
     -   het vorige voorkomen van het object een eindGeldigheid krijgt,
@@ -892,14 +897,14 @@ uitgangspunten voor de levensduur en historie:
     -   het nieuwe voorkomen krijgt een beginGeldigheid welke dezelfde datum
         heeft als de eindGeldigheid van het vorige voorkomen van het object.
 
-5.  Als van een ontwerpobject het ontwerp definitief wordt beëindigd, of een
+6.  Als van een ontwerpobject het ontwerp definitief wordt beëindigd, of een
     gerealiseerd object definitief buiten gebruik wordt gesteld of gesloopt,
     wordt het object beëindigd en krijgt het een eindtijd en, in geval van de
     gerealiseerde objecten, een eindGeldigheid met beide dezelfde datum.
 
 Vorige voorkomens van een object blijven dus beschikbaar in de Landelijke
 Voorziening, maar worden ‘inactief gemaakt’ c.q. ‘niet-actueel verklaard’ door
-middel van een datum eindGeldigheid.
+middel van een eindGeldigheid.
 
 In de bijlage is een aantal voorbeelden opgenomen van de levenscyclus.
 
