@@ -21,8 +21,7 @@
            targetNamespace="http://www.broservices.nl/xsd/dsguf/1.0"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
-           version="1.0.0">
-
+           version="1.2.0">
     <xs:annotation>
         <xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
             <gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
@@ -38,7 +37,7 @@
     <xs:import namespace="http://www.broservices.nl/xsd/gufcommon/1.0" schemaLocation="gufcommon.xsd"/>
     <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
 
-    <xs:element name="parseFault" type="brocom:ParseFaultType" />
+    <xs:element name="parseFault" type="brocom:ParseFaultType"/>
 
     <xs:element name="dispatchCharacteristicsRequest" type="dsguf:DispatchCharacteristicsRequestType">
         <xs:annotation>
@@ -49,11 +48,7 @@
         <xs:complexContent>
             <xs:extension base="brocom:AbstractDispatchCharacteristicsRequestType">
                 <xs:sequence>
-                    <xs:element minOccurs="1"
-                           maxOccurs="1"
-                           name="criteria"
-                           nillable="false"
-                           type="dsguf:GUF_CriteriaSetType">
+                    <xs:element minOccurs="1" maxOccurs="1" name="criteria" nillable="false" type="dsguf:GUF_CriteriaSetType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De afzonderlijke kenmerken waaraan de registratieobjecten moeten voldoen.</xs:documentation>
                         </xs:annotation>
@@ -72,20 +67,13 @@
         <xs:complexContent>
             <xs:extension base="brocom:DispatchResponseType">
                 <xs:sequence>
-                    <xs:element name="numberOfDocuments"
-                           type="xs:integer"
-                           minOccurs="1"
-                           maxOccurs="1">
+                    <xs:element name="numberOfDocuments" type="xs:integer" minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het aantal dispatchDocuments (uitgiftedocumenten) van Grondwatergebruiksysteem registratieobjecten die voldoen aan de GUF_CriteriaSet (GUF-kenmerken) in het betreffende DispatchCharacteristicsRequest (Verzoek tot levering kengegevens).
 Explanation: Het aantal dispatchDocuments (uitgiftedocumenten) wordt om praktische redenen beperkt tot maximaal 2000.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
-                           name="dispatchDocument"
-                           nillable="false"
-                           type="brocom:AbstractRegistrationObjectPropertyType">
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="dispatchDocument" nillable="false" type="brocom:AbstractRegistrationObjectPropertyType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Lijst met uitgiftedocumenten van Grondwatergebruiksysteem registratieobjecten die voldoen aan de GUFCriteriaSet (GUF-kenmerken) in het betreffende DispatchCharacteristicsRequest (Verzoek tot levering kengegevens). Vanwege het polymorfe karakter is het type van ieder dispatchDocument óf een dsguf:GUFC met daarin de kengegevens van grondwatergebruiksysteem dat niet uit registratie is genomen óf een brocom:BRO_DO met daarin de kengegevens van een registratieobject dat uit registratie is genomen.</xs:documentation>
                         </xs:annotation>
@@ -104,10 +92,7 @@ Explanation: Het aantal dispatchDocuments (uitgiftedocumenten) wordt om praktis
         <xs:complexContent>
             <xs:extension base="brocom:DispatchDataRequestType">
                 <xs:sequence>
-                    <xs:element name="dataToBeDelivered"
-                           type="dsguf:DataToBeDeliveredType"
-                           minOccurs="1"
-                           maxOccurs="1">
+                    <xs:element name="dataToBeDelivered" type="dsguf:DataToBeDeliveredType" minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Aanduiding welke gegevens over het registratieobject worden opgevraagd: alleen de actuele gegevens (present object data) of de actuele gegevens en de volledige materiële geschiedenis (past and present object data).</xs:documentation>
                         </xs:annotation>
@@ -126,11 +111,7 @@ Explanation: Het aantal dispatchDocuments (uitgiftedocumenten) wordt om praktis
         <xs:complexContent>
             <xs:extension base="brocom:DispatchResponseType">
                 <xs:sequence>
-                    <xs:element minOccurs="0"
-                           maxOccurs="1"
-                           name="dispatchDocument"
-                           nillable="false"
-                           type="brocom:AbstractRegistrationObjectPropertyType">
+                    <xs:element minOccurs="0" maxOccurs="1" name="dispatchDocument" nillable="false" type="brocom:AbstractRegistrationObjectPropertyType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het element dispatchDocument bevat de gegevens van een grondwatergebruiksysteem registratieobject. Vanwege het polymorfe karakter is het type óf een BRODO uit de package brocom, óf een GUFPODP, óf een GUFPO, óf een GUFPPODP, óf een GUF_PPO uit de package dsguf. Deze vijf types hebben allen als gemeenschappelijke vader het type AbstractRegistrationObject uit de package brocom.
 Explanation: Het element dispatchDocument is afwezig als de BRO geen registratieobject bevat met het opgegegeven broId.</xs:documentation>
@@ -141,9 +122,7 @@ Explanation: Het element dispatchDocument is afwezig als de BRO geen registratie
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:element name="GUF_C"
-               type="dsguf:GUF_CType"
-               substitutionGroup="brocom:AbstractCharacteristicsV2">
+    <xs:element name="GUF_C" type="dsguf:GUF_CType" substitutionGroup="brocom:AbstractCharacteristicsV2">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kengegevens, naast de kengevens uit de entiteit AbstractCharacteristics uit de package brocommon, van een grondwatergebruiksysteem dat voldoet aan de zoekcriteria in de entiteit GUF_CriteriaSet en dat niet uit registratie is genomen.</xs:documentation>
         </xs:annotation>
@@ -152,32 +131,18 @@ Explanation: Het element dispatchDocument is afwezig als de BRO geen registratie
         <xs:complexContent>
             <xs:extension base="brocom:AbstractCharacteristicsV2Type">
                 <xs:sequence>
-                    <xs:element name="startTime"
-                           type="brocom:PartialDateType"
-                           minOccurs="1"
-                           maxOccurs="1">
+                    <xs:element name="startTime" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid is ontstaan.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="endTime"
-                           type="brocom:PartialDateType"
-                           minOccurs="0"
-                           maxOccurs="1">
+                    <xs:element name="endTime" type="brocom:PartialDateType" minOccurs="0" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Tijdstip waarop het object in de werkelijkheid niet meer geldig is. Het object is nog geldig als het attribuut niet aanwezig is.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="1"
-                           maxOccurs="unbounded"
-                           name="licence"
-                           nillable="false"
-                           type="dsguf:LicenceGroundwaterUsagePropertyType"/>
-                    <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
-                           name="realisedInstallation"
-                           nillable="false"
-                           type="dsguf:RealisedInstallationPropertyType"/>
+                    <xs:element minOccurs="1" maxOccurs="unbounded" name="licence" nillable="false" type="dsguf:LicenceGroundwaterUsagePropertyType"/>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="realisedInstallation" nillable="false" type="dsguf:RealisedInstallationPropertyType"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -188,9 +153,7 @@ Explanation: Het element dispatchDocument is afwezig als de BRO geen registratie
         </xs:sequence>
     </xs:complexType>
 
-    <xs:element name="GUF_PO"
-               type="dsguf:GUF_POType"
-               substitutionGroup="dsguf:GUF_PO_DP">
+    <xs:element name="GUF_PO" type="dsguf:GUF_POType" substitutionGroup="dsguf:GUF_PO_DP">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het uitgiftedocument met de actuele gegevens van een grondwatergebruiksysteem, dat wordt uitgeleverd als de afnemer niet de bronhouder of dataleverancier is van het registratieobject en het registratieobject niet uit registratie is genomen.</xs:documentation>
         </xs:annotation>
@@ -206,9 +169,7 @@ Explanation: Het element dispatchDocument is afwezig als de BRO geen registratie
         </xs:sequence>
     </xs:complexType>
 
-    <xs:element name="GUF_PO_DP"
-               type="dsguf:GUF_PO_DPType"
-               substitutionGroup="brocom:RegistrationObject">
+    <xs:element name="GUF_PO_DP" type="dsguf:GUF_PO_DPType" substitutionGroup="brocom:RegistrationObject">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het uitgiftedocument met de actuele gegevens van een grondwatergebruiksysteem, dat wordt uitgeleverd als de afnemer tevens de bronhouder of dataleverancier is van het registratieobject, ongeacht of registratieobject uit registratie is genomen of niet.
 Explanation: Een grondwatergebruiksysteem, ook wel inrichting genoemd, omvat alle onderdelen die een technische en/of organisatorische samenhang kennen.</xs:documentation>
@@ -218,10 +179,7 @@ Explanation: Een grondwatergebruiksysteem, ook wel inrichting genoemd, omvat all
         <xs:complexContent>
             <xs:extension base="brocom:RegistrationObjectType">
                 <xs:sequence>
-                    <xs:element name="deliveryContext"
-                           minOccurs="1"
-                           maxOccurs="1"
-                           type="gufcom:DeliveryContextType">
+                    <xs:element name="deliveryContext" minOccurs="1" maxOccurs="1" type="gufcom:DeliveryContextType">
                         <xs:annotation>
                             <xs:appinfo>
                                 <CodeListName>DeliveryContext</CodeListName>
@@ -231,64 +189,36 @@ Explanation: Een grondwatergebruiksysteem, ook wel inrichting genoemd, omvat all
 Explanation: De wetgever stipuleert dat het gegeven moet zijn vastgelegd om inzicht te geven in de relatie met de taken van een bestuursorgaan. Het gegeven geeft inzicht in de maatschappelijke betekenis van de informatie. Het betreft hier de rechtsgrond in het heden. Wanneer tijdens de levensduur van het registratieobject de rechtsgrond veranderd, dan wordt deze verandering inclusief het moment waarop de verandering plaats vond geregistreerd.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="1"
-                           name="standardizedLocation"
-                           nillable="false"
-                           type="brocom:StandardizedLocationV2Type">
+                    <xs:element minOccurs="0" maxOccurs="1" name="standardizedLocation" nillable="false" type="brocom:StandardizedLocationV2Type">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De gegevens over de locatie van de een grondwatergebruiksysteem en over het bepalen van die locatie zoals die door de basisregistratie ondergrond zijn getransformeerd.
 Explanation: De gegevens staan niet in een brondocument. De gestandaardiseerde locatie wordt door de basisregistratie ondergrond berekend ten behoeve van afnemers. Het maakt het mogelijk alle gegevens in de registratie ondergrond in een en hetzelfde referentiestelsel te ontsluiten. De locatie van een grondwatergebruiksysteem is in de meeste gevallen een multi-point dat bestaat uit de locaties van de verschillende ontwerpinstallaties en gerealiseerde installaties.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="1"
-                           maxOccurs="1"
-                           name="registrationHistory"
-                           nillable="false"
-                           type="brocom:RegistrationHistoryType">
+                    <xs:element minOccurs="1" maxOccurs="1" name="registrationHistory" nillable="false" type="brocom:RegistrationHistoryType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De gegevens die de geschiedenis van het object in de registratie ondergrond markeren.
 Explanation: De gegevens staan niet in een brondocument maar worden automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="1"
-                           maxOccurs="1"
-                           name="validityPeriod"
-                           nillable="false"
-                           type="gufcom:ValidityPeriodType">
+                    <xs:element minOccurs="1" maxOccurs="1" name="validityPeriod" nillable="false" type="gufcom:ValidityPeriodType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De periode waarin het betreffende voorkomen van een grondwatergebruiksysteem geldig is in de werkelijkheid.
 Explanation: Een voorkomen van een grondwatergebruiksysteem is geldig wanneer de combinatie van (waarden voor) gegevens over een grondwatergebruiksysteem, geldig is in de werkelijkheid.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="1"
-                           maxOccurs="1"
-                           name="lifespan"
-                           nillable="false"
-                           type="gufcom:LifespanType">
+                    <xs:element minOccurs="1" maxOccurs="1" name="lifespan" nillable="false" type="gufcom:LifespanType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De periode van de datum waarop het eerste ontwerp middels een verleende vergunning wordt goedgekeurd of in een melding wordt gemeld (begindatum) tot datum van definitieve beëindiging van de beschikking of melding en de definitieve beëindiging van de gerealiseerde installaties (einddatum) van een grondwatergebruiksysteem.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="1"
-                           maxOccurs="1"
-                           name="objectHistory"
-                           nillable="false"
-                           type="dsguf:ObjectHistoryType">
+                    <xs:element minOccurs="1" maxOccurs="1" name="objectHistory" nillable="false" type="dsguf:ObjectHistoryType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De geschiedenis van het grondwatergebruiksysteem in de werkelijkheid.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
-                           name="licence"
-                           nillable="false"
-                           type="gufcom:LicenceGroundwaterUsagePropertyType"/>
-                    <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
-                           name="realisedInstallation"
-                           nillable="false"
-                           type="gufcom:RealisedInstallationPropertyType"/>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="licence" nillable="false" type="gufcom:LicenceGroundwaterUsagePropertyType"/>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="realisedInstallation" nillable="false" type="gufcom:RealisedInstallationPropertyType"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -299,9 +229,7 @@ Explanation: Een voorkomen van een grondwatergebruiksysteem is geldig wanneer de
         </xs:sequence>
     </xs:complexType>
 
-    <xs:element name="GUF_PPO"
-               type="dsguf:GUF_PPOType"
-               substitutionGroup="dsguf:GUF_PPO_DP">
+    <xs:element name="GUF_PPO" type="dsguf:GUF_PPOType" substitutionGroup="dsguf:GUF_PPO_DP">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het uitgiftedocument met de gegevens van een grondwatergebruiksysteem tijdens het starten van de registratie en de volledige objectgeschiedenis, dat wordt uitgeleverd als de afnemer niet de bronhouder of dataleverancier is van het registratieobject en het registratieobject niet uit registratie is genomen.</xs:documentation>
         </xs:annotation>
@@ -317,9 +245,7 @@ Explanation: Een voorkomen van een grondwatergebruiksysteem is geldig wanneer de
         </xs:sequence>
     </xs:complexType>
 
-    <xs:element name="GUF_PPO_DP"
-               type="dsguf:GUF_PPO_DPType"
-               substitutionGroup="dsguf:GUF_PO_DP">
+    <xs:element name="GUF_PPO_DP" type="dsguf:GUF_PPO_DPType" substitutionGroup="dsguf:GUF_PO_DP">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het uitgiftedocument met de gegevens van een grondwatergebruiksysteem tijdens het starten van de registratie en de volledige objectgeschiedenis, dat wordt uitgeleverd als de afnemer tevens de bronhouder of dataleverancier is van het registratieobject, ongeacht of registratieobject uit registratie is genomen of niet.</xs:documentation>
         </xs:annotation>
@@ -335,9 +261,7 @@ Explanation: Een voorkomen van een grondwatergebruiksysteem is geldig wanneer de
         </xs:sequence>
     </xs:complexType>
 
-    <xs:element name="DesignInstallation"
-               type="dsguf:DesignInstallationType"
-               substitutionGroup="gml:AbstractFeature">
+    <xs:element name="DesignInstallation" type="dsguf:DesignInstallationType" substitutionGroup="gml:AbstractFeature">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kengegevens van de, in de beschikking of melding opgenomen, ontworpen installatie.</xs:documentation>
         </xs:annotation>
@@ -346,10 +270,7 @@ Explanation: Een voorkomen van een grondwatergebruiksysteem is geldig wanneer de
         <xs:complexContent>
             <xs:extension base="gml:AbstractFeatureType">
                 <xs:sequence>
-                    <xs:element name="installationFunction"
-                           minOccurs="1"
-                           maxOccurs="1"
-                           type="gufcom:InstallationTypeType">
+                    <xs:element name="installationFunction" minOccurs="1" maxOccurs="1" type="gufcom:InstallationTypeType">
                         <xs:annotation>
                             <xs:appinfo>
                                 <CodeListName>InstallationType</CodeListName>
@@ -358,40 +279,21 @@ Explanation: Een voorkomen van een grondwatergebruiksysteem is geldig wanneer de
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De functie van de installatie zoals die gebruikt wordt voor het primaire gebruiksdoel.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="geometry"
-                           type="gml:PointPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1">
+                    <xs:element name="geometry" type="gml:PointPropertyType" minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De puntgeometrie van de globale horizontale positie van de Ontwerpinstallatie in het tweedimensionale (2D) vlak.
 Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. De puntgeometrie kan bepaald worden door het gemiddelde (centroide) van de verzameling van puntgeometrie(en) van de putten of bodemlussen. Het kan ook de locatie van een van putten of lussen betreffen of een op een andere manier bepaalde locatie. De nauwkeurigheid van dit gegeven is daarmee niet goed te kwantificeren.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="1"
-                           name="energyCharacteristics"
-                           nillable="false"
-                           type="dsguf:EnergyCharacteristicsType">
+                    <xs:element minOccurs="0" maxOccurs="1" name="energyCharacteristics" nillable="false" type="dsguf:EnergyCharacteristicsType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De energiegerelateerde eigenschappen van de ontwerpinstallatie. Vastgelegd worden de hoeveelheden die worden toegevoegd aan de ondergrond. Veel van deze kenmerken worden in de beschikking of melding vastgelegd.
 Explanation: In de basisregistratie ondergrond gaan we nadrukkelijk uit van hoeveelheden die aan de ondergrond worden toegevoegd. Een ander perspectief, dat niet in de basisregistratie ondergrond wordt vastgelegd, is een gebouwzijdig perspectief: wat er aan het gebouw wordt geleverd ofwel wat er aan de ondergrond wordt onttrokken.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
-                           name="designLoop"
-                           nillable="false"
-                           type="dsguf:DesignLoopPropertyType"/>
-                    <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
-                           name="designSurfaceInfiltration"
-                           nillable="false"
-                           type="dsguf:DesignSurfaceInfiltrationPropertyType"/>
-                    <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
-                           name="designWell"
-                           nillable="false"
-                           type="dsguf:DesignWellPropertyType"/>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="designLoop" nillable="false" type="dsguf:DesignLoopPropertyType"/>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="designSurfaceInfiltration" nillable="false" type="dsguf:DesignSurfaceInfiltrationPropertyType"/>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="designWell" nillable="false" type="dsguf:DesignWellPropertyType"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -403,9 +305,7 @@ Explanation: In de basisregistratie ondergrond gaan we nadrukkelijk uit van hoev
         <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
-    <xs:element name="DesignLoop"
-               type="dsguf:DesignLoopType"
-               substitutionGroup="gml:AbstractFeature">
+    <xs:element name="DesignLoop" type="dsguf:DesignLoopType" substitutionGroup="gml:AbstractFeature">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kengegevens van de in de beschikking of melding opgenomen, ontworpen bodemlus.</xs:documentation>
         </xs:annotation>
@@ -414,10 +314,7 @@ Explanation: In de basisregistratie ondergrond gaan we nadrukkelijk uit van hoev
         <xs:complexContent>
             <xs:extension base="gml:AbstractFeatureType">
                 <xs:sequence>
-                    <xs:element name="geometry"
-                           type="gufcom:PointOrCurveOrSurfacePropertyType"
-                           minOccurs="0"
-                           maxOccurs="1">
+                    <xs:element name="geometry" type="gufcom:PointOrCurveOrSurfacePropertyType" minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De punt-, lijn- of vlakgeometrie, in het tweedimensionale (2D) vlak, van de ontwerpbodemlus.
 Explanation: Punt-, lijn-, of vlakgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. Bij horizontale bodemlussen wordt een puntgeometrie gebruikt als de lus niet verder reikt dan 10 meter vanaf het middelpunt van de lus. Er wordt een lijngeometrie gebruikt als het een enkele lus over langere afstand betreft, die verder reikt dan 10 meter vanaf het middelpunt van de lus. Er wordt een vlakgeometrie gebruikt als de horizontale lus verder reikt dan 10 meter vanaf het middelpunt van de lus. In dat laatste geval wordt het vlak geregistreerd waarbinnen de horizontale ontwerpbodemlus zich zal bevinden.</xs:documentation>
@@ -434,9 +331,7 @@ Explanation: Punt-, lijn-, of vlakgeometrie gebaseerd op ISO19107. Aangegeven wo
         <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
-    <xs:element name="DesignSurfaceInfiltration"
-               type="dsguf:DesignSurfaceInfiltrationType"
-               substitutionGroup="gml:AbstractFeature">
+    <xs:element name="DesignSurfaceInfiltration" type="dsguf:DesignSurfaceInfiltrationType" substitutionGroup="gml:AbstractFeature">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kengegevens van het in de beschikking of melding opgenomen oppervlaktelichaam voor de infiltratie van water.</xs:documentation>
         </xs:annotation>
@@ -445,10 +340,7 @@ Explanation: Punt-, lijn-, of vlakgeometrie gebaseerd op ISO19107. Aangegeven wo
         <xs:complexContent>
             <xs:extension base="gml:AbstractFeatureType">
                 <xs:sequence>
-                    <xs:element name="geometry"
-                           type="gufcom:PointOrCurveOrSurfacePropertyType"
-                           minOccurs="1"
-                           maxOccurs="1">
+                    <xs:element name="geometry" type="gufcom:PointOrCurveOrSurfacePropertyType" minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De punt-, lijn- of vlakgeometrie, in het tweedimensionale (2D) vlak, van de infiltratieplas of het infiltratiekanaal.
 Explanation: De geometrie is gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. Wanneer gekozen wordt voor een punt is dit het centroide binnen de begrenzing van de plas of het kanaal. Bij een kanaal mag ook het type lijn gekozen worden en bij een plas mag een vlak gekozen worden.</xs:documentation>
@@ -465,9 +357,7 @@ Explanation: De geometrie is gebaseerd op ISO19107. Aangegeven wordt of de coör
         <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
-    <xs:element name="DesignWell"
-               type="dsguf:DesignWellType"
-               substitutionGroup="gml:AbstractFeature">
+    <xs:element name="DesignWell" type="dsguf:DesignWellType" substitutionGroup="gml:AbstractFeature">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kengegevens van de in de beschikking of melding opgenomen, ontworpen put.</xs:documentation>
         </xs:annotation>
@@ -476,10 +366,7 @@ Explanation: De geometrie is gebaseerd op ISO19107. Aangegeven wordt of de coör
         <xs:complexContent>
             <xs:extension base="gml:AbstractFeatureType">
                 <xs:sequence>
-                    <xs:element name="geometry"
-                           type="gml:PointPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1">
+                    <xs:element name="geometry" type="gml:PointPropertyType" minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De puntgeometrie, in het tweedimensionale (2D) vlak, van de ontwerpput.
 Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89.</xs:documentation>
@@ -496,9 +383,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
         <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
-    <xs:element name="LicenceGroundwaterUsage"
-               type="dsguf:LicenceGroundwaterUsageType"
-               substitutionGroup="gml:AbstractFeature">
+    <xs:element name="LicenceGroundwaterUsage" type="dsguf:LicenceGroundwaterUsageType" substitutionGroup="gml:AbstractFeature">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kengegevens van een, door een bestuursorgaan verleende vergunning, of een aan bestuursorgaan gedane melding, voor het onttrekken, infiltreren en retourneren van grondwater en het benutten van de warmte- en koudecapaciteit van de ondergrond.</xs:documentation>
         </xs:annotation>
@@ -518,10 +403,7 @@ Explanation: In het geval van een vergunning betreft dit de, door het bevoegd ge
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
-                    <xs:element name="legalType"
-                           minOccurs="1"
-                           maxOccurs="1"
-                           type="gufcom:LegalTypeType">
+                    <xs:element name="legalType" minOccurs="1" maxOccurs="1" type="gufcom:LegalTypeType">
                         <xs:annotation>
                             <xs:appinfo>
                                 <CodeListName>LegalType</CodeListName>
@@ -530,40 +412,24 @@ Explanation: In het geval van een vergunning betreft dit de, door het bevoegd ge
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De juridische procedurevorm waaruit het recht het grondwater te gebruiken is ontstaan.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="1"
-                           maxOccurs="1"
-                           name="usageTypeFacility"
-                           nillable="false"
-                           type="dsguf:UsageTypeFacilityType">
+                    <xs:element minOccurs="1" maxOccurs="1" name="usageTypeFacility" nillable="false" type="dsguf:UsageTypeFacilityType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kenmerken van de gebruikstoepassing of -toepassingen van het registratieobject.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="2"
-                           name="licensedQuantity"
-                           nillable="false"
-                           type="dsguf:LicensedQuantityType">
+                    <xs:element minOccurs="0" maxOccurs="2" name="licensedQuantity" nillable="false" type="dsguf:LicensedQuantityType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De in de beschikking of melding genoemde kenmerken van de maximale volumes water die door het gehele systeem aan de ondergrond onttrokken mogen worden en de maximale volumes die in de bodem gebracht mogen worden.
 Explanation: De toegestande maximale waterverplaatsing kan zowel bij het gebruiksrecht voor het gehele systeem, als voor de verschillende installaties geregistreerd worden. De optelsom van de maximale volumes van de verschillende installaties komt niet altijd overeen met de maximale volumes van het gehele grondwatergebruiksysteem ofwel de gehele inrichting. In het geval het grondwatergebruiksysteem 2 functies vervult namelijk onttrekken en in de bodem brengen, wordt de gegevensgroep 2 keer geregistreerd: 1 keer voor de maximale volumes die onttrokken mogen worden en 1 keer voor volumes die in de bodem gebracht mogen worden. Het betreft de maximale hoeveelheden tijdens het reguliere verbruik, inclusief onderhoud. Het is exclusief de maximale volumes die aanvullend bij de aanleg van het systeem mogen worden gebruikt.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="1"
-                           name="lifespan"
-                           nillable="false"
-                           type="gufcom:LifespanType">
+                    <xs:element minOccurs="0" maxOccurs="1" name="lifespan" nillable="false" type="gufcom:LifespanType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De periode van datum van het eerste ontstaan tot datum van het definitieve einde van een Recht grondwatergebruik.
-Explanation: Het Recht grondwatergebruik ontstaat bij de ingangsdatum van de vergunning. Bij meldingen ontstaat het Recht grondwatergebruik bij het bevestigen van de melding. Het intrekken van de vergunning of wanneer de einddatum is bereikt, betekent het einde van het Recht grondwatergebruik.</xs:documentation>
+Explanation: Het Recht grondwatergebruik ontstaat bij de ingangsdatum van de vergunning. Bij meldingen ontstaat het Recht grondwatergebruik bij het bevestigen van de melding. Bij het wijzigen van een vergunning wordt een nieuw recht geregistreerd. Hiermee wordt het bestaande recht automatisch beëindigd (met een einddatum).</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
-                           name="designInstallation"
-                           nillable="false"
-                           type="dsguf:DesignInstallationPropertyType"/>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="designInstallation" nillable="false" type="dsguf:DesignInstallationPropertyType"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -575,9 +441,7 @@ Explanation: Het Recht grondwatergebruik ontstaat bij de ingangsdatum van de ver
         <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
-    <xs:element name="RealisedInstallation"
-               type="dsguf:RealisedInstallationType"
-               substitutionGroup="gml:AbstractFeature">
+    <xs:element name="RealisedInstallation" type="dsguf:RealisedInstallationType" substitutionGroup="gml:AbstractFeature">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kengegevens van de gerealiseerde installatie zoals in werkelijkheid aanwezig.</xs:documentation>
         </xs:annotation>
@@ -586,10 +450,7 @@ Explanation: Het Recht grondwatergebruik ontstaat bij de ingangsdatum van de ver
         <xs:complexContent>
             <xs:extension base="gml:AbstractFeatureType">
                 <xs:sequence>
-                    <xs:element name="installationFunction"
-                           minOccurs="1"
-                           maxOccurs="1"
-                           type="gufcom:InstallationTypeType">
+                    <xs:element name="installationFunction" minOccurs="1" maxOccurs="1" type="gufcom:InstallationTypeType">
                         <xs:annotation>
                             <xs:appinfo>
                                 <CodeListName>InstallationType</CodeListName>
@@ -598,30 +459,15 @@ Explanation: Het Recht grondwatergebruik ontstaat bij de ingangsdatum van de ver
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De functie van de installatie zoals die gebruikt wordt voor het primaire gebruiksdoel.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="geometry"
-                           type="gml:PointPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1">
+                    <xs:element name="geometry" type="gml:PointPropertyType" minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De puntgeometrie van de globale horizontale positie van de Gerealiseerde installatie in het tweedimensionale vlak.
 Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. De puntgeometrie kan bepaald worden door het gemiddelde (centroide) van de verzameling van puntgeometrie(en) van de putten of bodemlussen. Het kan ook de locatie van een van putten of lussen betreffen of een op een andere manier bepaalde locatie.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
-                           name="realisedLoop"
-                           nillable="false"
-                           type="dsguf:RealisedLoopPropertyType"/>
-                    <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
-                           name="realisedSurfaceInfiltration"
-                           nillable="false"
-                           type="dsguf:RealisedSurfaceInfiltrationPropertyType"/>
-                    <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
-                           name="realisedWell"
-                           nillable="false"
-                           type="dsguf:RealisedWellPropertyType"/>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="realisedLoop" nillable="false" type="dsguf:RealisedLoopPropertyType"/>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="realisedSurfaceInfiltration" nillable="false" type="dsguf:RealisedSurfaceInfiltrationPropertyType"/>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="realisedWell" nillable="false" type="dsguf:RealisedWellPropertyType"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -633,9 +479,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
         <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
-    <xs:element name="RealisedLoop"
-               type="dsguf:RealisedLoopType"
-               substitutionGroup="gml:AbstractFeature">
+    <xs:element name="RealisedLoop" type="dsguf:RealisedLoopType" substitutionGroup="gml:AbstractFeature">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kengegevens van de gerealiseerde bodemlus zoals in de werkelijkheid aanwezig.</xs:documentation>
         </xs:annotation>
@@ -644,10 +488,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
         <xs:complexContent>
             <xs:extension base="gml:AbstractFeatureType">
                 <xs:sequence>
-                    <xs:element name="geometry"
-                           type="gufcom:PointOrCurveOrSurfacePropertyType"
-                           minOccurs="1"
-                           maxOccurs="1">
+                    <xs:element name="geometry" type="gufcom:PointOrCurveOrSurfacePropertyType" minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De punt-, lijn- of vlakgeometrie, in het tweedimensionale (2D) vlak, van de in de werkelijkheid gerealiseerde bodemlus.
 Explanation: Punt-, lijn- of vlakgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. Bij horizontale bodemlussen wordt een puntgeometrie gebruikt als de lus niet verder reikt dan 10 meter vanaf het middelpunt van de lus. Er wordt een lijngeometrie gebruikt als het een enkele lus over langere afstand betreft, die verder reikt dan 10 meter vanaf het middelpunt van de lus. Er wordt een vlakgeometrie gebruikt als de horizontale lus verder reikt dan 10 meter vanaf het middelpunt van de lus. In dat laatste geval wordt het vlak geregistreerd waarbinnen de horizontale gerealiseerde bodemlus zich bevindt.</xs:documentation>
@@ -664,9 +505,7 @@ Explanation: Punt-, lijn- of vlakgeometrie gebaseerd op ISO19107. Aangegeven wor
         <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
-    <xs:element name="RealisedScreen"
-               type="dsguf:RealisedScreenType"
-               substitutionGroup="gml:AbstractFeature">
+    <xs:element name="RealisedScreen" type="dsguf:RealisedScreenType" substitutionGroup="gml:AbstractFeature">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kengegevens van het gerealiseerde filter van de put zoals in de werkelijkheid aanwezig.</xs:documentation>
         </xs:annotation>
@@ -687,10 +526,7 @@ Explanation: Punt-, lijn- of vlakgeometrie gebaseerd op ISO19107. Aangegeven wor
                             </xs:simpleContent>
                         </xs:complexType>
                     </xs:element>
-                    <xs:element name="geometry"
-                           type="gufcom:PointOrCurvePropertyType"
-                           minOccurs="0"
-                           maxOccurs="1">
+                    <xs:element name="geometry" type="gufcom:PointOrCurvePropertyType" minOccurs="0" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De geometrie van het filter in het tweedimensionale vlak.
 Explanation: In sommige gevallen is de put niet loodrecht naar beneden gegraven of geboord maar schuin. In dat geval wordt informatie over de geometrie van het niet-verticale filter geregistreerd als punt of als lijn. Bij horizontale filters wordt een lijngeometrie gebruikt.</xs:documentation>
@@ -707,9 +543,7 @@ Explanation: In sommige gevallen is de put niet loodrecht naar beneden gegraven 
         <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
-    <xs:element name="RealisedSurfaceInfiltration"
-               type="dsguf:RealisedSurfaceInfiltrationType"
-               substitutionGroup="gml:AbstractFeature">
+    <xs:element name="RealisedSurfaceInfiltration" type="dsguf:RealisedSurfaceInfiltrationType" substitutionGroup="gml:AbstractFeature">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kengegevens van het gerealiseerde oppervlaktelichaam voor de infiltratie van water, zoals in de werkelijkheid aanwezig.</xs:documentation>
         </xs:annotation>
@@ -718,10 +552,7 @@ Explanation: In sommige gevallen is de put niet loodrecht naar beneden gegraven 
         <xs:complexContent>
             <xs:extension base="gml:AbstractFeatureType">
                 <xs:sequence>
-                    <xs:element name="geometry"
-                           type="gufcom:PointOrCurveOrSurfacePropertyType"
-                           minOccurs="1"
-                           maxOccurs="1">
+                    <xs:element name="geometry" type="gufcom:PointOrCurveOrSurfacePropertyType" minOccurs="1" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De punt-, lijn- of vlakgeometrie, in het tweedimensionale (2D) vlak, van de infiltratieplas of het infiltratiekanaal zoals het in de werkelijkheid is gerealiseerd.
 Explanation: De geometrie is gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89. Wanneer gekozen wordt voor een punt is dit het centroide binnen de begrenzing van de plas of het kanaal. Bij een kanaal mag ook het type lijn gekozen worden en bij een plas mag een vlak gekozen worden.</xs:documentation>
@@ -738,9 +569,7 @@ Explanation: De geometrie is gebaseerd op ISO19107. Aangegeven wordt of de coör
         <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
     </xs:complexType>
 
-    <xs:element name="RealisedWell"
-               type="dsguf:RealisedWellType"
-               substitutionGroup="gml:AbstractFeature">
+    <xs:element name="RealisedWell" type="dsguf:RealisedWellType" substitutionGroup="gml:AbstractFeature">
         <xs:annotation>
             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De kengegevens van de gerealiseerde put zoals in de werkelijkheid aanwezig.</xs:documentation>
         </xs:annotation>
@@ -749,20 +578,13 @@ Explanation: De geometrie is gebaseerd op ISO19107. Aangegeven wordt of de coör
         <xs:complexContent>
             <xs:extension base="gml:AbstractFeatureType">
                 <xs:sequence>
-                    <xs:element name="geometry"
-                           type="gml:PointPropertyType"
-                           minOccurs="0"
-                           maxOccurs="1">
+                    <xs:element name="geometry" type="gml:PointPropertyType" minOccurs="0" maxOccurs="1">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De puntgeometrie, in het tweedimensionale (2D) vlak, van de gerealiseerde put.
 Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördinaten zijn ten opzichte van het Rijksdriehoekstelsel (EPSG:28992) of ten opzicht van ETRS89.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
-                           name="realisedScreen"
-                           nillable="false"
-                           type="dsguf:RealisedScreenPropertyType"/>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="realisedScreen" nillable="false" type="dsguf:RealisedScreenPropertyType"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -804,18 +626,12 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
     </xs:complexType>
     <xs:complexType name="EventType">
         <xs:sequence>
-            <xs:element name="date"
-                     type="brocom:PartialDateType"
-                     minOccurs="1"
-                     maxOccurs="1">
+            <xs:element name="date" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum waarop de gebeurtenis heeft plaatsgevonden.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="name"
-                     minOccurs="1"
-                     maxOccurs="1"
-                     type="dsguf:EventNameType">
+            <xs:element name="name" minOccurs="1" maxOccurs="1" type="dsguf:EventNameType">
                 <xs:annotation>
                     <xs:appinfo>
                         <CodeListName>EventName</CodeListName>
@@ -836,10 +652,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="sourceDocument"
-                     type="gufcom:SourceDocumentType"
-                     minOccurs="0"
-                     maxOccurs="1">
+            <xs:element name="sourceDocument" type="gufcom:SourceDocumentType" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het naar aanleiding van de gebeurtenis aangeleverde brondocument.</xs:documentation>
                 </xs:annotation>
@@ -850,36 +663,22 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
         <xs:complexContent>
             <xs:extension base="brocom:CriteriaSetType">
                 <xs:sequence>
-                    <xs:element minOccurs="0"
-                           maxOccurs="1"
-                           name="startPeriod"
-                           nillable="false"
-                           type="brocom:DatePeriodType">
+                    <xs:element minOccurs="0" maxOccurs="1" name="startPeriod" nillable="false" type="brocom:DatePeriodType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De periode waarbinnen de starttijd van de levensduur valt van een Grondwatergebruiksysteem.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element minOccurs="0"
-                           maxOccurs="1"
-                           name="endPeriod"
-                           nillable="false"
-                           type="brocom:DatePeriodType">
+                    <xs:element minOccurs="0" maxOccurs="1" name="endPeriod" nillable="false" type="brocom:DatePeriodType">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De periode waarbinnen de eindtijd van de levensduur valt van een Grondwatergebruiksysteem.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="identificationLicence"
-                           minOccurs="0"
-                           maxOccurs="1"
-                           type="xs:string">
+                    <xs:element name="identificationLicence" minOccurs="0" maxOccurs="1" type="xs:string">
                         <xs:annotation>
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie beschikking-melding van het Recht grondwatergebruik van het Grondwatergebruiksysteem.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="legalType"
-                           minOccurs="0"
-                           maxOccurs="1"
-                           type="gufcom:LegalTypeType">
+                    <xs:element name="legalType" minOccurs="0" maxOccurs="1" type="gufcom:LegalTypeType">
                         <xs:annotation>
                             <xs:appinfo>
                                 <CodeListName>LegalType</CodeListName>
@@ -888,10 +687,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het rechtstype van het Recht grondwatergebruik van het Grondwatergebruiksysteem.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="primaryUsageType"
-                           minOccurs="0"
-                           maxOccurs="unbounded"
-                           type="gufcom:UsageTypeType">
+                    <xs:element name="primaryUsageType" minOccurs="0" maxOccurs="unbounded" type="gufcom:UsageTypeType">
                         <xs:annotation>
                             <xs:appinfo>
                                 <CodeListName>UsageType</CodeListName>
@@ -900,10 +696,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Lijst met gebruiksdoelen waarvan het primair gebruiksdoel van het Gebruiksdoel systeem van het Recht grondwatergebruik van het Grondwatergebruiksysteem er één moet zijn.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="designInstallationFunction"
-                           minOccurs="0"
-                           maxOccurs="1"
-                           type="gufcom:InstallationTypeType">
+                    <xs:element name="designInstallationFunction" minOccurs="0" maxOccurs="1" type="gufcom:InstallationTypeType">
                         <xs:annotation>
                             <xs:appinfo>
                                 <CodeListName>InstallationType</CodeListName>
@@ -912,10 +705,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
                             <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De installatiefunctie van de Ontwerpinstallatie van het Recht grondwatergebruik van het Grondwatergebruiksysteem.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="realisedInstallationFunction"
-                           minOccurs="0"
-                           maxOccurs="1"
-                           type="gufcom:InstallationTypeType">
+                    <xs:element name="realisedInstallationFunction" minOccurs="0" maxOccurs="1" type="gufcom:InstallationTypeType">
                         <xs:annotation>
                             <xs:appinfo>
                                 <CodeListName>InstallationType</CodeListName>
@@ -930,10 +720,7 @@ Explanation: Puntgeometrie gebaseerd op ISO19107. Aangegeven wordt of de coördi
     </xs:complexType>
     <xs:complexType name="LicensedQuantityType">
         <xs:sequence>
-            <xs:element name="licensedInOut"
-                     minOccurs="1"
-                     maxOccurs="1"
-                     type="gufcom:LicensedInOutType">
+            <xs:element name="licensedInOut" minOccurs="1" maxOccurs="1" type="gufcom:LicensedInOutType">
                 <xs:annotation>
                     <xs:appinfo>
                         <CodeListName>LicensedInOut</CodeListName>
@@ -959,11 +746,7 @@ Explanation: Het kan het onttrekken of het in de bodem brengen van water betreff
     </xs:complexType>
     <xs:complexType name="ObjectHistoryType">
         <xs:sequence>
-            <xs:element minOccurs="1"
-                     maxOccurs="unbounded"
-                     name="event"
-                     nillable="false"
-                     type="dsguf:EventType">
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="event" nillable="false" type="dsguf:EventType">
                 <xs:annotation>
                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Een lijst met gegevens over de gebeurtenissen die in de werkelijkheid hebben plaats gevonden.</xs:documentation>
                 </xs:annotation>
@@ -972,10 +755,7 @@ Explanation: Het kan het onttrekken of het in de bodem brengen van water betreff
     </xs:complexType>
     <xs:complexType name="UsageTypeFacilityType">
         <xs:sequence>
-            <xs:element name="primaryUsageType"
-                     minOccurs="1"
-                     maxOccurs="1"
-                     type="gufcom:UsageTypeType">
+            <xs:element name="primaryUsageType" minOccurs="1" maxOccurs="1" type="gufcom:UsageTypeType">
                 <xs:annotation>
                     <xs:appinfo>
                         <CodeListName>UsageType</CodeListName>
@@ -985,10 +765,7 @@ Explanation: Het kan het onttrekken of het in de bodem brengen van water betreff
 Explanation: Het belangrijkste doel is ook het doel waarvoor het grootste deel van de maximale waterverplaatsing wordt gebruikt.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="humanConsumption"
-                     type="brocom:IndicationYesNoUnknownType"
-                     minOccurs="1"
-                     maxOccurs="1">
+            <xs:element name="humanConsumption" type="brocom:IndicationYesNoUnknownType" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De aanduiding die aangeeft of de winning van het grondwater, of een deel ervan, bedoeld is voor de bereiding van voor menselijke consumptie bestemd water. Onder voor menselijke consumptie bestemd water wordt verstaan, al het water dat onbehandeld of na behandeling bestemd is voor drinken, koken, voedselbereiding of andere huishoudelijke doeleinden, maar ook al het water dat in levensmiddelenbedrijven wordt gebruikt voor de vervaardiging, de behandeling, de conservering of het in de handel brengen van voor menselijke consumptie bestemde producten of stoffen.</xs:documentation>
                 </xs:annotation>
@@ -1005,14 +782,10 @@ Explanation: Het belangrijkste doel is ook het doel waarvoor het grootste deel v
             <xs:enumeration value="actueelHistorisch"/>
         </xs:restriction>
     </xs:simpleType>
-
     <xs:complexType name="EventNameType">
         <xs:simpleContent>
             <xs:restriction base="gml:CodeWithAuthorityType">
-                <xs:attribute name="codeSpace"
-                          type="xs:anyURI"
-                          use="required"
-                          fixed="urn:bro:guf:EventName"/>
+                <xs:attribute name="codeSpace" type="xs:anyURI" use="required" fixed="urn:bro:guf:EventName"/>
             </xs:restriction>
         </xs:simpleContent>
     </xs:complexType>
