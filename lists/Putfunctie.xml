@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Putfunctie>
+		<Waarde>infiltratie</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Infiltratie, dat wil zeggen, het in de bodem brengen van water, ter aanvulling van het grondwater, met het doel het op een later moment te onttrekken.</Omschrijving>
+	</Putfunctie>
+	<Putfunctie>
+		<Waarde>onttrekking</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Onttrekking van grondwater.</Omschrijving>
+	</Putfunctie>
+	<Putfunctie>
+		<Waarde>retournering</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Retournering, dat wil zeggen, het terugbrengen van onttrokken water in de bodem. Retourneren valt volgens de wet onder lozen.</Omschrijving>
+	</Putfunctie>
+	<Putfunctie>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend wat de functie van de put is (IMBRO/A kwaliteitsregime).</Omschrijving>
+	</Putfunctie>
+</domeintabel>

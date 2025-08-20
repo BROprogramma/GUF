@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<KaderAanlevering>
+		<Waarde>waterwet</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van de Waterwet.</Omschrijving>
+	</KaderAanlevering>
+	<KaderAanlevering>
+		<Waarde>omgevingswet</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van de Omgevingswet.</Omschrijving>
+	</KaderAanlevering>
+	<KaderAanlevering>
+		<Waarde>wetMilieubeheer</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van de Wet milieubeheer (Activiteitenbesluit).</Omschrijving>
+	</KaderAanlevering>
+	<KaderAanlevering>
+		<Waarde>besluitLozenBuitenInrichtingen</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van het Besluit lozen buiten inrichtingen.</Omschrijving>
+	</KaderAanlevering>
+	<KaderAanlevering>
+		<Waarde>wetMilieubeheerOfBesluitLozenBuitenInrichtingen</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van ofwel de Wet milieubeheer (Activiteitenbesluit) ofwel het Besluit lozen buiten inrichtingen. Deze waarde mag uitsluitend gebruikt worden indien aan de volgende 3 voorwaarden wordt voldaan; 1. Er is sprake van een Gesloten Bodem Energie Systeem (GBES systeem) die 2. door het Landelijk Grondwater Register (LGR) wordt geregistreerd zolang 3. de omgevingswet nog niet geldt als het vigerend wettelijke kader.</Omschrijving>
+	</KaderAanlevering>
+	<KaderAanlevering>
+		<Waarde>archiefoverdracht</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van archiefoverdracht.</Omschrijving>
+	</KaderAanlevering>
+</domeintabel>

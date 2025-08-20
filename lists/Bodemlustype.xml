@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bodemlustype>
+		<Waarde>korf</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De leidingen zijn gewikkeld in de vorm van een spiraal, een korf.</Omschrijving>
+	</Bodemlustype>
+	<Bodemlustype>
+		<Waarde>horizontaal</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De leidingen zijn in een horizontaal vlak aangebracht, in de bovenste grondlaag, onder de vorstgrens.</Omschrijving>
+	</Bodemlustype>
+	<Bodemlustype>
+		<Waarde>verticaal</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De leidingen zijn verticaal, in een boorgat aangebracht.</Omschrijving>
+	</Bodemlustype>
+</domeintabel>
