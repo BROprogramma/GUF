@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Gebruiksdoel>
+		<Waarde>agrarischeDoeleinden</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Grondwatergebruik ten behoeve van agrarische toepassing zoals drinkwater voor vee of beregening en bevloeiing van landbouwgewassen.</Omschrijving>
+	</Gebruiksdoel>
+	<Gebruiksdoel>
+		<Waarde>bemaling</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Grondwatergebruik ten behoeve van bouwput- of sleufbemalingen (drooghouden van bouwputten of sleuven),  proefbronnering (onttrekking om grondwaterkwaliteit te bepalen of om het onttrekkingseffect op de grondwaterstand en grondwaterstroming te meten) of grondsanering (een grondwateronttrekking die plaatsvindt ten behoeve van het mechanisch verwijderen van een verontreiniging).</Omschrijving>
+	</Gebruiksdoel>
+	<Gebruiksdoel>
+		<Waarde>brandblusvoorziening</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Grondwatergebruik ten behoeve van het blussen van branden.</Omschrijving>
+	</Gebruiksdoel>
+	<Gebruiksdoel>
+		<Waarde>geslotenBodemenergiesysteem</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Een gesloten bodemenergiesysteem wisselt warmte of koude met de bodem uit door koelvloeistof in een gesloten lus door de bodem te leiden. Dit systeem maakt alleen gebruik van de warmtecapaciteit van bodem en grondwater, maar infiltreert of onttrekt geen grondwater.</Omschrijving>
+	</Gebruiksdoel>
+	<Gebruiksdoel>
+		<Waarde>grondwatersanering</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Grondwatergebruik ten behoeve van het verwijderen of beheersen van een grondwaterverontreiniging.</Omschrijving>
+	</Gebruiksdoel>
+	<Gebruiksdoel>
+		<Waarde>industrieleToepassing</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Grondwatergebruik ten behoeve van gebruik in het industriële productieproces.</Omschrijving>
+	</Gebruiksdoel>
+	<Gebruiksdoel>
+		<Waarde>openBodemenergiesysteem</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Grondwatergebruik ten behoeve van de tijdelijke opslag van warmte en/of koude de bodem.</Omschrijving>
+	</Gebruiksdoel>
+	<Gebruiksdoel>
+		<Waarde>openbareDrinkwatervoorziening</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Grondwatergebruik ten behoeve van de winning en levering van drinkwater. De uitvoering wordt verzorgd door drinkwaterbedrijven.</Omschrijving>
+	</Gebruiksdoel>
+	<Gebruiksdoel>
+		<Waarde>overigeDoeleinden</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Grondwatergebruik welke niet onder één van de andere categorieën vallen, zoals drinkwaterwinning anders dan voor de openbare drinkwatervoorziening, of (permanente) bemalingen ten behoeve van het drooghouden van kruipruimtes of ondergrondse garages.</Omschrijving>
+	</Gebruiksdoel>
+</domeintabel>

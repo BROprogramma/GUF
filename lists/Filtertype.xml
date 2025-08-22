@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Filtertype>
+		<Waarde>nietVerticaal</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het filter is horizontaal of schuin geboord of gegraven in de ondergrond.</Omschrijving>
+	</Filtertype>
+	<Filtertype>
+		<Waarde>verticaal</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het filter is verticaal geboord of gegraven in de ondergrond.</Omschrijving>
+	</Filtertype>
+	<Filtertype>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend wat het filtertype is (IMBRO/A kwaliteitsregime).</Omschrijving>
+	</Filtertype>
+</domeintabel>

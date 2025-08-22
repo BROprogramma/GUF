@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<RelatieveTemperatuur>
+		<Waarde>koud</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Relatief koud ten opzichte van de ondergrond elders op een vergelijkbare diepte.</Omschrijving>
+	</RelatieveTemperatuur>
+	<RelatieveTemperatuur>
+		<Waarde>warm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Relatief warm ten opzichte van de ondergrond elders op een vergelijkbare diepte.</Omschrijving>
+	</RelatieveTemperatuur>
+	<RelatieveTemperatuur>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend wat de relatieve temperatuur is (IMBRO/A kwaliteitsregime).</Omschrijving>
+	</RelatieveTemperatuur>
+</domeintabel>

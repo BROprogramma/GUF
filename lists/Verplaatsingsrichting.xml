@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Verplaatsingsrichting>
+		<Waarde>inbrengen</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het maximale volume heeft betrekking op het water dat wordt geïnfiltreerd in, of geretourneerd aan de ondergrond.</Omschrijving>
+	</Verplaatsingsrichting>
+	<Verplaatsingsrichting>
+		<Waarde>onttrekken</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het maximale volume heeft betrekking op het grondwater dat wordt onttrokken aan de ondergrond.</Omschrijving>
+	</Verplaatsingsrichting>
+</domeintabel>

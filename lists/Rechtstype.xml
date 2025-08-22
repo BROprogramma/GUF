@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Rechtstype>
+		<Waarde>beschikking</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De activiteit is vergunningsplichting.</Omschrijving>
+	</Rechtstype>
+	<Rechtstype>
+		<Waarde>melding</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De activiteit is meldingsplichtig.</Omschrijving>
+	</Rechtstype>
+</domeintabel>

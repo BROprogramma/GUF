@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Installatiefunctie>
+		<Waarde>geslotenBodemenergiesysteem</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Installatie ten behoeve van een gesloten bodemenergiesysteem.</Omschrijving>
+	</Installatiefunctie>
+	<Installatiefunctie>
+		<Waarde>onttrekking</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Installatie waarmee grondwater wordt onttrokken.</Omschrijving>
+	</Installatiefunctie>
+	<Installatiefunctie>
+		<Waarde>onttrekkingEnRetournering</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Installatie waarmee grondwater wordt onttrokken en geretourneerd. Retourneren is het terugbrengen van onttrokken water in de bodem. Retourneren valt volgens de wet onder lozen.</Omschrijving>
+	</Installatiefunctie>
+	<Installatiefunctie>
+		<Waarde>infiltratie</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Installatie waarmee water in de bodem wordt gebracht, ter aanvulling van het grondwater, met het doel het op een later moment te onttrekken. Het onttrekken gebeurt in dit geval via een andere installatie.</Omschrijving>
+	</Installatiefunctie>
+	<Installatiefunctie>
+		<Waarde>infiltratieEnOnttrekking</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Installatie waarmee water in de bodem wordt gebracht, ter aanvulling van het grondwater, met het doel het te onttrekken met behulp van dezelfde installatie.</Omschrijving>
+	</Installatiefunctie>
+	<Installatiefunctie>
+		<Waarde>openBodemenergiesysteem</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Installatie ten behoeve van een open bodemenergiesysteem waarbij grondwater wordt onttrokken en na gebruik in de bodem gebracht.</Omschrijving>
+	</Installatiefunctie>
+</domeintabel>
