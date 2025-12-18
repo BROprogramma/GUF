@@ -2,7 +2,7 @@ Bijlage: Voorbeelden materiële historie
 ---------------------------------------
 
 Op 01-01-2021 wordt een vergunning voor grondwaterontrekking verleend met
-ingangsdatum 01-02-2021 is. In de vergunning is geen einddatum opgenomen. De
+ingangsdatum 01-02-2021. In de vergunning is geen einddatum opgenomen. De
 grondwaterontrekking bestaat uit een installatie met 1 grondwaterontrekkingsput.
 In de LV BRO worden de volgende objecten opgevoerd.
 
