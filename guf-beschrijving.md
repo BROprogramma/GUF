@@ -909,7 +909,7 @@ middel van een eindGeldigheid.
 In de bijlage is een aantal voorbeelden opgenomen van de levenscyclus.
 
 <figure id='image007'>
-  <img src="./media/6e86f385b83cb076071aa315476da261.tmp" alt="levenscyclus" width="600"/>
+  <img src="./media/6e86f385b83cb076071aa315476da261.png" alt="levenscyclus" width="600"/>
   <figcaption>Schematisch voorbeeld van de levenscyclus van objecten binnen het
   grondwatergebruiksysteem: Als eerste ontstaat het recht grondwatergebruik, samen
   met het ontwerp. Op een later moment ontstaan de gerealiseerde objecten. De
